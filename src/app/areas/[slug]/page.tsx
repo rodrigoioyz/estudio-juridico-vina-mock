@@ -64,6 +64,7 @@ const AREA_CONTENT: Record<string, {
       'El estudio ha representado a trabajadores en procedimientos por despido injustificado, ' +
       'despido indirecto y nulidad del despido ante los Juzgados de Letras del Trabajo, con ' +
       'actuaciones documentadas en causas recientes (2024-2025).',
+    image: '/images/fotos/terminacion-contrato.jpg',
   },
 
   remuneraciones: {
@@ -156,6 +157,7 @@ const AREA_CONTENT: Record<string, {
       'Existen antecedentes de actuaciones del estudio en procedimientos de tutela laboral con ocasión ' +
       'del despido, así como de acuerdos alcanzados dentro de esos procedimientos, lo que demuestra ' +
       'experiencia tanto en litigación como en negociación de soluciones.',
+    image: '/images/fotos/derechos-fundamentales.jpg',
   },
 
   'relacion-laboral': {
@@ -190,6 +192,7 @@ const AREA_CONTENT: Record<string, {
           'lo que revela experiencia en conflictos laborales con estructuras empresariales complejas.',
       },
     ],
+    image: '/images/fotos/relacion-laboral.jpg',
   },
 
   'derecho-colectivo': {
@@ -222,6 +225,7 @@ const AREA_CONTENT: Record<string, {
           'del instrumento colectivo o la resolución del conflicto por la vía que corresponda.',
       },
     ],
+    image: '/images/fotos/derecho-colectivo.jpg',
   },
 
   'litigacion-recursos': {
@@ -295,6 +299,7 @@ const AREA_CONTENT: Record<string, {
           'acciones pertinentes para obtener la reparación que en derecho proceda.',
       },
     ],
+    image: '/images/fotos/accidentes-laborales.jpg',
   },
 };
 
