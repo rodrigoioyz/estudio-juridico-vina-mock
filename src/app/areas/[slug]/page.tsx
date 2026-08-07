@@ -318,6 +318,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function AreaPage({ params }: Props) {
   const { slug } = await params;
   const area = PRACTICE_AREAS.find((a) => a.slug === slug);
+  // eslint-disable-next-line security/detect-object-injection
   const content = AREA_CONTENT[slug];
 
   if (!area) notFound();

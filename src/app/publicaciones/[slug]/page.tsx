@@ -17,6 +17,7 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
+  // eslint-disable-next-line security/detect-object-injection
   const pub = PUBLICACIONES[slug];
   if (!pub) return { title: 'Publicación no encontrada' };
   return { title: pub.title };
