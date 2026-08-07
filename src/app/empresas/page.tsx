@@ -14,7 +14,7 @@ export default function EmpresasPage() {
       <section className="bg-primary text-white py-20">
         <div className="container-narrow">
           <h1 className="text-white text-4xl font-bold mb-6">Servicios para Empresas</h1>
-          <p className="text-xl text-white/80 leading-relaxed">
+          <p className="text-xl text-white/80 leading-relaxed max-w-3xl">
             Asesoramos a empleadores en la gestión y defensa de controversias laborales.
             Evaluamos la solidez jurídica de las decisiones antes de que se conviertan en
             conflictos y representamos a la empresa ante el Juzgado de Letras del Trabajo
@@ -24,7 +24,7 @@ export default function EmpresasPage() {
       </section>
 
       {/* ── Servicios ───────────────────────────────────── */}
-      <section className="py-20">
+      <section className="section-white">
         <div className="container-wide">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
@@ -51,12 +51,12 @@ export default function EmpresasPage() {
       </section>
 
       {/* ── Dos caras del servicio ──────────────────────── */}
-      <section className="py-20 bg-surface-alt">
+      <section className="section-paper">
         <div className="container-wide">
-          <h2 className="text-center text-3xl mb-12">
+          <h2 className="section-title text-center">
             Dos caras de un mismo servicio
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto" style={{ marginTop: '3rem' }}>
             <div className="bg-white p-8 rounded-lg shadow-sm">
               <h3 className="text-xl font-bold mb-3">Contenciosa</h3>
               <p className="text-text-muted mb-4">Cuando el conflicto ya existe:</p>
@@ -82,10 +82,10 @@ export default function EmpresasPage() {
       </section>
 
       {/* ── Por qué elegirnos ───────────────────────────── */}
-      <section className="py-20">
+      <section className="section-white">
         <div className="container-narrow">
-          <h2 className="text-3xl mb-8 text-center">Por qué elegir un estudio especializado</h2>
-          <div className="prose max-w-none">
+          <h2 className="section-title">Por qué elegir un estudio especializado</h2>
+          <div className="prose max-w-none" style={{ marginTop: '2rem' }}>
             <p>
               No somos un estudio generalista que ofrece familia, civil, penal, laboral e
               inmobiliario simultáneamente. Somos <strong>exclusivamente laboralistas</strong>,
@@ -108,18 +108,15 @@ export default function EmpresasPage() {
       </section>
 
       {/* ── CTA ──────────────────────────────────────────── */}
-      <section className="py-16 bg-primary text-white text-center">
+      <section className="final-cta">
         <div className="container-narrow">
-          <h2 className="text-white text-3xl mb-4">
+          <h2 className="final-title">
             ¿Necesita asesoría laboral para su empresa?
           </h2>
-          <p className="text-white/80 mb-8 text-lg">
+          <p className="final-sub">
             Agende una evaluación para analizar sus necesidades y diseñar una estrategia adecuada.
           </p>
-          <Link
-            href="/contacto"
-            className="inline-block bg-accent text-white px-8 py-3 rounded-md font-semibold hover:bg-accent/90 transition-colors text-lg"
-          >
+          <Link href="/contacto" className="cta-accent">
             Agendar evaluación →
           </Link>
         </div>
