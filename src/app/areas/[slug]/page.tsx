@@ -334,7 +334,7 @@ export default async function AreaPage({ params }: Props) {
       </section>
 
       {/* ── Contenido ────────────────────────────────────── */}
-      <section className="py-20">
+      <section className="section-white">
         <div className="container-narrow">
           {content?.image && (
             <div className="rounded-lg overflow-hidden mb-12">
@@ -390,7 +390,7 @@ export default async function AreaPage({ params }: Props) {
             </p>
             <Link
               href="/contacto"
-              className="inline-block bg-primary text-white px-6 py-3 rounded-md font-semibold hover:bg-primary-light transition-colors"
+              className="cta-primary"
             >
               Solicitar evaluación →
             </Link>
