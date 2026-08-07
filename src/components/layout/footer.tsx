@@ -53,11 +53,6 @@ export function Footer() {
                 {SITE_CONFIG.contact.email}
               </a>
             </p>
-            <p>
-              <a href={`tel:${SITE_CONFIG.contact.phone}`} className="hover:text-white transition-colors">
-                {SITE_CONFIG.contact.phone}
-              </a>
-            </p>
             <Link href="/contacto" className="inline-block text-accent hover:text-white transition-colors font-semibold mt-2">
               Formulario de contacto →
             </Link>

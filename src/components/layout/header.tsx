@@ -3,10 +3,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { SITE_CONFIG, NAV_LINKS } from '@/lib/site-config';
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="border-b border-border bg-white sticky top-0 z-50">
@@ -33,6 +35,7 @@ export function Header() {
               key={link.href}
               href={link.href}
               className="text-sm text-text-muted hover:text-primary transition-colors"
+              aria-current={pathname === link.href ? 'page' : undefined}
             >
               {link.label}
             </Link>
@@ -70,6 +73,7 @@ export function Header() {
               href={link.href}
               className="block text-text-muted hover:text-primary transition-colors py-1"
               onClick={() => setMobileOpen(false)}
+              aria-current={pathname === link.href ? 'page' : undefined}
             >
               {link.label}
             </Link>
