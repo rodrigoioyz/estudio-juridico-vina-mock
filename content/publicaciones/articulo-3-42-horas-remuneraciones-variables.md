@@ -11,7 +11,7 @@ keyword_secundaria: "42 horas remuneraciones variables"
 
 ## El 26 de abril de 2026: una fecha que cambió las reglas
 
-El 26 de abril de 2026 no fue un día laboral más. Ese día entró en vigor la tercera y última etapa del cronograma de reducción de jornada establecido por la Ley N.º 21.561 —conocida popularmente como "Ley de 40 Horas"—, fijando la jornada ordinaria máxima en 42 horas semanales. Para miles de empresas y trabajadores, la reducción de dos horas semanales (desde las 44 horas previas) representó un ajuste significativo.
+El 26 de abril de 2026 no fue un día laboral más. Ese día entró en vigor la segunda etapa del cronograma de reducción de jornada establecido por la Ley N.º 21.561 —conocida popularmente como "Ley de 40 Horas"—, fijando la jornada ordinaria máxima en 42 horas semanales. Para miles de empresas y trabajadores, la reducción desde las 44 horas previas representó un ajuste significativo.
 
 Pero para los trabajadores cuya remuneración depende de comisiones, metas comerciales o bonos de producción, la pregunta va más allá del horario de entrada y salida: **si trabajo menos horas, ¿mis metas de comisión se ajustan? ¿Puedo ganar lo mismo? ¿Puede el empleador bajarme el sueldo?**
 
@@ -24,8 +24,7 @@ La Ley N.º 21.561, publicada el 26 de abril de 2023, estableció un cronograma 
 | Etapa | Fecha de entrada en vigor | Jornada máxima semanal |
 |---|---|---|
 | 1ª | 26 de abril de 2024 | 44 horas |
-| 2ª | 26 de abril de 2025 | 43 horas |
-| 3ª | 26 de abril de 2026 | 42 horas |
+| 2ª | 26 de abril de 2026 | 42 horas |
 | Meta final | 26 de abril de 2028 | 40 horas |
 
 La ley también permite a las empresas adelantar la reducción mediante pacto con los trabajadores, así como distribuir la jornada en un promedio de hasta 4 semanas (con tope diario de 10 horas). Pero lo relevante para este análisis es lo que la ley **no** modificó: el artículo 42 del Código del Trabajo y la estructura de las remuneraciones.
@@ -54,9 +53,9 @@ Este dictamen —emitido durante la implementación de la segunda etapa de la le
 
 En otras palabras: si el trabajador tenía una meta de ventas calculada sobre la base de una jornada de 44 horas, al reducirse la jornada a 42 horas, la meta debe ajustarse proporcionalmente. Mantener la misma meta con menos horas disponibles para alcanzarla equivale, en los hechos, a una rebaja unilateral de la remuneración.
 
-### ORD. N.º 253/21
+### ORD. N.º 253/21 (2026)
 
-Emitido con anterioridad a la Ley 21.561 pero plenamente aplicable a su lógica, este dictamen estableció las reglas generales para la implementación de modificaciones de jornada con impacto en remuneraciones variables. Su doctrina es clara: toda modificación que afecte las condiciones de trabajo debe respetar la equivalencia de las prestaciones.
+Este dictamen, emitido en 2026 para la segunda etapa de implementación, reconsideró la doctrina administrativa previa y precisó la forma de implementar la rebaja de 44 a 42 horas semanales. Establece que la ley privilegia el acuerdo entre las partes y, a falta de acuerdo, fija reglas supletorias para la distribución de la reducción en la jornada semanal, sin que la implementación pueda afectar las remuneraciones.
 
 ## ¿Qué parámetros deben ajustarse?
 
@@ -74,11 +73,11 @@ Los bonos atados a unidades producidas, clientes atendidos o cualquier métrica 
 
 ### 3. Remuneración mínima garantizada
 
-La Ley N.º 21.830 fijó el Ingreso Mínimo Mensual en $553.553 a contar del 1 de enero de 2026. Si un trabajador con remuneración variable no alcanza este piso en un mes determinado porque la meta no se ajustó, el empleador podría estar en infracción —incluso si el trabajador no lo reclama.
+La Ley N.º 21.830 fijó el Ingreso Mínimo Mensual en $553.553 a contar del 1 de mayo de 2026. Si un trabajador con remuneración variable no alcanza este piso en un mes determinado porque la meta no se ajustó, el empleador podría estar en infracción —incluso si el trabajador no lo reclama.
 
 ### 4. Horas extraordinarias
 
-La reducción de jornada no modifica el concepto de hora extraordinaria: sigue siendo toda aquella que excede la jornada ordinaria pactada. Pero con una jornada más corta, las horas extra se gatillan antes. Si el trabajador con remuneración variable realiza horas extra, el valor de la hora debe calcularse sobre su remuneración ordinaria, que incluye el sueldo base más el promedio de lo devengado por concepto de remuneración variable en los últimos tres meses.
+La reducción de jornada no modifica el concepto de hora extraordinaria: sigue siendo toda aquella que excede la jornada ordinaria pactada. Pero con una jornada más corta, las horas extra se gatillan antes. Si el trabajador con remuneración variable realiza horas extra, el valor de la hora extraordinaria se calcula sobre el sueldo base más el promedio de las remuneraciones variables devengadas en los últimos tres meses, conforme al artículo 32 del CT.
 
 ## El menoscabo: cuándo hay infracción
 
@@ -102,15 +101,9 @@ En la práctica, esto significa que:
 - Si detectan una disminución sistemática de las remuneraciones variables sin justificación, pueden cursar multas.
 - El empleador tiene la carga de demostrar que el ajuste de parámetros fue razonable y comunicado al trabajador.
 
-## La Ley 21.755 (Ley Karin): el otro ajuste de 2026
+## Otras normas relevantes en 2026
 
-No puede entenderse el panorama de las remuneraciones en 2026 sin mencionar la Ley N.º 21.755 —conocida como Ley Karin—, cuya entrada en vigor coincidió en el mismo período. Su artículo 24 modificó aspectos relevantes del sistema de remuneraciones:
-
-1. **Reforzó la prohibición de discriminación salarial** entre trabajadores que realizan la misma función.
-2. **Estableció nuevas obligaciones de transparencia** en la estructura de remuneraciones.
-3. **Limitó el pago en especies** al 50% de la remuneración total.
-
-Si bien la Ley Karin no aborda directamente el cruce entre jornada y remuneraciones variables, su espíritu de protección del trabajador refuerza la interpretación de que los ajustes posteriores a la reducción de jornada no pueden ser perjudiciales.
+La Ley N.º 21.755, publicada en el mismo período, introdujo modificaciones al sistema de remuneraciones —incluyendo la limitación del pago en especies al 50% de la remuneración total— y reforzó obligaciones de transparencia en la estructura salarial. Si bien no aborda directamente el cruce entre jornada y remuneraciones variables, su orientación protectora refuerza la interpretación de que los ajustes posteriores a la reducción de jornada no pueden ser perjudiciales.
 
 ## ¿Qué debería hacer un trabajador en esta situación?
 

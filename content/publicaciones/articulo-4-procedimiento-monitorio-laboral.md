@@ -26,26 +26,26 @@ El procedimiento monitorio está regulado en los artículos 496 a 498 del Códig
 
 | Elemento | Procedimiento monitorio | Procedimiento ordinario |
 |---|---|---|
-| Cuantía máxima | Hasta 10 Ingresos Mínimos Mensuales (~$5.535.530 a 2026) | Sin límite |
+| Cuantía máxima | Hasta 15 Ingresos Mínimos Mensuales (~$8.303.295 a 2026) | Sin límite |
 | Inicio | Demanda o reclamo ante la Inspección del Trabajo | Demanda ante tribunal |
-| Reclamo administrativo previo | Posible pero no obligatorio | No exigido |
+| Reclamo administrativo previo | Requisito de acceso al procedimiento monitorio | No exigido |
 | Audiencia | Única (concentrada) | Preparatoria + juicio |
 | Plazos | Abreviados | Ordinarios |
-| Representación legal | No exigida (comparecencia personal) | Exigida |
+| Representación legal | No exigida en sede administrativa (comparecencia personal ante la Inspección); exigida en sede judicial | Exigida |
 
 El propósito declarado del legislador fue **facilitar el acceso a la justicia** de trabajadores con pretensiones económicas modestas, para quienes los costos de un juicio ordinario —en tiempo, dinero y complejidad— podían resultar disuasivos.
 
 ### El reclamo administrativo ante la Inspección del Trabajo
 
-El artículo 497 del CT contempla que el trabajador pueda presentar su reclamo ante la Inspección del Trabajo, la cual citará a las partes a un comparendo de conciliación. Si no hay acuerdo, la Inspección remite los antecedentes al tribunal para que continúe el procedimiento monitorio.
+El artículo 497 del CT contempla que, para acceder al procedimiento monitorio, el trabajador debe presentar su reclamo ante la Inspección del Trabajo, la cual citará a las partes a un comparendo de conciliación. Si no hay acuerdo, la Inspección remite los antecedentes al tribunal para que continúe el procedimiento monitorio.
 
-Esta vía administrativa es una **opción**, no un requisito de admisibilidad. El trabajador también puede interponer su demanda directamente ante el tribunal competente, sin pasar por la Inspección. Sin embargo, la práctica judicial previa al fallo de la Corte Suprema había generado una interpretación restrictiva que trataba el reclamo previo como un paso obligatorio.
+El reclamo administrativo previo es, por tanto, un **requisito de acceso al procedimiento monitorio**. Pero esto no significa que si el trabajador omite ese paso quede sin acceso a la justicia: puede presentar su demanda directamente ante el tribunal por la vía del **procedimiento de aplicación general** (ordinario), regulado en los artículos 497 y siguientes del CT. El monitorio es una opción más rápida; no la única vía.
 
 ## El caso concreto: Rol 24.934-2025
 
 ### Los hechos
 
-El trabajador —cuya identidad se omite por razones de reserva— fue despedido y presentó demanda de despido injustificado ante el Juzgado de Letras del Trabajo competente. El tribunal rechazó la demanda in limine: consideró que, tratándose de una pretensión que no superaba las 10 IMM, el trabajador debió haber agotado previamente la vía administrativa ante la Inspección del Trabajo.
+El trabajador —cuya identidad se omite por razones de reserva— fue despedido y presentó demanda de despido injustificado ante el Juzgado de Letras del Trabajo competente. El tribunal rechazó la demanda in limine: consideró que, tratándose de una pretensión que no superaba las 15 IMM, el trabajador debió haber interpuesto su reclamo por la vía del procedimiento monitorio, para lo cual necesitaba haber presentado previamente el reclamo administrativo ante la Inspección del Trabajo. Al no haberlo hecho, el tribunal entendió que la demanda por la vía ordinaria era inadmisible.
 
 La decisión fue confirmada por la Corte de Apelaciones respectiva, que compartió el criterio de que el reclamo administrativo previo constituía un presupuesto procesal de admisibilidad.
 
@@ -59,21 +59,19 @@ El argumento central fue que la interpretación del tribunal —que convertía u
 
 La Cuarta Sala de la Corte Suprema, en sentencia de 8 de septiembre de 2025, acogió el recurso de queja. Los fundamentos esenciales del fallo pueden sintetizarse así:
 
-1. **El procedimiento monitorio es una herramienta de facilitación, no de obstaculización.** Su diseño normativo —arts. 496 a 498 del CT— revela que el legislador quiso allanar el camino del trabajador, no imponerle exigencias adicionales.
+1. **El reclamo previo es requisito para el procedimiento monitorio, pero su omisión no cierra el acceso a la justicia.** Si el trabajador no presentó el reclamo ante la Inspección del Trabajo, no puede acceder a la vía monitoria. Pero ello no lo inhabilita para acceder al procedimiento de aplicación general, establecido en los artículos 497 y siguientes del CT, que no exige dicho trámite administrativo.
 
-2. **El reclamo administrativo previo es una alternativa, no un requisito.** El artículo 497 utiliza el verbo "podrá" —y no "deberá"— para referirse a la presentación del reclamo ante la Inspección. La norma es facultativa, no imperativa.
+2. **El procedimiento monitorio es una herramienta al servicio del trabajador, no una carga.** Su diseño normativo —arts. 496 a 498 del CT— revela que el legislador quiso ofrecer una vía adicional rápida y de bajo costo. Convertir el incumplimiento de su requisito de acceso en una barrera para toda forma de tutela judicial desnaturaliza su propósito.
 
-3. **Convertir una facultad en una carga vulnera el derecho a la tutela judicial efectiva.** Exigir al trabajador que agote una vía administrativa que la ley no exige constituye una interpretación contra legem que lesiona la garantía del artículo 19 N.º 3 de la Constitución.
-
-4. **La ratio legis del procedimiento monitorio es la protección del trabajador.** Todo el sistema procesal laboral chileno está informado por el principio protector. Interpretar sus normas en perjuicio de quien pretenden proteger contradice su finalidad.
+3. **Impedir el acceso al procedimiento de aplicación general por no cumplir un requisito del monitorio vulnera el artículo 19 N.º 3 de la Constitución.** La garantía de igual protección de la ley en el ejercicio de los derechos y el principio de inexcusabilidad (art. 76 de la Constitución) obligan a que exista siempre una vía para que el conflicto sea conocido y resuelto por un tribunal.
 
 ## ¿Qué significa este fallo para los trabajadores?
 
 La sentencia del Rol 24.934-2025 tiene efectos prácticos concretos:
 
-### 1. Nadie puede rechazar una demanda laboral por no haber hecho el reclamo ante la Inspección
+### 1. Sin reclamo previo no accede al monitorio, pero sí al procedimiento de aplicación general
 
-Este es el efecto más directo. Si un trabajador presenta una demanda de despido injustificado, cobro de prestaciones o cualquier otra pretensión de competencia laboral, el tribunal no puede rechazarla por el solo hecho de que no haya pasado antes por la Inspección del Trabajo. El reclamo administrativo es un derecho del trabajador, no una carga.
+Este es el efecto más directo. Si un trabajador no presentó el reclamo ante la Inspección del Trabajo, no puede utilizar la vía monitoria. Pero eso no le impide presentar su demanda por el procedimiento de aplicación general. El tribunal no puede rechazar la demanda por el solo hecho de que el trabajador no haya pasado antes por la Inspección.
 
 ### 2. El trabajador elige la vía que más le conviene
 
@@ -91,8 +89,8 @@ Si bien las sentencias dictadas en recursos de queja no constituyen jurisprudenc
 
 Es frecuente que los trabajadores confundan dos conceptos que, si bien están relacionados, operan en planos distintos:
 
-- **Procedimiento monitorio**: es la vía procesal para reclamaciones de hasta 10 IMM. Puede iniciarse por demanda directa o por reclamo ante la Inspección.
-- **Reclamo administrativo ante la Inspección del Trabajo**: es una de las formas de iniciar el procedimiento monitorio. También puede usarse como instancia de conciliación previa a cualquier juicio laboral, pero nunca como requisito de admisibilidad de la demanda.
+- **Procedimiento monitorio**: es la vía procesal para reclamaciones de hasta 15 IMM. Requiere reclamo administrativo previo ante la Inspección del Trabajo como requisito de acceso.
+- **Procedimiento de aplicación general**: es la vía ordinaria, disponible para cualquier cuantía y sin necesidad de reclamo administrativo previo. Si el trabajador omite el reclamo, pierde el acceso al monitorio, pero conserva intacto su derecho a demandar por esta vía.
 
 Confundir ambos conceptos puede llevar al trabajador a creer —erróneamente— que si no va primero a la Inspección, no puede demandar. La Corte Suprema ha dejado claro que no es así.
 

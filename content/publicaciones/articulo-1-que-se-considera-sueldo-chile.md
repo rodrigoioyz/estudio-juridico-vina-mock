@@ -24,7 +24,7 @@ La norma es precisa y cada uno de sus elementos tiene consecuencias jurídicas. 
 
 1. **Obligatorio**: el empleador no puede decidir discrecionalmente si lo paga o no. Es una obligación contractual exigible.
 2. **Fijo**: su monto no depende del resultado de la empresa, del desempeño del trabajador ni de ninguna variable externa. Debe estar predeterminado.
-3. **En dinero**: no puede pagarse en especies. La Ley N.º 21.755 (Ley Karin), que modificó el artículo 44 del CT, reforzó esta exigencia al limitar el pago en especies al 50% de la remuneración total y solo bajo condiciones estrictas.
+3. **En dinero**: no puede pagarse en especies. La Ley N.º 21.755 reforzó esta exigencia al limitar el pago en especies al 50% de la remuneración total y solo bajo condiciones estrictas.
 4. **Pagado por períodos iguales**: la periodicidad debe ser regular (mensual, quincenal, semanal).
 5. **Determinado en el contrato**: debe constar por escrito en el instrumento contractual.
 6. **Por la jornada ordinaria**: corresponde a la contraprestación por la jornada pactada, sin incluir horas extraordinarias.
@@ -65,7 +65,7 @@ En abril de 2026, la jornada laboral ordinaria se redujo a 42 horas semanales co
 
 Esta doble modificación normativa hace que la correcta calificación del sueldo sea más relevante que nunca:
 
-1. **Jornada de 42 horas**: el sueldo se define por referencia a la jornada ordinaria. Si la jornada cambió —como efectivamente ocurrió—, el sueldo pactado debe recalcularse. Un empleador no puede reducir unilateralmente el sueldo porque ahora se trabajan menos horas; la reducción de jornada no autoriza una rebaja remuneracional.
+1. **Jornada de 42 horas**: el sueldo se define por referencia a la jornada ordinaria. La reducción de jornada no modifica el sueldo pactado —un empleador no puede reducir unilateralmente el sueldo porque ahora se trabajan menos horas; la ley no autoriza una rebaja remuneracional. Lo que sí cambia es el valor de la hora ordinaria para efectos de calcular horas extraordinarias y el sueldo mínimo en contratos a jornada parcial.
 
 2. **IMM de $553.553**: el sueldo base no puede ser inferior al ingreso mínimo. Pero si un trabajador recibe un monto que el empleador llama "sueldo" y que en realidad está compuesto mayoritariamente por comisiones variables, ese monto no es sueldo para efectos del piso del artículo 44 del CT.
 

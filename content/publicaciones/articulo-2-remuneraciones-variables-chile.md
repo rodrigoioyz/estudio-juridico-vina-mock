@@ -15,7 +15,7 @@ Considere tres escenarios que se repiten a diario en las relaciones laborales ch
 
 - **Andrea** es vendedora en una tienda de retail. Su contrato establece un sueldo base más una comisión del 3% sobre cada venta que realiza. En diciembre, con las ventas navideñas, sus comisiones casi duplican su sueldo base. En febrero, caen a la mitad.
 - **Benjamín** trabaja en el área de operaciones de una empresa minera. A fin de año recibe un bono que la empresa denomina "bono de gestión", cuyo monto depende de las utilidades anuales de la compañía. El bono no está pactado en su contrato: la empresa lo entrega discrecionalmente.
-- **Carolina** es supervisora en una planta de producción. Recibe mensualmente un porcentaje de las utilidades netas de la planta, conforme al sistema de gratificación legal del artículo 47 del Código del Trabajo.
+- **Carolina** es supervisora en una planta de producción. Recibe mensualmente un porcentaje de las utilidades netas de la planta, conforme al sistema de gratificación legal regulado en los artículos 47 y 50 del Código del Trabajo.
 
 Los tres reciben dinero además de su sueldo base. Sin embargo, desde el punto de vista jurídico, Andrea, Benjamín y Carolina no reciben lo mismo. Lo que Andrea percibe es **remuneración variable** en sentido estricto. Lo de Benjamín es una **remuneración eventual**. Lo de Carolina es una **remuneración participativa**.
 
@@ -64,7 +64,7 @@ El artículo 42 del CT no solo define el sueldo. En sus incisos siguientes, esta
 
 - **Comisión** (inciso tercero): "porcentaje sobre el precio de las ventas o compras, o sobre el monto de otras operaciones, que el empleador efectúa con la colaboración del trabajador".
 - **Participación** (inciso cuarto): "proporción en las utilidades de un negocio determinado o de una empresa o solo de la de una o más secciones o sucursales de la misma".
-- **Gratificación** (art. 47): "parte de las utilidades con que el empleador beneficia el sueldo del trabajador". El CT establece dos sistemas: el legal (30% de las utilidades líquidas, con tope de 4,75 IMM) y el convencional.
+- **Gratificación** (art. 47): "parte de las utilidades con que el empleador beneficia el sueldo del trabajador". El artículo 50 del CT establece dos sistemas para su cumplimiento: el legal (30% de las utilidades líquidas, con tope de 4,75 IMM) y el convencional.
 
 Lo que el CT **no** define expresamente es el bono. Sin embargo, la doctrina y la jurisprudencia lo han conceptualizado como un pago que el empleador efectúa voluntariamente, sin que exista obligación legal o contractual de hacerlo —al menos mientras no se configuren los requisitos de la cláusula tácita.
 
@@ -97,7 +97,7 @@ La base imponible para cotizaciones previsionales (AFP, salud, seguro de cesant�
 
 ### Descuentos y embargos
 
-El artículo 57 del CT establece límites a los descuentos que pueden hacerse sobre las remuneraciones. Tratándose de remuneraciones variables, la regla del 15% de exención previsto en el artículo 57 bis solo se aplica al sueldo base, no a los componentes variables. Esto puede generar situaciones en que un trabajador con alto componente variable enfrente embargos más gravosos que un trabajador con remuneración enteramente fija.
+El artículo 57 del CT regula los descuentos permitidos sobre las remuneraciones. El artículo 58, en tanto, establece los límites de embargabilidad: las remuneraciones son inembargables hasta un monto equivalente a 15 UTM, y solo el excedente puede ser objeto de embargo. Tratándose de remuneraciones variables, estas reglas se aplican sobre el total percibido, sin distinción entre componentes fijos y variables.
 
 ## El caso de los bonos: la zona más gris
 
