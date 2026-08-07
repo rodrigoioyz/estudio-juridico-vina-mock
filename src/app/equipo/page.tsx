@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export const metadata: Metadata = { title: 'Equipo' };
 
@@ -26,51 +27,75 @@ const EQUIPO = [
 
 export default function EquipoPage() {
   return (
-    <div className="container-wide py-20">
-      <h1 className="text-center mb-4">Equipo</h1>
-      <p className="text-center text-text-muted mb-12 max-w-xl mx-auto">
-        Los asuntos son abordados por un equipo jurídico, no mediante prácticas
-        individuales organizadas alrededor de un único abogado.
-      </p>
+    <>
+      {/* ── Hero ────────────────────────────────────────── */}
+      <section className="bg-primary text-white py-20">
+        <div className="container-narrow">
+          <h1 className="text-white text-4xl font-bold mb-6">Equipo</h1>
+          <p className="text-xl text-white/80 leading-relaxed max-w-2xl">
+            Los asuntos son abordados por un equipo jurídico, no mediante prácticas
+            individuales organizadas alrededor de un único abogado.
+          </p>
+        </div>
+      </section>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {EQUIPO.map((abogado) => (
-          <div
-            key={abogado.nombre}
-            className="bg-white border border-border rounded-lg overflow-hidden"
-          >
-            {/* Foto o placeholder */}
-            {abogado.foto ? (
-              <div className="relative w-full" style={{ aspectRatio: '4/5', background: '#f7fafc' }}>
-                <Image
-                  src={abogado.foto}
-                  alt={abogado.nombre}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-              </div>
-            ) : (
-              <div className="flex items-center justify-center bg-surface-alt" style={{ aspectRatio: '4/5' }}>
-                <span className="text-text-muted text-sm">Foto pendiente</span>
-              </div>
-            )}
+      {/* ── Perfiles ────────────────────────────────────── */}
+      <section className="section-white">
+        <div className="container-wide">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {EQUIPO.map((abogado) => (
+              <div
+                key={abogado.nombre}
+                className="bg-white border border-border rounded-lg overflow-hidden"
+              >
+                {/* Foto o placeholder */}
+                {abogado.foto ? (
+                  <div className="relative w-full" style={{ aspectRatio: '4/5', background: '#f7fafc' }}>
+                    <Image
+                      src={abogado.foto}
+                      alt={abogado.nombre}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  </div>
+                ) : (
+                  <div className="flex items-center justify-center bg-surface-alt" style={{ aspectRatio: '4/5' }}>
+                    <span className="text-text-muted text-sm">Foto pendiente</span>
+                  </div>
+                )}
 
-            {/* Info */}
-            <div className="p-6">
-              <h2 className="text-lg font-bold mb-1">{abogado.nombre}</h2>
-              <p className="text-sm text-primary font-medium mb-3">{abogado.rol}</p>
-              <p className="text-sm text-text-muted leading-relaxed">{abogado.bio}</p>
-            </div>
+                {/* Info */}
+                <div className="p-6">
+                  <h2 className="text-lg font-bold mb-1">{abogado.nombre}</h2>
+                  <p className="text-sm text-primary font-medium mb-3">{abogado.rol}</p>
+                  <p className="text-sm text-text-muted leading-relaxed">{abogado.bio}</p>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
 
-      <p className="text-center text-text-muted mt-12 text-sm max-w-xl mx-auto">
-        Los perfiles, fotos y biografías de los demás integrantes del equipo se
-        completarán una vez que el estudio proporcione la información y
-        autorizaciones correspondientes.
-      </p>
-    </div>
+          <p className="text-center text-text-muted mt-12 text-sm max-w-xl mx-auto">
+            Los perfiles, fotos y biografías de los demás integrantes del equipo se
+            completarán una vez que el estudio proporcione la información y
+            autorizaciones correspondientes.
+          </p>
+        </div>
+      </section>
+
+      {/* ── CTA ──────────────────────────────────────────── */}
+      <section className="section-paper text-center">
+        <div className="container-narrow">
+          <h2 className="section-title">¿Quiere saber quién llevaría su caso?</h2>
+          <p className="section-dek" style={{ marginLeft: 'auto', marginRight: 'auto' }}>
+            Solicite una evaluación y le diremos exactamente qué abogado del equipo
+            se haría cargo, con base en la materia y la instancia.
+          </p>
+          <Link href="/contacto" className="cta-primary">
+            Solicitar evaluación →
+          </Link>
+        </div>
+      </section>
+    </>
   );
 }

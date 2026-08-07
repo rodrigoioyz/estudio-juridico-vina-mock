@@ -14,7 +14,7 @@ export default function EstudioPage() {
       <section className="bg-primary text-white py-20">
         <div className="container-narrow">
           <h1 className="text-white text-4xl font-bold mb-6">El Estudio</h1>
-          <p className="text-xl text-white/80 leading-relaxed">
+          <p className="text-xl text-white/80 leading-relaxed max-w-3xl">
             El Estudio Jurídico Laboral es una firma especializada en Derecho del Trabajo
             que desarrolla asesoría preventiva y representación judicial para trabajadores,
             empresas y organizaciones sindicales. Su práctica comprende conflictos derivados
@@ -27,7 +27,7 @@ export default function EstudioPage() {
       </section>
 
       {/* ── Descripción maestra ──────────────────────────── */}
-      <section className="py-20">
+      <section className="section-white">
         <div className="container-narrow">
           <div className="prose max-w-none">
             <p className="text-lg leading-relaxed">
@@ -59,14 +59,14 @@ export default function EstudioPage() {
       </section>
 
       {/* ── Los 4 pilares ────────────────────────────────── */}
-      <section className="py-20 bg-surface-alt">
+      <section className="section-paper">
         <div className="container-wide">
-          <h2 className="text-center mb-4">Lo que define nuestra práctica</h2>
-          <p className="text-center text-text-muted mb-12 max-w-xl mx-auto">
+          <h2 className="section-title text-center">Lo que define nuestra práctica</h2>
+          <p className="section-dek text-center" style={{ marginLeft: 'auto', marginRight: 'auto' }}>
             Cuatro componentes que distinguen al estudio en el ejercicio del Derecho del Trabajo.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto" style={{ marginTop: '3rem' }}>
             {[
               {
                 number: '1',
@@ -100,10 +100,10 @@ export default function EstudioPage() {
       </section>
 
       {/* ── Producción académica ─────────────────────────── */}
-      <section className="py-20">
+      <section className="section-white">
         <div className="container-narrow">
-          <h2 className="mb-6">Conocimiento que forma parte de nuestra práctica</h2>
-          <div className="prose max-w-none">
+          <h2 className="section-title">Conocimiento que forma parte de nuestra práctica</h2>
+          <div className="prose max-w-none" style={{ marginTop: '2rem' }}>
             <p>
               La actividad profesional del estudio se complementa con producción académica
               especializada en Derecho del Trabajo. Entre estas contribuciones se encuentra
@@ -144,7 +144,7 @@ export default function EstudioPage() {
       </section>
 
       {/* ── Cómo trabajamos ──────────────────────────────── */}
-      <section className="py-20 bg-surface-alt">
+      <section className="section-paper">
         <div className="container-wide grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="rounded-lg overflow-hidden">
             <img
@@ -154,8 +154,8 @@ export default function EstudioPage() {
             />
           </div>
           <div>
-            <h2 className="mb-6">Cómo trabajamos</h2>
-            <div className="prose max-w-none">
+            <h2 className="section-title">Cómo trabajamos</h2>
+            <div className="prose max-w-none" style={{ marginTop: '2rem' }}>
             <p>
               Los asuntos son abordados por un <strong>equipo jurídico</strong>, no mediante
               una práctica individual organizada alrededor de un único abogado. En los
@@ -181,16 +181,16 @@ export default function EstudioPage() {
       </section>
 
       {/* ── CTA ──────────────────────────────────────────── */}
-      <section className="py-16 text-center">
+      <section className="section-white text-center">
         <div className="container-narrow">
-          <h2 className="mb-4">¿Necesita asesoría en Derecho del Trabajo?</h2>
-          <p className="text-text-muted mb-8">
+          <h2 className="section-title">¿Necesita asesoría en Derecho del Trabajo?</h2>
+          <p className="section-dek" style={{ marginLeft: 'auto', marginRight: 'auto' }}>
             Solicite una evaluación de su caso. Le diremos con claridad si existe un caso,
             qué puede obtener y cómo proceder.
           </p>
           <Link
             href="/contacto"
-            className="inline-block bg-primary text-white px-8 py-3 rounded-md font-semibold hover:bg-primary-light transition-colors"
+            className="cta-primary"
           >
             Solicitar evaluación →
           </Link>
