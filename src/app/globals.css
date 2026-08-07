@@ -786,7 +786,7 @@ header button[aria-label="Menú"] {
 @media (prefers-reduced-motion: no-preference) {
   .hero-home-media video {
     transform-origin: 62% 50%;
-    animation: hero-kenburns 18s ease-in-out infinite alternate;
+    animation: hero-kenburns 18s cubic-bezier(0.25, 0.1, 0.25, 0.9) infinite alternate;
     will-change: transform;
   }
 }

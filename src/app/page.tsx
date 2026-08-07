@@ -75,6 +75,7 @@ export default function HomePage() {
             muted
             loop
             playsInline
+            preload="auto"
             poster="/images/fotos/vina-del-mar.jpg"
             aria-label="Video de la costa de Viña del Mar al amanecer: oleaje suave contra los acantilados"
           >
