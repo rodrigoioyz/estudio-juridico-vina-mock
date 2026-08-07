@@ -347,6 +347,7 @@ export default async function AreaPage({ params }: Props) {
                 src={content.image}
                 alt={area.title}
                 className="w-full h-auto"
+                loading="lazy"
               />
             </div>
           )}

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import { SITE_CONFIG, PRACTICE_AREAS } from '@/lib/site-config';
 import { ScrollReveal } from '@/components/motion/scroll-reveal';
@@ -81,11 +82,13 @@ export default function HomePage() {
             <source src="/videos/hero-vina-del-mar-12s.mp4" type="video/mp4" media="(min-width: 768px)" />
           </video>
           <div className="hero-overlay" aria-hidden="true" />
-          <img
+          <Image
             src="/images/fotos/vina-del-mar.jpg"
             alt="Costa de Viña del Mar al amanecer: el Pacífico en calma y la casona blanca sobre los acantilados"
             className="hero-fallback"
-            fetchPriority="high"
+            fill
+            sizes="100vw"
+            priority
           />
         </div>
       </section>

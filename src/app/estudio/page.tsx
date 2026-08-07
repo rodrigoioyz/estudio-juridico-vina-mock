@@ -151,6 +151,7 @@ export default function EstudioPage() {
               src="/images/fotos/pareja-abogados.jpg"
               alt="Abogados revisando documentos con el Código del Trabajo"
               className="w-full h-auto"
+              loading="lazy"
             />
           </div>
           <div>
