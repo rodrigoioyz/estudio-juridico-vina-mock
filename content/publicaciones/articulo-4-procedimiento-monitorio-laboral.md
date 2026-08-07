@@ -1,7 +1,7 @@
 ---
 title: "Procedimiento monitorio laboral: acceso a la justicia y Corte Suprema"
 meta_title: "Procedimiento monitorio laboral: acceso a la justicia"
-meta_description: "¿Te rechazaron una demanda por no reclamar ante la Inspección? La Corte Suprema falló que el procedimiento monitorio no puede negar el acceso a la justicia. Análisis del Rol 24.934-2025."
+meta_description: "La Corte Suprema resolvió que omitir el reclamo previo para la vía monitoria no puede impedir que la demanda sea conocida por el procedimiento general. Análisis del Rol 24.934-2025."
 slug: procedimiento-monitorio-laboral-acceso-justicia-corte-suprema
 keyword_primaria: "procedimiento monitorio laboral"
 keyword_secundaria_1: "recurso de queja Corte Suprema laboral"
