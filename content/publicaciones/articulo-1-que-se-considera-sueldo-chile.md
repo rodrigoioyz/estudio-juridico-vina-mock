@@ -1,9 +1,11 @@
 ---
 title: "¿Qué se considera sueldo en Chile? Fijeza y concepto legal"
 meta_title: "¿Qué se considera sueldo en Chile? Fijeza y concepto legal"
-meta_description: "El artículo 42 del Código del Trabajo define el sueldo por su fijeza: pago fijo, en dinero, por jornada ordinaria. ¿Qué dice la DT y por qué importa en 2026?"
+meta_description: "El artículo 42 del Código del Trabajo define el sueldo por su fijeza: un pago fijo, en dinero, por la jornada ordinaria. ¿Qué dice la DT y por qué importa en 2026?"
 slug: que-se-considera-sueldo-chile-fijeza
-keyword_primaria: "que se considera sueldo Chile"
+keyword_primaria: "qué se considera sueldo en Chile"
+keyword_secundaria_1: "sueldo base Chile"
+keyword_secundaria_2: "fijeza del sueldo artículo 42 CT"
 ---
 
 # ¿Qué se considera sueldo en Chile? Fijeza y concepto legal
@@ -97,5 +99,32 @@ Para un empleador, la misma distinción determina si sus liquidaciones resistir�
 
 **Enlaces sugeridos:**
 - [Remuneraciones variables en Chile: bonos, comisiones y diferencias](/remuneraciones-variables-chile-bonos-comisiones)
-- [42 horas y remuneraciones variables: comisiones, metas y bonos](/42-horas-remuneraciones-variables-comisiones)
-- [Procedimiento monitorio laboral: acceso a la justicia y Corte Suprema](/procedimiento-monitorio-laboral-acceso-justicia)
+- [42 horas y remuneraciones variables: comisiones, metas y bonos](/42-horas-remuneraciones-variables-comisiones-metas-bonos)
+- [Procedimiento monitorio laboral: acceso a la justicia y Corte Suprema](/procedimiento-monitorio-laboral-acceso-justicia-corte-suprema)
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "¿Qué se considera sueldo en Chile? Fijeza y concepto legal",
+  "datePublished": "2026-08-07",
+  "dateModified": "2026-08-07",
+  "author": {
+    "@type": "Organization",
+    "name": "Estudio Jurídico Laboral"
+  },
+  "image": "https://estudiojuridicolaboral.cl/images/og-sueldo-chile-fijeza.jpg",
+  "url": "https://estudiojuridicolaboral.cl/publicaciones/que-se-considera-sueldo-chile-fijeza",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://estudiojuridicolaboral.cl/publicaciones/que-se-considera-sueldo-chile-fijeza"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Estudio Jurídico Laboral"
+  },
+  "description": "El artículo 42 del Código del Trabajo define el sueldo por su fijeza: pago fijo, en dinero, por jornada ordinaria. Análisis de la doctrina de Fariña, citada en dictámenes 3662/53, 2734/47 y 457 de la DT.",
+  "keywords": ["sueldo Chile", "sueldo base", "fijeza sueldo", "artículo 42 Código del Trabajo", "Lautaro Fariña Quezada"],
+  "articleBody": "El artículo 42 del CT establece que el sueldo es el estipendio obligatorio y fijo, en dinero, pagado por períodos iguales, determinado en el contrato, por jornada ordinaria. La fijeza es el elemento central que lo distingue de otras remuneraciones."
+}
+</script>

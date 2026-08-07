@@ -1,9 +1,11 @@
 ---
 title: "Procedimiento monitorio laboral: acceso a la justicia y Corte Suprema"
-meta_title: "Procedimiento monitorio laboral y acceso a la justicia"
-meta_description: "¿Te rechazaron una demanda por no reclamar ante la Inspección? La Corte Suprema falló que el procedimiento monitorio no puede negar el acceso a la justicia."
+meta_title: "Procedimiento monitorio laboral: acceso a la justicia"
+meta_description: "¿Te rechazaron una demanda por no reclamar ante la Inspección? La Corte Suprema falló que el procedimiento monitorio no puede negar el acceso a la justicia. Análisis del Rol 24.934-2025."
 slug: procedimiento-monitorio-laboral-acceso-justicia-corte-suprema
 keyword_primaria: "procedimiento monitorio laboral"
+keyword_secundaria_1: "recurso de queja Corte Suprema laboral"
+keyword_secundaria_2: "acceso a la justicia trabajadores"
 ---
 
 # Procedimiento monitorio laboral: acceso a la justicia y Corte Suprema
@@ -115,4 +117,31 @@ Para cualquier trabajador que esté considerando demandar por despido injustific
 **Enlaces sugeridos:**
 - [¿Qué se considera sueldo en Chile? Fijeza y concepto legal](/que-se-considera-sueldo-chile-fijeza)
 - [Remuneraciones variables en Chile: bonos, comisiones y diferencias](/remuneraciones-variables-chile-bonos-comisiones)
-- [42 horas y remuneraciones variables: comisiones, metas y bonos](/42-horas-remuneraciones-variables-comisiones)
+- [42 horas y remuneraciones variables: comisiones, metas y bonos](/42-horas-remuneraciones-variables-comisiones-metas-bonos)
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Procedimiento monitorio laboral: acceso a la justicia y Corte Suprema",
+  "datePublished": "2026-08-07",
+  "dateModified": "2026-08-07",
+  "author": {
+    "@type": "Organization",
+    "name": "Estudio Jurídico Laboral"
+  },
+  "image": "https://estudiojuridicolaboral.cl/images/og-tutela-laboral-corte-suprema.jpg",
+  "url": "https://estudiojuridicolaboral.cl/publicaciones/procedimiento-monitorio-laboral-acceso-justicia-corte-suprema",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://estudiojuridicolaboral.cl/publicaciones/procedimiento-monitorio-laboral-acceso-justicia-corte-suprema"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Estudio Jurídico Laboral"
+  },
+  "description": "Análisis del fallo Rol 24.934-2025 de la Corte Suprema sobre tutela judicial efectiva laboral. El procedimiento monitorio no puede negar el acceso a la justicia.",
+  "keywords": ["tutela laboral Chile", "procedimiento monitorio", "Corte Suprema", "recurso de queja", "acceso a la justicia", "Rol 24.934-2025"],
+  "articleBody": "La Corte Suprema (Rol 24.934-2025) estableció que el procedimiento monitorio laboral (arts. 496-498 CT) es una herramienta al servicio del trabajador. La omisión del reclamo administrativo no cierra la vía del procedimiento de aplicación general ni vulnera el art. 19 N°3 CPR."
+}
+</script>

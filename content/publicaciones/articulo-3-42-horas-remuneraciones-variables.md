@@ -1,10 +1,11 @@
 ---
 title: "42 horas y remuneraciones variables: comisiones, metas y bonos"
-meta_title: "42 horas y remuneraciones variables: metas y bonos"
-meta_description: "Desde abril 2026 la jornada es de 42 horas. ¿Afecta a trabajadores con comisiones y sueldo variable? El empleador debe ajustar parámetros según ORD. 820/2025."
+meta_title: "42 horas y remuneraciones variables: comisiones, metas y bonos"
+meta_description: "Desde abril 2026 la jornada es de 42 horas. ¿Qué pasa con comisiones, bonos y metas? El empleador debe ajustar parámetros según ORD. 820/2025 de la DT."
 slug: 42-horas-remuneraciones-variables-comisiones-metas-bonos
 keyword_primaria: "ley 40 horas Chile 2026"
-keyword_secundaria: "42 horas remuneraciones variables"
+keyword_secundaria_1: "42 horas semanales Chile"
+keyword_secundaria_2: "impacto reducción jornada sueldo variable"
 ---
 
 # 42 horas y remuneraciones variables: comisiones, metas y bonos
@@ -132,3 +133,30 @@ En un mercado laboral donde cada vez más trabajadores dependen de comisiones, b
 - [¿Qué se considera sueldo en Chile? Fijeza y concepto legal](/que-se-considera-sueldo-chile-fijeza)
 - [Remuneraciones variables en Chile: bonos, comisiones y diferencias](/remuneraciones-variables-chile-bonos-comisiones)
 - [Procedimiento monitorio laboral: acceso a la justicia y Corte Suprema](/procedimiento-monitorio-laboral-acceso-justicia-corte-suprema)
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "42 horas y remuneraciones variables: comisiones, metas y bonos",
+  "datePublished": "2026-08-07",
+  "dateModified": "2026-08-07",
+  "author": {
+    "@type": "Organization",
+    "name": "Estudio Jurídico Laboral"
+  },
+  "image": "https://estudiojuridicolaboral.cl/images/og-42-horas-remuneraciones.jpg",
+  "url": "https://estudiojuridicolaboral.cl/publicaciones/42-horas-remuneraciones-variables-comisiones-metas-bonos",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://estudiojuridicolaboral.cl/publicaciones/42-horas-remuneraciones-variables-comisiones-metas-bonos"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Estudio Jurídico Laboral"
+  },
+  "description": "Análisis jurídico del impacto de la reducción de jornada a 42 horas semanales (Ley 21.561) sobre trabajadores con remuneraciones variables: comisiones, metas, bonos y menoscabo.",
+  "keywords": ["ley 40 horas Chile", "42 horas semanales", "remuneraciones variables", "reducción jornada laboral", "ORD 820/2025", "Ley 21.561"],
+  "articleBody": "Desde el 26 de abril de 2026 rigen las 42 horas semanales (Ley 21.561). Para trabajadores con remuneración variable, el ORD. 820/2025 obliga al empleador a ajustar parámetros. La reducción de jornada sin ajuste de metas constituye menoscabo (art. 12 CT)."
+}
+</script>

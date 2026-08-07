@@ -1,10 +1,11 @@
 ---
 title: "Remuneraciones variables en Chile: bonos, comisiones y diferencias"
 meta_title: "Remuneraciones variables: bonos, comisiones y diferencias"
-meta_description: "¿Es lo mismo un bono que una comisión? ¿Las gratificaciones son remuneración variable? Distinción jurídica según doctrina 2015, CT y dictámenes de la DT."
+meta_description: "¿Es lo mismo un bono que una comisión? ¿Las gratificaciones son remuneración variable? Conoce la distinción jurídica según doctrina 2015, CT y dictámenes de la DT."
 slug: remuneraciones-variables-chile-bonos-comisiones
 keyword_primaria: "remuneraciones variables Chile"
-keyword_secundaria: "bonos comisiones diferencia"
+keyword_secundaria_1: "gratificación legal Chile"
+keyword_secundaria_2: "comisiones se consideran sueldo"
 ---
 
 # Remuneraciones variables en Chile: bonos, comisiones y diferencias
@@ -141,3 +142,30 @@ Para un trabajador que está negociando su contrato —o su finiquito—, entend
 - [¿Qué se considera sueldo en Chile? Fijeza y concepto legal](/que-se-considera-sueldo-chile-fijeza)
 - [42 horas y remuneraciones variables: comisiones, metas y bonos](/42-horas-remuneraciones-variables-comisiones-metas-bonos)
 - [Procedimiento monitorio laboral: acceso a la justicia y Corte Suprema](/procedimiento-monitorio-laboral-acceso-justicia-corte-suprema)
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Remuneraciones variables en Chile: bonos, comisiones y diferencias",
+  "datePublished": "2026-08-07",
+  "dateModified": "2026-08-07",
+  "author": {
+    "@type": "Organization",
+    "name": "Estudio Jurídico Laboral"
+  },
+  "image": "https://estudiojuridicolaboral.cl/images/og-remuneraciones-variables.jpg",
+  "url": "https://estudiojuridicolaboral.cl/publicaciones/remuneraciones-variables-chile-bonos-comisiones",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://estudiojuridicolaboral.cl/publicaciones/remuneraciones-variables-chile-bonos-comisiones"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Estudio Jurídico Laboral"
+  },
+  "description": "Guía jurídica sobre remuneraciones variables en Chile: diferencia entre bonos, comisiones, gratificación y participación. Doctrina Fariña 2015 y análisis del Código del Trabajo.",
+  "keywords": ["remuneraciones variables Chile", "gratificación legal", "comisiones laborales", "bonos Chile", "artículo 42", "artículo 172 CT"],
+  "articleBody": "Las remuneraciones variables en Chile incluyen comisiones, bonos y gratificaciones. La doctrina Fariña 2015 propone tres criterios: ajenidad, conmutatividad y elemento diferenciador. La distinción determina la base de cálculo de indemnizaciones (art. 172 CT) y semana corrida (art. 45 CT)."
+}
+</script>
