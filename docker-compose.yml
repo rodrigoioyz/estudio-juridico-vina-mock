@@ -1,0 +1,45 @@
+# docker-compose.yml — servicios de desarrollo local
+# Levantar: docker compose up -d
+# Detener:  docker compose down
+# Reset:    docker compose down -v && docker compose up -d
+
+services:
+  valkey:
+    image: valkey/valkey:8-alpine
+    container_name: estudio-valkey
+    ports:
+      - "6379:6379"
+    volumes:
+      - valkey_data:/data
+    command: valkey-server --save 60 1 --loglevel warning
+    healthcheck:
+      test: ["CMD", "valkey-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - estudio-network
+
+  mailpit:
+    image: axllent/mailpit:latest
+    container_name: estudio-mailpit
+    ports:
+      - "1025:1025"   # SMTP
+      - "8025:8025"   # Web UI
+    environment:
+      MP_MAX_MESSAGES: 500
+      MP_DATABASE: /data/mailpit.db
+    volumes:
+      - mailpit_data:/data
+    restart: unless-stopped
+    networks:
+      - estudio-network
+
+volumes:
+  valkey_data:
+  mailpit_data:
+
+networks:
+  estudio-network:
+    driver: bridge

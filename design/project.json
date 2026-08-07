@@ -1,0 +1,32 @@
+{
+  "project": "EstudioJuridicoVina",
+  "created": "2026-08-07",
+  "design_system": "docs/design-system.md",
+  "source_image": "public/images/fotos/vina-del-mar.jpg (foto real, bloqueada — no regenerar)",
+  "routes": {
+    "asset_route": "higgsfield",
+    "stills_route": "codex",
+    "video_route": "veo-lite"
+  },
+  "budget": {
+    "currency": "USD",
+    "limit": 0,
+    "approved": false,
+    "spent_usd": 1.28
+  },
+  "jobs": [
+    {
+      "id": "hero-clip-1",
+      "type": "image-to-video",
+      "model": "veo-3.1-lite-generate-preview",
+      "first_frame": "hero/start-frame.png",
+      "duration_s": 8,
+      "resolution": "720p",
+      "aspect_ratio": "16:9",
+      "audio": "strip via ffmpeg (Veo Lite no ofrece modo sin audio a menor precio)",
+      "unit_price_usd_per_s": 0.05,
+      "estimated_cost_usd": 0.4,
+      "status": "done"
+    }
+  ]
+}
