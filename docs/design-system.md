@@ -45,11 +45,11 @@ Archivo canónico de tokens de este proyecto. Sigue la estructura de 3 capas de 
 | `--wood-400` | `#846E4C` | retrato Lautaro |
 | `--sand-300` | `#C0AE8C` | retrato Lautaro |
 
-**⚠️ Divergencia conocida — acento legado:**
+✅ **Migrado (2026-08-07):** `--accent` legado → `--sand-300` — unificación de dorado.
 
 | Token | Hex | Origen | Estado |
 |---|---|---|---|
-| `--accent` | `#c59a3e` | páginas internas anteriores al sistema extraído | **LEGADO.** NO coincide con `--sand-300`. Pendiente migrar a `--sand-300`. |
+| `--accent` (extinto) | `#c59a3e` → `#C0AE8C` | páginas internas migradas el 2026-08-07 | Las clases `.text-accent` y `.bg-accent` ahora resuelven a `var(--sand-300)`. |
 
 **Estado (formularios):**
 
@@ -110,7 +110,7 @@ Estos son los nombres **reales** que usa `globals.css`. Cada uno resuelve a un p
 |---|---|---|
 | `--primary` | `var(--navy-800)` | headings (h1–h4), header, CTAs, focus ring |
 | `--primary-light` | `var(--navy-700)` | gradients, hover states |
-| `--accent` | `#c59a3e` ⚠️ | **LEGADO.** `.text-accent`, `.bg-accent`. Divergencia documentada en §3.1. |
+| `--accent` (extinto) | — | Migrado. `.text-accent` y `.bg-accent` ahora usan `var(--sand-300)` directamente. |
 
 ### 4.4 Borde
 
