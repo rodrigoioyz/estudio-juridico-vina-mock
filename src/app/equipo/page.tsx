@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { assetPath } from '@/lib/asset-path';
 
 export const metadata: Metadata = { title: 'Equipo' };
 
@@ -52,7 +53,7 @@ export default function EquipoPage() {
                 {abogado.foto ? (
                   <div className="relative w-full" style={{ aspectRatio: '4/5', background: '#f7fafc' }}>
                     <Image
-                      src={abogado.foto}
+                      src={assetPath(abogado.foto)}
                       alt={abogado.nombre}
                       fill
                       className="object-cover"

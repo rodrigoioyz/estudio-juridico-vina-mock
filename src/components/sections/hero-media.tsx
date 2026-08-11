@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { assetPath } from '@/lib/asset-path';
 import { useEffect, useRef, useState } from 'react';
 
 export function HeroMedia() {
@@ -49,7 +50,7 @@ export function HeroMedia() {
   return (
     <div ref={containerRef} className="hero-home-media">
       <Image
-        src="/images/fotos/vina-del-mar.jpg"
+        src={assetPath('/images/fotos/vina-del-mar.jpg')}
         alt="Costa de Viña del Mar al amanecer: el Pacífico en calma y una casona blanca sobre los acantilados"
         className="hero-fallback"
         fill
@@ -64,12 +65,12 @@ export function HeroMedia() {
           loop
           playsInline
           preload="metadata"
-          poster="/images/fotos/vina-del-mar.jpg"
+          poster={assetPath('/images/fotos/vina-del-mar.jpg')}
           onCanPlay={() => setVideoReady(true)}
           aria-hidden="true"
           tabIndex={-1}
         >
-          <source src="/videos/hero-vina-del-mar-12s.mp4" type="video/mp4" />
+          <source src={assetPath('/videos/hero-vina-del-mar-12s.mp4')} type="video/mp4" />
         </video>
       )}
       <div className="hero-overlay" aria-hidden="true" />

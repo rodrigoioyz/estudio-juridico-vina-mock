@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
+import { assetPath } from '@/lib/asset-path';
 import { NAV_LINKS, SITE_CONFIG } from '@/lib/site-config';
 
 function isCurrentPath(pathname: string, href: string) {
@@ -19,7 +20,7 @@ export function Header() {
       <div className="container-wide header-row">
         <Link href="/" className="brand-link" aria-label={`${SITE_CONFIG.name}, inicio`}>
           <Image
-            src="/images/logo.png"
+            src={assetPath('/images/logo.png')}
             alt=""
             width={54}
             height={54}

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { assetPath } from '@/lib/asset-path';
 import articles from './articles-listing.json';
 
 export const metadata: Metadata = {
@@ -50,7 +51,7 @@ export default function PublicacionesPage() {
               <article className="publication-entry" key={article.slug}>
                 <Link href={`/publicaciones/${article.slug}`} className="publication-image-link" tabIndex={-1} aria-hidden="true">
                   <Image
-                    src={article.image}
+                    src={assetPath(article.image)}
                     alt=""
                     width={1024}
                     height={576}

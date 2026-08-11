@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { assetPath } from '@/lib/asset-path';
 import { SITE_CONFIG } from '@/lib/site-config';
 import articlesData from '../articles-data.json';
 
@@ -119,7 +120,7 @@ export default async function PublicacionPage({ params }: Props) {
 
       <div className="article-media container-wide">
         <Image
-          src={article.image}
+          src={assetPath(article.image)}
           alt=""
           width={1024}
           height={576}

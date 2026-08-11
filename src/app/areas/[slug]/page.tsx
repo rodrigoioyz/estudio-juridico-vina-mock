@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { assetPath } from '@/lib/asset-path';
 import { PRACTICE_AREAS } from '@/lib/site-config';
 import { notFound } from 'next/navigation';
 
@@ -349,7 +350,7 @@ export default async function AreaPage({ params }: Props) {
           {content?.image && (
             <div className="rounded-lg overflow-hidden mb-12">
               <Image
-                src={content.image}
+                src={assetPath(content.image)}
                 alt={area.title}
                 width={1200}
                 height={800}

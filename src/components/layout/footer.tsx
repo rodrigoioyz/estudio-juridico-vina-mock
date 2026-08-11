@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { assetPath } from '@/lib/asset-path';
 import { SITE_CONFIG } from '@/lib/site-config';
 
 export function Footer() {
@@ -9,7 +10,7 @@ export function Footer() {
         {/* Logo + Info */}
         <div>
           <Image
-            src="/images/logo.png"
+            src={assetPath('/images/logo.png')}
             alt={SITE_CONFIG.name}
             width={60}
             height={60}

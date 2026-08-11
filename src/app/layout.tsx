@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { assetPath } from '@/lib/asset-path';
 import { SITE_CONFIG } from '@/lib/site-config';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     url: '/',
     images: [
       {
-        url: '/images/fotos/vina-del-mar.jpg',
+        url: assetPath('/images/fotos/vina-del-mar.jpg'),
         width: 1536,
         height: 1024,
         alt: 'Costa de Viña del Mar al amanecer',
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: SITE_CONFIG.name,
     description: SITE_CONFIG.description,
-    images: ['/images/fotos/vina-del-mar.jpg'],
+    images: [assetPath('/images/fotos/vina-del-mar.jpg')],
   },
   robots: {
     index: isPublicSite,
@@ -42,8 +43,8 @@ export const metadata: Metadata = {
     googleBot: { index: isPublicSite, follow: isPublicSite },
   },
   icons: {
-    icon: '/icon.png',
-    apple: '/apple-icon.png',
+    icon: assetPath('/icon.png'),
+    apple: assetPath('/apple-icon.png'),
   },
 };
 
@@ -78,7 +79,10 @@ const jsonLd = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es-CL">
-      <body className="flex flex-col min-h-screen">
+      <body
+        className="flex flex-col min-h-screen"
+        style={{ '--internal-hero-background': `url("${assetPath('/images/fotos/codigo-trabajo.jpg')}")` } as React.CSSProperties}
+      >
         <a href="#contenido-principal" className="skip-link">
           Saltar al contenido principal
         </a>
