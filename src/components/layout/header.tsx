@@ -1,92 +1,97 @@
 'use client';
 
-import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { SITE_CONFIG, NAV_LINKS } from '@/lib/site-config';
+import { useState } from 'react';
+import { NAV_LINKS, SITE_CONFIG } from '@/lib/site-config';
+
+function isCurrentPath(pathname: string, href: string) {
+  return href === '/' ? pathname === '/' : pathname === href || pathname.startsWith(`${href}/`);
+}
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
 
   return (
-    <header className="border-b border-border bg-white sticky top-0 z-50">
-      <div className="container-wide flex items-center justify-between h-20">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 hover:opacity-90 transition-opacity">
+    <header className="site-header">
+      <div className="container-wide header-row">
+        <Link href="/" className="brand-link" aria-label={`${SITE_CONFIG.name}, inicio`}>
           <Image
             src="/images/logo.png"
-            alt={SITE_CONFIG.name}
-            width={48}
-            height={48}
-            className="h-12 w-auto"
+            alt=""
+            width={54}
+            height={54}
+            className="brand-mark"
             priority
           />
-          <span className="text-primary font-bold text-sm leading-tight hidden sm:block">
-            ESTUDIO<br />JURÍDICO LABORAL
+          <span className="brand-wordmark" aria-hidden="true">
+            <span>Estudio</span>
+            Jurídico Laboral
           </span>
         </Link>
 
-        {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-6">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-sm text-text-muted hover:text-primary transition-colors"
-              aria-current={pathname === link.href ? 'page' : undefined}
-            >
-              {link.label}
-            </Link>
-          ))}
-          <Link
-            href="/contacto"
-            className="bg-primary text-white text-sm px-4 py-2 rounded-md font-semibold hover:bg-primary-light transition-colors"
-          >
-            Contacto
+        <nav className="desktop-nav" aria-label="Navegación principal">
+          {NAV_LINKS.map((link) => {
+            const current = isCurrentPath(pathname, link.href);
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`nav-link${current ? ' is-current' : ''}`}
+                aria-current={current ? 'page' : undefined}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+          <Link href="/contacto" className="header-cta">
+            Solicitar evaluación
           </Link>
         </nav>
 
-        {/* Mobile hamburger */}
         <button
-          className="lg:hidden p-2"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Menú"
+          className="menu-toggle"
+          type="button"
+          onClick={() => setMobileOpen((open) => !open)}
+          aria-label={mobileOpen ? 'Cerrar menú' : 'Abrir menú'}
+          aria-expanded={mobileOpen}
+          aria-controls="mobile-navigation"
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            {mobileOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            )}
-          </svg>
+          <span aria-hidden="true" className={`menu-icon${mobileOpen ? ' is-open' : ''}`}>
+            <span />
+            <span />
+          </span>
         </button>
       </div>
 
-      {/* Mobile nav */}
-      {mobileOpen && (
-        <nav className="lg:hidden border-t border-border bg-white px-4 py-4 space-y-3">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="block text-text-muted hover:text-primary transition-colors py-1"
-              onClick={() => setMobileOpen(false)}
-              aria-current={pathname === link.href ? 'page' : undefined}
-            >
-              {link.label}
-            </Link>
-          ))}
-          <Link
-            href="/contacto"
-            className="block bg-primary text-white text-center px-4 py-2 rounded-md font-semibold hover:bg-primary-light transition-colors"
-            onClick={() => setMobileOpen(false)}
-          >
-            Contacto
+      <nav
+        id="mobile-navigation"
+        className={`mobile-nav${mobileOpen ? ' is-open' : ''}`}
+        aria-label="Navegación móvil"
+        hidden={!mobileOpen}
+      >
+        <div className="container-wide mobile-nav-inner">
+          {NAV_LINKS.map((link) => {
+            const current = isCurrentPath(pathname, link.href);
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`mobile-nav-link${current ? ' is-current' : ''}`}
+                aria-current={current ? 'page' : undefined}
+                onClick={() => setMobileOpen(false)}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+          <Link href="/contacto" className="header-cta mobile-cta" onClick={() => setMobileOpen(false)}>
+            Solicitar evaluación
           </Link>
-        </nav>
-      )}
+        </div>
+      </nav>
     </header>
   );
 }

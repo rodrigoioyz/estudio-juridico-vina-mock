@@ -24,7 +24,7 @@ export function Footer() {
 
         {/* Navegación */}
         <div>
-          <h4 className="text-white font-semibold mb-3">Navegación</h4>
+          <p className="text-white font-semibold mb-3">Navegación</p>
           <nav className="space-y-2 text-sm">
             <Link href="/estudio" className="block hover:text-white transition-colors">
               El Estudio
@@ -46,14 +46,21 @@ export function Footer() {
 
         {/* Contacto */}
         <div>
-          <h4 className="text-white font-semibold mb-3">Contacto</h4>
+          <p className="text-white font-semibold mb-3">Contacto</p>
           <div className="space-y-2 text-sm">
             <p>
               <a href={`mailto:${SITE_CONFIG.contact.email}`} className="hover:text-white transition-colors">
                 {SITE_CONFIG.contact.email}
               </a>
             </p>
-            <Link href="/contacto" className="inline-block text-accent hover:text-white transition-colors font-semibold mt-2">
+            {SITE_CONFIG.contact.phone && (
+              <p>
+                <a href={`tel:${SITE_CONFIG.contact.phone}`} className="hover:text-white transition-colors">
+                  {SITE_CONFIG.contact.phone}
+                </a>
+              </p>
+            )}
+            <Link href="/contacto" className="inline-block text-white hover:underline transition-colors font-semibold mt-2">
               Formulario de contacto →
             </Link>
           </div>

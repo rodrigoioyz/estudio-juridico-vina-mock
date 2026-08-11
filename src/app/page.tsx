@@ -1,14 +1,15 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import type { Metadata } from 'next';
 import { SITE_CONFIG, PRACTICE_AREAS } from '@/lib/site-config';
 import { ScrollReveal } from '@/components/motion/scroll-reveal';
+import { HeroMedia } from '@/components/sections/hero-media';
 
 export const metadata: Metadata = {
   title: `${SITE_CONFIG.name} — ${SITE_CONFIG.location.city}`,
   description:
     'Estudio especializado exclusivamente en Derecho del Trabajo en Viña del Mar. ' +
     'Litigación, asesoría preventiva y representación de trabajadores, empresas y organizaciones sindicales.',
+  alternates: { canonical: '/' },
   openGraph: {
     title: `${SITE_CONFIG.name} — Derecho del Trabajo en ${SITE_CONFIG.location.city}`,
     description:
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
       'representación de trabajadores, empresas y sindicatos.',
     type: 'website',
     locale: 'es_CL',
+    url: '/',
   },
 };
 
@@ -68,30 +70,7 @@ export default function HomePage() {
             Doctrina del estudio citada por la Dirección del Trabajo.
           </p>
         </div>
-        <div className="hero-home-media">
-          <video
-            className="hero-video"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
-            poster="/images/fotos/vina-del-mar.jpg"
-            aria-label="Video de la costa de Viña del Mar al amanecer: oleaje suave contra los acantilados"
-          >
-            {/* media: en móvil se sirve solo el poster (datos + Lighthouse) */}
-            <source src="/videos/hero-vina-del-mar-12s.mp4" type="video/mp4" media="(min-width: 768px)" />
-          </video>
-          <div className="hero-overlay" aria-hidden="true" />
-          <Image
-            src="/images/fotos/vina-del-mar.jpg"
-            alt="Costa de Viña del Mar al amanecer: el Pacífico en calma y la casona blanca sobre los acantilados"
-            className="hero-fallback"
-            fill
-            sizes="100vw"
-            priority
-          />
-        </div>
+        <HeroMedia />
       </section>
 
       {/* ── 2. Prueba — franja de trayectoria institucional ── */}

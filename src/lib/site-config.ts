@@ -1,6 +1,22 @@
 // lib/site-config.ts
 // Constantes del sitio. Fuente única de verdad para datos institucionales.
 
+const DEFAULT_PUBLIC_EMAIL = 'contacto@estudiojuridicolaboral.cl';
+const DEFAULT_PUBLIC_URL = 'https://estudiojuridicolaboral.cl';
+
+export function getPublicSiteUrl(value?: string, isDevelopment = process.env.NODE_ENV === 'development'): string {
+  const candidate = value?.trim().replace(/\/$/, '');
+  if (isDevelopment && candidate) return candidate;
+  if (!candidate || /localhost|127\.0\.0\.1/i.test(candidate)) return DEFAULT_PUBLIC_URL;
+  return candidate;
+}
+
+export function getPublicContactEmail(value?: string): string {
+  const candidate = value?.trim();
+  if (!candidate || /\.local$/i.test(candidate)) return DEFAULT_PUBLIC_EMAIL;
+  return candidate;
+}
+
 export const SITE_CONFIG = {
   name: 'Estudio Jurídico Laboral',
   shortName: 'EJL',
@@ -9,16 +25,16 @@ export const SITE_CONFIG = {
     'Estudio especializado en Derecho del Trabajo en Viña del Mar. ' +
     'Asesoría preventiva y representación judicial para trabajadores, empresas y sindicatos. ' +
     'Litigación ante Juzgados del Trabajo, Corte de Apelaciones y Corte Suprema.',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://estudiojuridicolaboral.cl',
+  url: getPublicSiteUrl(process.env.NEXT_PUBLIC_SITE_URL),
   location: {
     city: 'Viña del Mar',
     region: 'Región de Valparaíso',
     country: 'Chile',
   },
   contact: {
-    email: process.env.CONTACT_EMAIL_TO || 'contacto@estudiojuridicolaboral.cl',
-    phone: '+56 9 XXXX XXXX', // Validar con el cliente
-    whatsapp: '569XXXXXXXX', // Validar con el cliente
+    email: getPublicContactEmail(process.env.NEXT_PUBLIC_CONTACT_EMAIL),
+    phone: process.env.NEXT_PUBLIC_CONTACT_PHONE || null,
+    whatsapp: process.env.NEXT_PUBLIC_CONTACT_WHATSAPP || null,
   },
   social: {
     linkedin: '', // Validar

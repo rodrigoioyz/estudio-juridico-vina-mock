@@ -5,7 +5,16 @@ import securityPlugin from "eslint-plugin-security";
 export default tseslint.config(
   // Ignorar generados
   {
-    ignores: [".next/**", "node_modules/**", "out/**", "build/**", "coverage/**", "next-env.d.ts"],
+    ignores: [
+      ".next/**",
+      ".backups/**",
+      ".hermes/**",
+      "node_modules/**",
+      "out/**",
+      "build/**",
+      "coverage/**",
+      "next-env.d.ts",
+    ],
   },
   // Next.js recommended
   {

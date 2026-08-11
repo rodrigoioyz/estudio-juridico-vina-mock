@@ -9,6 +9,7 @@ out/
 
 # Backups manuales
 .backups/
+.hermes/
 
 # OS
 .DS_Store

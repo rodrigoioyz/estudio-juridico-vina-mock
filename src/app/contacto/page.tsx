@@ -4,88 +4,75 @@ import { SITE_CONFIG } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: 'Contacto',
-  description: 'Solicite una evaluación de su caso laboral. Atención en Viña del Mar y todo Chile.',
+  description: 'Solicite una evaluación de su caso laboral. Atención en Viña del Mar y en todo Chile.',
+  alternates: { canonical: '/contacto' },
+  openGraph: { url: '/contacto' },
 };
 
 export default function ContactoPage() {
   return (
     <>
-      {/* ── Hero ────────────────────────────────────────── */}
-      <section className="bg-primary text-white py-20">
+      <section className="internal-hero contact-hero">
         <div className="container-narrow">
-          <h1 className="text-white text-4xl font-bold mb-6">Contacto</h1>
-          <p className="text-xl text-white/80 leading-relaxed max-w-2xl">
-            Complete el formulario y le responderemos con una evaluación honesta
-            de su caso. Sin compromiso.
+          <p className="eyebrow">Primer paso</p>
+          <h1>Conversemos sobre su situación laboral.</h1>
+          <p className="internal-hero-dek">
+            Comparta los antecedentes esenciales. Le responderemos con claridad sobre los próximos pasos posibles.
           </p>
         </div>
       </section>
 
-      {/* ── Formulario + Info ────────────────────────────── */}
-      <section className="section-white">
-        <div className="container-wide">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Formulario */}
-            <div>
-              <ContactForm />
-            </div>
-
-            {/* Info de contacto */}
-            <div className="lg:pl-8">
-              <h2 className="section-title" style={{ fontSize: '1.5rem' }}>Información de contacto</h2>
-
-              <div className="space-y-4 text-text-muted" style={{ marginTop: '2rem' }}>
-                <div>
-                  <strong className="text-text">Dirección:</strong>
-                  <br />
-                  Viña del Mar, Región de Valparaíso, Chile
-                </div>
-
-                <div>
-                  <strong className="text-text">Teléfono:</strong>
-                  <br />
-                  <a href={`tel:${SITE_CONFIG.contact.phone}`} className="hover:text-primary">
-                    {SITE_CONFIG.contact.phone}
-                  </a>
-                </div>
-
-                <div>
-                  <strong className="text-text">WhatsApp:</strong>
-                  <br />
-                  <a
-                    href={`https://wa.me/${SITE_CONFIG.contact.whatsapp}`}
-                    className="hover:text-primary"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    +{SITE_CONFIG.contact.whatsapp}
-                  </a>
-                </div>
-
-                <div>
-                  <strong className="text-text">Email:</strong>
-                  <br />
-                  <a href={`mailto:${SITE_CONFIG.contact.email}`} className="hover:text-primary">
-                    {SITE_CONFIG.contact.email}
-                  </a>
-                </div>
-
-                <div>
-                  <strong className="text-text">Horario:</strong>
-                  <br />
-                  Lunes a viernes, 9:00 – 18:00 hrs
-                </div>
-              </div>
-
-              <div className="mt-8 p-6 bg-surface-alt rounded-lg">
-                <h3 className="text-lg mb-2">Atención en todo Chile</h3>
-                <p className="text-text-muted text-sm">
-                  Atendemos de forma presencial en Viña del Mar y también por
-                  videollamada para clientes en otras regiones del país.
-                </p>
-              </div>
-            </div>
+      <section className="contact-section">
+        <div className="container-wide contact-layout">
+          <div className="contact-form-column">
+            <ContactForm />
           </div>
+
+          <aside className="contact-information" aria-labelledby="contact-information-title">
+            <p className="eyebrow">Información práctica</p>
+            <h2 id="contact-information-title">Atención desde Viña del Mar</h2>
+            <p className="contact-information-dek">
+              Reuniones presenciales en Viña del Mar y por videollamada para personas y organizaciones de otras regiones de Chile.
+            </p>
+
+            <dl className="contact-details">
+              <div>
+                <dt>Ubicación</dt>
+                <dd>Viña del Mar<br />Región de Valparaíso, Chile</dd>
+              </div>
+              <div>
+                <dt>Correo</dt>
+                <dd><a href={`mailto:${SITE_CONFIG.contact.email}`}>{SITE_CONFIG.contact.email}</a></dd>
+              </div>
+              {SITE_CONFIG.contact.phone && (
+                <div>
+                  <dt>Teléfono</dt>
+                  <dd><a href={`tel:${SITE_CONFIG.contact.phone}`}>{SITE_CONFIG.contact.phone}</a></dd>
+                </div>
+              )}
+              {SITE_CONFIG.contact.whatsapp && (
+                <div>
+                  <dt>WhatsApp</dt>
+                  <dd>
+                    <a href={`https://wa.me/${SITE_CONFIG.contact.whatsapp}`} target="_blank" rel="noopener noreferrer">
+                      +{SITE_CONFIG.contact.whatsapp}
+                    </a>
+                  </dd>
+                </div>
+              )}
+              <div>
+                <dt>Horario</dt>
+                <dd>Lunes a viernes<br />9:00–18:00</dd>
+              </div>
+            </dl>
+
+            <div className="confidentiality-note">
+              <span aria-hidden="true">§</span>
+              <p>
+                La información enviada se trata de forma confidencial. El contacto inicial no constituye aceptación del caso ni genera una relación abogado-cliente.
+              </p>
+            </div>
+          </aside>
         </div>
       </section>
     </>

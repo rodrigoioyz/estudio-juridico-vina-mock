@@ -66,12 +66,13 @@ Archivo canónico de tokens de este proyecto. Sigue la estructura de 3 capas de 
 
 ### 3.2 Tipografía
 
-| Token | ¿Declarado en `:root`? | Valor efectivo |
+| Token | Declarado en `:root` | Valor efectivo |
 |---|---|---|
-| `--font-display` | ❌ No. Depende de fallback inline. | `var(--font-display, 'Libre Baskerville'), Georgia, 'Times New Roman', serif` |
-| `--font-body` | ❌ No. Depende de fallback inline. | `var(--font-body, 'Source Sans 3'), system-ui, -apple-system, sans-serif` |
+| `--font-display` | ✅ Sí | `'Libre Baskerville'`, con Georgia y serif como fallback |
+| `--font-display-italic` | ✅ Sí | `'Libre Baskerville'`, con Georgia y serif como fallback |
+| `--font-body` | ✅ Sí | `'Source Sans 3'`, con `system-ui` y sans-serif como fallback |
 
-**⚠️ Ambos tokens se *consumen* en `globals.css` pero nunca se *declaran*.** Siempre caen al fallback. Deberían promoverse a `:root` para que el sistema de tokens sea completo.
+Los tokens tipográficos están declarados en `:root` y se consumen en todo el sistema editorial. El sitio no carga fuentes remotas en tiempo de ejecución: si las familias de marca no están disponibles, usa fallbacks seguros sin bloquear el render.
 
 ### 3.3 Motion
 
@@ -134,13 +135,24 @@ Estos son los nombres **reales** que usa `globals.css`. Cada uno resuelve a un p
 | `.hero-sub` | `color: var(--slate-600)` | primitivo directo |
 | `.cta-primary` | `background: var(--navy-800)` | `var(--primary)` |
 | `.cta-accent` | `background: var(--sand-300)` | primitivo directo |
-| `.cta-accent:hover` | `background: #cdbb9c` ⚠️ | **hardcodeado**, no tokenizado |
+| `.cta-accent:hover` | `color-mix(in srgb, var(--sand-300), white 8%)` | derivado del token, sin hex paralelo |
 | `.signature-rule` | `background: var(--sand-300)` | primitivo directo |
 | `.ruled-link` | `color: var(--navy-800)` | `var(--primary)` |
 | `.final-cta` | `background: var(--navy-900)` | primitivo directo |
 | `.final-title` | `color: var(--white)` | `var(--white)` |
 
-La extracción de estos a tokens de componente (ej. `--button-primary-bg`, `--hero-text`) es trabajo pendiente. Hasta que se haga, el front usa directamente las capas 1 y 2, y este documento refleja ese estado real.
+La extracción de estos a tokens de componente (ej. `--button-primary-bg`, `--hero-text`) queda reservada para cuando exista reutilización que la justifique. Hasta entonces, el front usa directamente las capas 1 y 2 y evita una capa especulativa.
+
+### 5.1 Componentes editoriales vigentes
+
+- **Header institucional:** logo, wordmark, navegación activa con regla arena y CTA único “Solicitar evaluación”.
+- **Hero de inicio:** split 7/5, fotografía LCP y video diferido tras idle/viewport; sin video en móvil o reduced motion.
+- **Tres públicos:** lista regida por hairlines; no tarjetas homogéneas.
+- **Índice de áreas:** introducción sticky e índice editorial.
+- **Publicaciones:** lista numerada con imagen 16:9, metadata y lectura jerarquizada.
+- **Artículo:** hero navy, imagen editorial, aside sticky y cuerpo limitado a 68ch.
+- **Formulario:** grilla de dos columnas en desktop, estados accesibles y bloque de confidencialidad.
+- **Firma visual:** regla arena en momentos de jerarquía; el acento cálido sigue limitado a aproximadamente 10%.
 
 ---
 

@@ -1,35 +1,37 @@
 import type { MetadataRoute } from 'next';
-import { PRACTICE_AREAS } from '@/lib/site-config';
+import { PRACTICE_AREAS, SITE_CONFIG } from '@/lib/site-config';
+import articles from '@/app/publicaciones/articles-listing.json';
+
+const LAST_CONTENT_UPDATE = new Date('2026-08-07');
+
+export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://estudiojuridicolaboral.cl';
+  const baseUrl = SITE_CONFIG.url;
 
-  const staticRoutes = [
-    { url: baseUrl, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 1 },
-    { url: `${baseUrl}/estudio`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.9 },
-    { url: `${baseUrl}/areas`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.9 },
-    { url: `${baseUrl}/equipo`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.7 },
-    { url: `${baseUrl}/empresas`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.8 },
-    { url: `${baseUrl}/publicaciones`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.8 },
-    { url: `${baseUrl}/contacto`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.6 },
+  const staticRoutes: MetadataRoute.Sitemap = [
+    { url: baseUrl, lastModified: LAST_CONTENT_UPDATE, changeFrequency: 'weekly', priority: 1 },
+    { url: `${baseUrl}/estudio`, lastModified: LAST_CONTENT_UPDATE, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${baseUrl}/areas`, lastModified: LAST_CONTENT_UPDATE, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${baseUrl}/equipo`, lastModified: LAST_CONTENT_UPDATE, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/empresas`, lastModified: LAST_CONTENT_UPDATE, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/publicaciones`, lastModified: LAST_CONTENT_UPDATE, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${baseUrl}/contacto`, lastModified: LAST_CONTENT_UPDATE, changeFrequency: 'monthly', priority: 0.6 },
   ];
 
-  const areaRoutes = PRACTICE_AREAS.map((area) => ({
+  const areaRoutes: MetadataRoute.Sitemap = PRACTICE_AREAS.map((area) => ({
     url: `${baseUrl}/areas/${area.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
+    lastModified: LAST_CONTENT_UPDATE,
+    changeFrequency: 'monthly',
     priority: 0.7,
   }));
 
-  // TODO: generar dinámicamente desde content/publicaciones/
-  const publicacionesRoutes = [
-    {
-      url: `${baseUrl}/publicaciones/ejemplo-articulo`,
-      lastModified: new Date('2026-08-01'),
-      changeFrequency: 'monthly' as const,
-      priority: 0.6,
-    },
-  ];
+  const publicationRoutes: MetadataRoute.Sitemap = articles.map((article) => ({
+    url: `${baseUrl}/publicaciones/${article.slug}`,
+    lastModified: new Date(article.date),
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
 
-  return [...staticRoutes, ...areaRoutes, ...publicacionesRoutes];
+  return [...staticRoutes, ...areaRoutes, ...publicationRoutes];
 }

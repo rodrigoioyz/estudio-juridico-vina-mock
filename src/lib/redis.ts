@@ -41,7 +41,41 @@ export interface RateLimitStore {
   get(key: string): Promise<string | null>;
 }
 
+interface MemoryEntry {
+  value: number;
+  expiresAt: number;
+}
+
+const memoryEntries = new Map<string, MemoryEntry>();
+
+function getMemoryStore(): RateLimitStore {
+  return {
+    async incr(key) {
+      const now = Date.now();
+      const existing = memoryEntries.get(key);
+      const value = !existing || existing.expiresAt <= now ? 1 : existing.value + 1;
+      memoryEntries.set(key, { value, expiresAt: existing?.expiresAt && existing.expiresAt > now ? existing.expiresAt : now + 300_000 });
+      return value;
+    },
+    async expire(key, seconds) {
+      const existing = memoryEntries.get(key);
+      if (existing) memoryEntries.set(key, { ...existing, expiresAt: Date.now() + seconds * 1000 });
+    },
+    async get(key) {
+      const existing = memoryEntries.get(key);
+      if (!existing || existing.expiresAt <= Date.now()) {
+        memoryEntries.delete(key);
+        return null;
+      }
+      return String(existing.value);
+    },
+  };
+}
+
 export async function getRateLimitStore(): Promise<RateLimitStore> {
+  const hasVercelKv = Boolean(process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN);
+  if (!isDev && !hasVercelKv) return getMemoryStore();
+
   if (isDev) {
     const redis = await getIOredis();
     return {

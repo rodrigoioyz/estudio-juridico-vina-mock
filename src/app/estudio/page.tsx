@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { SITE_CONFIG } from '@/lib/site-config';
 
@@ -147,11 +148,13 @@ export default function EstudioPage() {
       <section className="section-paper">
         <div className="container-wide grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="rounded-lg overflow-hidden">
-            <img
+            <Image
               src="/images/fotos/pareja-abogados.jpg"
               alt="Abogados revisando documentos con el Código del Trabajo"
+              width={1200}
+              height={800}
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="w-full h-auto"
-              loading="lazy"
             />
           </div>
           <div>

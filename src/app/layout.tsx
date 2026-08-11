@@ -1,35 +1,12 @@
 import type { Metadata } from 'next';
-import { Libre_Baskerville, Source_Sans_3 } from 'next/font/google';
 import { SITE_CONFIG } from '@/lib/site-config';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import './globals.css';
 
-// Display serif del logo (design-system.md §3). 700 no tiene cursiva real en
-// Libre Baskerville: la instancia itálica va en variable separada para que el
-// énfasis en titulares use cursiva verdadera, no sintética.
-const displayFont = Libre_Baskerville({
-  weight: ['400', '700'],
-  style: ['normal'],
-  subsets: ['latin'],
-  variable: '--font-display',
-  display: 'swap',
-});
-
-const displayFontItalic = Libre_Baskerville({
-  weight: '400',
-  style: ['italic'],
-  subsets: ['latin'],
-  variable: '--font-display-italic',
-  display: 'swap',
-});
-
-// Body humanista (aprobado por Rodrigo, reemplaza a Inter como body).
-const bodyFont = Source_Sans_3({
-  subsets: ['latin'],
-  variable: '--font-body',
-  display: 'swap',
-});
+const siteUrl = SITE_CONFIG.url;
+const isGitHubPagesDemo = process.env.NEXT_PUBLIC_GITHUB_PAGES_DEMO === 'true';
+const isPublicSite = !isGitHubPagesDemo && /^https:\/\//.test(siteUrl) && !/localhost|127\.0\.0\.1/.test(siteUrl);
 
 export const metadata: Metadata = {
   title: {
@@ -37,50 +14,80 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_CONFIG.name}`,
   },
   description: SITE_CONFIG.description,
-  metadataBase: new URL(SITE_CONFIG.url),
-  robots: {
-    index: true,
-    follow: true,
-  },
+  metadataBase: new URL(siteUrl),
+  alternates: { canonical: '/' },
   openGraph: {
     type: 'website',
     locale: 'es_CL',
     siteName: SITE_CONFIG.name,
-    title: `${SITE_CONFIG.name} — Derecho del Trabajo en ${SITE_CONFIG.location.city}`,
-    description: SITE_CONFIG.description,
+    url: '/',
     images: [
       {
         url: '/images/fotos/vina-del-mar.jpg',
-        width: 1200,
-        height: 630,
-        alt: `Costa de Viña del Mar — ${SITE_CONFIG.name}`,
+        width: 1536,
+        height: 1024,
+        alt: 'Costa de Viña del Mar al amanecer',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${SITE_CONFIG.name} — Derecho del Trabajo`,
+    title: SITE_CONFIG.name,
     description: SITE_CONFIG.description,
     images: ['/images/fotos/vina-del-mar.jpg'],
   },
+  robots: {
+    index: isPublicSite,
+    follow: isPublicSite,
+    googleBot: { index: isPublicSite, follow: isPublicSite },
+  },
+  icons: {
+    icon: '/icon.png',
+    apple: '/apple-icon.png',
+  },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LegalService',
+  name: SITE_CONFIG.name,
+  description: SITE_CONFIG.description,
+  url: siteUrl,
+  image: `${siteUrl}/images/logo.png`,
+  email: SITE_CONFIG.contact.email,
+  ...(SITE_CONFIG.contact.phone ? { telephone: SITE_CONFIG.contact.phone } : {}),
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: SITE_CONFIG.location.city,
+    addressRegion: SITE_CONFIG.location.region,
+    addressCountry: 'CL',
+  },
+  areaServed: { '@type': 'Country', name: 'Chile' },
+  knowsAbout: [
+    'Derecho del Trabajo',
+    'Terminación del Contrato de Trabajo',
+    'Remuneraciones',
+    'Derechos Fundamentales',
+    'Relación Laboral',
+    'Derecho Colectivo',
+    'Litigación y Recursos',
+    'Accidentes Laborales',
+  ],
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="es-CL"
-      className={`${displayFont.variable} ${displayFontItalic.variable} ${bodyFont.variable}`}
-    >
+    <html lang="es-CL">
       <body className="flex flex-col min-h-screen">
-        <a href="#contenido" className="skip-link">
-          Saltar al contenido
+        <a href="#contenido-principal" className="skip-link">
+          Saltar al contenido principal
         </a>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
+        />
         <Header />
-        <main id="contenido" className="flex-1">
+        <main id="contenido-principal" className="flex-1" tabIndex={-1}>
           {children}
         </main>
         <Footer />

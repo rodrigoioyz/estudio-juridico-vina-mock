@@ -1,67 +1,153 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { SITE_CONFIG } from '@/lib/site-config';
+import articlesData from '../articles-data.json';
 
-// TODO: Reemplazar con carga real de MDX desde content/publicaciones/
-const PUBLICACIONES: Record<string, { title: string; date: string; area: string }> = {
-  'ejemplo-articulo': {
-    title: 'La regulación del sueldo en el Código del Trabajo',
-    date: '2026-08-01',
-    area: 'Remuneraciones',
-  },
-};
+interface ArticleData {
+  title: string;
+  date: string;
+  area: string;
+  meta_title: string;
+  meta_description: string;
+  image: string;
+  body_html: string;
+  slug: string;
+}
+
+const ARTICLE_ENTRIES = Object.entries(articlesData) as [string, ArticleData][];
+const ARTICLES = new Map(ARTICLE_ENTRIES);
+const ARTICLE_SLUGS = new Set(ARTICLES.keys());
+const dateFormatter = new Intl.DateTimeFormat('es-CL', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+  timeZone: 'UTC',
+});
 
 interface Props {
   params: Promise<{ slug: string }>;
 }
 
+function prepareArticleBody(html: string) {
+  const withoutHeading = html.replace(/^<h1\b[^>]*>[\s\S]*?<\/h1>\s*/i, '');
+  const withoutInlineSchema = withoutHeading.replace(
+    /<script\b[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/gi,
+    '',
+  );
+
+  return withoutInlineSchema.replace(/href=["']\/([^"'/]+)["']/g, (match, slug: string) =>
+    ARTICLE_SLUGS.has(slug) ? `href="/publicaciones/${slug}"` : match,
+  );
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  // eslint-disable-next-line security/detect-object-injection
-  const pub = PUBLICACIONES[slug];
-  if (!pub) return { title: 'Publicación no encontrada' };
-  return { title: pub.title };
+  const article = ARTICLES.get(slug);
+  if (!article) return { title: 'Publicación no encontrada', robots: { index: false } };
+
+  const canonical = `/publicaciones/${slug}`;
+  return {
+    title: article.meta_title || article.title,
+    description: article.meta_description,
+    alternates: { canonical },
+    openGraph: {
+      type: 'article',
+      url: canonical,
+      title: article.title,
+      description: article.meta_description,
+      publishedTime: article.date,
+      images: [{ url: article.image, width: 1024, height: 576, alt: article.title }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: article.title,
+      description: article.meta_description,
+      images: [article.image],
+    },
+  };
+}
+
+export async function generateStaticParams() {
+  return [...ARTICLES.keys()].map((slug) => ({ slug }));
 }
 
 export default async function PublicacionPage({ params }: Props) {
   const { slug } = await params;
-  // eslint-disable-next-line security/detect-object-injection
-  const pub = PUBLICACIONES[slug];
+  const article = ARTICLES.get(slug);
+  if (!article) notFound();
 
-  if (!pub) notFound();
+  const articleBody = prepareArticleBody(article.body_html);
+  const canonicalUrl = `${SITE_CONFIG.url}/publicaciones/${slug}`;
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: article.title,
+    description: article.meta_description,
+    datePublished: article.date,
+    dateModified: article.date,
+    image: `${SITE_CONFIG.url}${article.image}`,
+    mainEntityOfPage: canonicalUrl,
+    author: { '@type': 'Organization', name: SITE_CONFIG.name },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE_CONFIG.name,
+      logo: { '@type': 'ImageObject', url: `${SITE_CONFIG.url}/images/logo.png` },
+    },
+  };
 
   return (
-    <div className="container-narrow py-20">
-      <Link href="/publicaciones" className="text-primary hover:underline text-sm mb-4 inline-block">
-        ← Volver a Publicaciones
-      </Link>
-      <span className="text-xs text-primary font-semibold uppercase tracking-wide">
-        {pub.area}
-      </span>
-      <h1 className="mt-2 mb-2">{pub.title}</h1>
-      <time className="text-sm text-text-muted">{pub.date}</time>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd).replace(/</g, '\\u003c') }}
+      />
+      <header className="article-header">
+        <div className="container-narrow">
+          <Link href="/publicaciones" className="article-back">
+            <span aria-hidden="true">←</span> Publicaciones
+          </Link>
+          <div className="article-kicker">
+            <span>{article.area}</span>
+            <time dateTime={article.date}>{dateFormatter.format(new Date(article.date))}</time>
+          </div>
+          <h1>{article.title}</h1>
+          <p>{article.meta_description}</p>
+        </div>
+      </header>
 
-      <article className="prose max-w-none mt-8">
-        <p>
-          El contenido completo de esta publicación está en preparación.
-          Próximamente estará disponible el análisis completo de{' '}
-          <strong>{pub.title}</strong>.
-        </p>
-      </article>
-
-      <div className="mt-12 p-6 bg-surface-alt rounded-lg">
-        <h2 className="text-lg mb-2">¿Tiene dudas sobre esta materia?</h2>
-        <p className="text-text-muted mb-4">
-          Si necesita asesoría específica sobre {pub.area.toLowerCase()}, no dude
-          en contactarnos.
-        </p>
-        <Link
-          href="/contacto"
-          className="inline-block bg-primary text-white px-6 py-3 rounded-md font-semibold hover:bg-primary-light transition-colors"
-        >
-          Solicitar asesoría →
-        </Link>
+      <div className="article-media container-wide">
+        <Image
+          src={article.image}
+          alt=""
+          width={1024}
+          height={576}
+          sizes="(max-width: 900px) 100vw, 1024px"
+          priority
+        />
       </div>
-    </div>
+
+      <div className="article-layout container-wide">
+        <aside className="article-aside" aria-label="Información de la publicación">
+          <span className="eyebrow">Análisis jurídico</span>
+          <p>Publicado por el equipo de {SITE_CONFIG.name}.</p>
+          <Link href="/contacto" className="ruled-link">Consultar esta materia →</Link>
+        </aside>
+        <article className="article-prose" dangerouslySetInnerHTML={{ __html: articleBody }} />
+      </div>
+
+      <section className="article-cta" aria-labelledby="article-consultation">
+        <div className="container-narrow">
+          <p className="eyebrow">Su situación concreta</p>
+          <h2 id="article-consultation">El contexto cambia el análisis.</h2>
+          <p>
+            Esta publicación entrega información general. Una evaluación jurídica requiere revisar
+            fechas, documentos y objetivos específicos.
+          </p>
+          <Link href="/contacto" className="cta-accent">Solicitar evaluación</Link>
+        </div>
+      </section>
+    </>
   );
 }

@@ -1,9 +1,13 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { PRACTICE_AREAS } from '@/lib/site-config';
 import { notFound } from 'next/navigation';
 
-// ── Contenido real de cada área de práctica ──────────────
+export function generateStaticParams() {
+  return PRACTICE_AREAS.map(({ slug }) => ({ slug }));
+}
+
 // Basado en investigación de evidencia pública (documentos judiciales,
 // LinkedIn, publicaciones académicas, dictámenes de la DT).
 
@@ -344,11 +348,13 @@ export default async function AreaPage({ params }: Props) {
         <div className="container-narrow">
           {content?.image && (
             <div className="rounded-lg overflow-hidden mb-12">
-              <img
+              <Image
                 src={content.image}
                 alt={area.title}
+                width={1200}
+                height={800}
+                sizes="(max-width: 768px) 100vw, 768px"
                 className="w-full h-auto"
-                loading="lazy"
               />
             </div>
           )}
