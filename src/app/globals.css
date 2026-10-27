@@ -1368,3 +1368,19 @@ footer a { display: inline-flex; min-height: 44px; align-items: center; text-und
 @media (prefers-reduced-motion: reduce) {
   .team-photo { transition: none; }
 }
+
+/* ── Interiores: pilar numerado (editorial) ── */
+.pillar-num {
+  color: var(--sand-300);
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  margin-right: 0.6rem;
+}
+/* Lista editorial de servicios/compromisos (sin link a la derecha) */
+.ruled-row--no-link {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.6fr);
+}
+@media (max-width: 1023px) {
+  .ruled-row--no-link { grid-template-columns: 1fr; }
+}

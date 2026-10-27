@@ -331,16 +331,14 @@ export default async function AreaPage({ params }: Props) {
   return (
     <>
       {/* ── Hero del área ───────────────────────────────── */}
-      <section className="bg-primary text-white py-16">
+      <section className="internal-hero">
         <div className="container-narrow">
-          <Link
-            href="/areas"
-            className="text-white/60 hover:text-white text-sm inline-block mb-4 transition-colors"
-          >
-            ← Áreas de Práctica
+          <p className="eyebrow">Área de práctica</p>
+          <h1>{area.title}</h1>
+          <p className="internal-hero-dek">{area.description}</p>
+          <Link href="/areas" className="article-back" style={{ marginBottom: 0, marginTop: '2rem' }}>
+            <span aria-hidden="true">←</span> Todas las áreas
           </Link>
-          <h1 className="text-white text-3xl md:text-4xl font-bold mb-4">{area.title}</h1>
-          <p className="text-lg text-white/80">{area.description}</p>
         </div>
       </section>
 

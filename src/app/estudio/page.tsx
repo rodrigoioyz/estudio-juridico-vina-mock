@@ -9,21 +9,41 @@ export const metadata: Metadata = {
   description: `Conozca al ${SITE_CONFIG.name}. Especialistas en Derecho del Trabajo con más de una década de trayectoria en Viña del Mar.`,
 };
 
+const PILARES = [
+  {
+    number: '01',
+    title: 'Especialización',
+    body: 'Derecho Laboral como disciplina central y exclusiva. No ofrecemos familia, civil, penal ni otras materias. Todo lo que hacemos es Derecho del Trabajo, y esa concentración nos permite conocer los criterios de los tribunales, la jurisprudencia actualizada y las estrategias que funcionan en sala.',
+  },
+  {
+    number: '02',
+    title: 'Litigación',
+    body: 'Experiencia real y continuada ante Juzgados de Letras del Trabajo, Corte de Apelaciones de Valparaíso y Corte Suprema. El estudio ha intervenido en recursos de queja, procedimientos de tutela laboral y causas con estructuras empresariales complejas que involucran responsabilidad solidaria y unidad económica.',
+  },
+  {
+    number: '03',
+    title: 'Asesoría',
+    body: 'Atendemos a trabajadores, empresas y organizaciones sindicales. Esto nos permite conocer la relación laboral desde más de una posición, lo que se traduce en estrategias mejor informadas. La práctica incluye tanto la resolución de conflictos ya existentes como la prevención de contingencias futuras.',
+  },
+  {
+    number: '04',
+    title: 'Conocimiento',
+    body: 'La actividad profesional del estudio se complementa con investigación y producción académica en Derecho del Trabajo. Estas contribuciones incluyen trabajos doctrinales sobre regulación del sueldo y remuneraciones variables que han sido considerados por la Dirección del Trabajo en la construcción de su jurisprudencia administrativa.',
+  },
+] as const;
+
 export default function EstudioPage() {
   return (
     <>
-      {/* ── Hero ────────────────────────────────────────── */}
-      <section className="bg-primary text-white py-20">
+      {/* ── Hero editorial ─────────────────────────────────── */}
+      <section className="internal-hero">
         <div className="container-narrow">
-          <h1 className="text-white text-4xl font-bold mb-6">El Estudio</h1>
-          <p className="text-xl text-white/80 leading-relaxed max-w-3xl">
-            El Estudio Jurídico Laboral es una firma especializada en Derecho del Trabajo
-            que desarrolla asesoría preventiva y representación judicial para trabajadores,
-            empresas y organizaciones sindicales. Su práctica comprende conflictos derivados
-            de la terminación del contrato, despidos y autodespidos, remuneraciones y
-            prestaciones laborales, tutela de derechos fundamentales, reconocimiento de
-            relaciones laborales, accidentes del trabajo y enfermedades profesionales, así
-            como materias de derecho colectivo y negociación colectiva.
+          <p className="eyebrow">El estudio</p>
+          <h1>El Estudio</h1>
+          <p className="internal-hero-dek">
+            Una firma especializada exclusivamente en Derecho del Trabajo, con
+            asesoría preventiva y representación judicial para trabajadores,
+            empresas y organizaciones sindicales.
           </p>
         </div>
       </section>
@@ -60,41 +80,22 @@ export default function EstudioPage() {
         </div>
       </section>
 
-      {/* ── Los 4 pilares ────────────────────────────────── */}
+      {/* ── Los 4 pilares — lista editorial con reglas ── */}
       <section className="section-paper">
         <div className="container-wide">
-          <h2 className="section-title text-center">Lo que define nuestra práctica</h2>
-          <p className="section-dek text-center" style={{ marginLeft: 'auto', marginRight: 'auto' }}>
+          <h2 className="section-title">Lo que define nuestra práctica</h2>
+          <p className="section-dek">
             Cuatro componentes que distinguen al estudio en el ejercicio del Derecho del Trabajo.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto" style={{ marginTop: '3rem' }}>
-            {[
-              {
-                number: '1',
-                title: 'Especialización',
-                body: 'Derecho Laboral como disciplina central y exclusiva. No ofrecemos familia, civil, penal ni otras materias. Todo lo que hacemos es Derecho del Trabajo, y esa concentración nos permite conocer los criterios de los tribunales, la jurisprudencia actualizada y las estrategias que funcionan en sala.',
-              },
-              {
-                number: '2',
-                title: 'Litigación',
-                body: 'Experiencia real y continuada ante Juzgados de Letras del Trabajo, Corte de Apelaciones de Valparaíso y Corte Suprema. El estudio ha intervenido en recursos de queja, procedimientos de tutela laboral y causas con estructuras empresariales complejas que involucran responsabilidad solidaria y unidad económica.',
-              },
-              {
-                number: '3',
-                title: 'Asesoría',
-                body: 'Atendemos a trabajadores, empresas y organizaciones sindicales. Esto nos permite conocer la relación laboral desde más de una posición, lo que se traduce en estrategias mejor informadas. La práctica incluye tanto la resolución de conflictos ya existentes como la prevención de contingencias futuras.',
-              },
-              {
-                number: '4',
-                title: 'Conocimiento',
-                body: 'La actividad profesional del estudio se complementa con investigación y producción académica en Derecho del Trabajo. Estas contribuciones incluyen trabajos doctrinales sobre regulación del sueldo y remuneraciones variables que han sido considerados por la Dirección del Trabajo en la construcción de su jurisprudencia administrativa.',
-              },
-            ].map((pilar) => (
-              <div key={pilar.number} className="bg-white p-8 rounded-lg shadow-sm">
-                <span className="text-3xl font-bold text-primary/20">{pilar.number}</span>
-                <h3 className="text-xl mt-2 mb-3">{pilar.title}</h3>
-                <p className="text-text-muted leading-relaxed">{pilar.body}</p>
+          <div className="ruled-list">
+            {PILARES.map((pilar) => (
+              <div key={pilar.number} className="ruled-row ruled-row--no-link">
+                <h3 className="font-display ruled-title">
+                  <span className="pillar-num nums" aria-hidden="true">{pilar.number}</span>
+                  {pilar.title}
+                </h3>
+                <p className="ruled-body">{pilar.body}</p>
               </div>
             ))}
           </div>
@@ -148,7 +149,7 @@ export default function EstudioPage() {
       {/* ── Cómo trabajamos ──────────────────────────────── */}
       <section className="section-paper">
         <div className="container-wide grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="rounded-lg overflow-hidden">
+          <div className="overflow-hidden">
             <Image
               src={assetPath('/images/fotos/pareja-abogados.jpg')}
               alt="Abogados revisando documentos con el Código del Trabajo"
@@ -186,18 +187,15 @@ export default function EstudioPage() {
       </section>
 
       {/* ── CTA ──────────────────────────────────────────── */}
-      <section className="section-white text-center">
+      <section className="final-cta">
         <div className="container-narrow">
-          <h2 className="section-title">¿Necesita asesoría en Derecho del Trabajo?</h2>
-          <p className="section-dek" style={{ marginLeft: 'auto', marginRight: 'auto' }}>
+          <h2 className="font-display final-title">¿Necesita asesoría en Derecho del Trabajo?</h2>
+          <p className="final-sub">
             Solicite una evaluación de su caso. Le diremos con claridad si existe un caso,
             qué puede obtener y cómo proceder.
           </p>
-          <Link
-            href="/contacto"
-            className="cta-primary"
-          >
-            Solicitar evaluación →
+          <Link href="/contacto" className="cta-accent">
+            Solicitar evaluación
           </Link>
         </div>
       </section>

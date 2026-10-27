@@ -7,14 +7,30 @@ export const metadata: Metadata = {
     'Asesoría preventiva, cumplimiento normativo y representación judicial para empleadores. Derecho del Trabajo para empresas en Viña del Mar y todo Chile.',
 };
 
+const SERVICIOS = [
+  {
+    title: 'Asesoría Preventiva',
+    body: 'Evaluamos la solidez jurídica de las decisiones laborales antes de que se conviertan en conflictos. Revisamos la causal invocada, redactamos cartas de término de contrato y diseñamos la estrategia preventiva adecuada para cada situación. Una decisión mal fundada puede costar indemnizaciones con recargos, multas y un juicio evitable.',
+  },
+  {
+    title: 'Cumplimiento Normativo',
+    body: 'Acompañamos a las empresas en la adecuación de sus procesos a la normativa laboral vigente, reduciendo la exposición a contingencias y fiscalizaciones. Esto incluye auditorías de cumplimiento, implementación de protocolos exigidos por la ley —como los relativos a la Ley Karin sobre acoso laboral y sexual— y due diligence laboral en procesos de reorganización empresarial.',
+  },
+  {
+    title: 'Representación Judicial',
+    body: 'Defensa técnica ante el Juzgado de Letras del Trabajo, la Inspección del Trabajo y, cuando corresponde, tribunales superiores. El estudio tiene experiencia en controversias que involucran estructuras empresariales complejas, incluyendo subcontratación, empresas relacionadas y responsabilidad solidaria.',
+  },
+] as const;
+
 export default function EmpresasPage() {
   return (
     <>
-      {/* ── Hero ────────────────────────────────────────── */}
-      <section className="bg-primary text-white py-20">
+      {/* ── Hero editorial ─────────────────────────────────── */}
+      <section className="internal-hero">
         <div className="container-narrow">
-          <h1 className="text-white text-4xl font-bold mb-6">Servicios para Empresas</h1>
-          <p className="text-xl text-white/80 leading-relaxed max-w-3xl">
+          <p className="eyebrow">Empleadores</p>
+          <h1>Servicios para Empresas</h1>
+          <p className="internal-hero-dek">
             Asesoramos a empleadores en la gestión y defensa de controversias laborales.
             Evaluamos la solidez jurídica de las decisiones antes de que se conviertan en
             conflictos y representamos a la empresa ante el Juzgado de Letras del Trabajo
@@ -23,27 +39,23 @@ export default function EmpresasPage() {
         </div>
       </section>
 
-      {/* ── Servicios ───────────────────────────────────── */}
+      {/* ── Servicios — lista editorial con reglas ── */}
       <section className="section-white">
         <div className="container-wide">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: 'Asesoría Preventiva',
-                body: 'Evaluamos la solidez jurídica de las decisiones laborales antes de que se conviertan en conflictos. Revisamos la causal invocada, redactamos cartas de término de contrato y diseñamos la estrategia preventiva adecuada para cada situación. Una decisión mal fundada puede costar indemnizaciones con recargos, multas y un juicio evitable.',
-              },
-              {
-                title: 'Cumplimiento Normativo',
-                body: 'Acompañamos a las empresas en la adecuación de sus procesos a la normativa laboral vigente, reduciendo la exposición a contingencias y fiscalizaciones. Esto incluye auditorías de cumplimiento, implementación de protocolos exigidos por la ley —como los relativos a la Ley Karin sobre acoso laboral y sexual— y due diligence laboral en procesos de reorganización empresarial.',
-              },
-              {
-                title: 'Representación Judicial',
-                body: 'Defensa técnica ante el Juzgado de Letras del Trabajo, la Inspección del Trabajo y, cuando corresponde, tribunales superiores. El estudio tiene experiencia en controversias que involucran estructuras empresariales complejas, incluyendo subcontratación, empresas relacionadas y responsabilidad solidaria.',
-              },
-            ].map((servicio) => (
-              <div key={servicio.title} className="border border-border rounded-lg p-8 hover:shadow-md transition-shadow">
-                <h2 className="text-xl font-bold mb-4">{servicio.title}</h2>
-                <p className="text-text-muted leading-relaxed">{servicio.body}</p>
+          <h2 className="section-title">Lo que ofrecemos a su empresa</h2>
+          <p className="section-dek">
+            Tres líneas de trabajo que se complementan: antes del conflicto, en el
+            cumplimiento y en el tribunal.
+          </p>
+
+          <div className="ruled-list">
+            {SERVICIOS.map((servicio, i) => (
+              <div key={servicio.title} className="ruled-row ruled-row--no-link">
+                <h3 className="font-display ruled-title">
+                  <span className="pillar-num nums" aria-hidden="true">0{i + 1}</span>
+                  {servicio.title}
+                </h3>
+                <p className="ruled-body">{servicio.body}</p>
               </div>
             ))}
           </div>
@@ -53,29 +65,47 @@ export default function EmpresasPage() {
       {/* ── Dos caras del servicio ──────────────────────── */}
       <section className="section-paper">
         <div className="container-wide">
-          <h2 className="section-title text-center">
-            Dos caras de un mismo servicio
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto" style={{ marginTop: '3rem' }}>
-            <div className="bg-white p-8 rounded-lg shadow-sm">
-              <h3 className="text-xl font-bold mb-3">Contenciosa</h3>
+          <h2 className="section-title">Dos caras de un mismo servicio</h2>
+          <p className="section-dek">
+            La defensa de la empresa puede ser contenciosa o preventiva. Ambas exigen el
+            mismo rigor jurídico.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8" style={{ marginTop: '2rem' }}>
+            <div>
+              <h3 className="font-display text-xl mb-3">Contenciosa</h3>
               <p className="text-text-muted mb-4">Cuando el conflicto ya existe:</p>
-              <ul className="space-y-2 text-text-muted">
-                <li>• Defensa en demandas laborales</li>
-                <li>• Representación en audiencias</li>
-                <li>• Negociación y conciliación</li>
-                <li>• Recursos ante tribunales superiores</li>
-              </ul>
+              <div className="ruled-list">
+                <div className="ruled-row ruled-row--no-link" style={{ padding: '0.9rem 0' }}>
+                  <span className="ruled-title" style={{ fontSize: '1rem' }}>Defensa en demandas laborales</span>
+                </div>
+                <div className="ruled-row ruled-row--no-link" style={{ padding: '0.9rem 0' }}>
+                  <span className="ruled-title" style={{ fontSize: '1rem' }}>Representación en audiencias</span>
+                </div>
+                <div className="ruled-row ruled-row--no-link" style={{ padding: '0.9rem 0' }}>
+                  <span className="ruled-title" style={{ fontSize: '1rem' }}>Negociación y conciliación</span>
+                </div>
+                <div className="ruled-row ruled-row--no-link" style={{ padding: '0.9rem 0' }}>
+                  <span className="ruled-title" style={{ fontSize: '1rem' }}>Recursos ante tribunales superiores</span>
+                </div>
+              </div>
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-sm">
-              <h3 className="text-xl font-bold mb-3">Preventiva</h3>
+            <div>
+              <h3 className="font-display text-xl mb-3">Preventiva</h3>
               <p className="text-text-muted mb-4">Antes de que exista el juicio:</p>
-              <ul className="space-y-2 text-text-muted">
-                <li>• Revisión de decisiones laborales</li>
-                <li>• Análisis de causales de despido</li>
-                <li>• Adecuación normativa de procesos</li>
-                <li>• Prevención de contingencias</li>
-              </ul>
+              <div className="ruled-list">
+                <div className="ruled-row ruled-row--no-link" style={{ padding: '0.9rem 0' }}>
+                  <span className="ruled-title" style={{ fontSize: '1rem' }}>Revisión de decisiones laborales</span>
+                </div>
+                <div className="ruled-row ruled-row--no-link" style={{ padding: '0.9rem 0' }}>
+                  <span className="ruled-title" style={{ fontSize: '1rem' }}>Análisis de causales de despido</span>
+                </div>
+                <div className="ruled-row ruled-row--no-link" style={{ padding: '0.9rem 0' }}>
+                  <span className="ruled-title" style={{ fontSize: '1rem' }}>Adecuación normativa de procesos</span>
+                </div>
+                <div className="ruled-row ruled-row--no-link" style={{ padding: '0.9rem 0' }}>
+                  <span className="ruled-title" style={{ fontSize: '1rem' }}>Prevención de contingencias</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -110,7 +140,7 @@ export default function EmpresasPage() {
       {/* ── CTA ──────────────────────────────────────────── */}
       <section className="final-cta">
         <div className="container-narrow">
-          <h2 className="final-title">
+          <h2 className="font-display final-title">
             ¿Necesita asesoría laboral para su empresa?
           </h2>
           <p className="final-sub">
