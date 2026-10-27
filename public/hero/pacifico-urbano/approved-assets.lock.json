@@ -1,0 +1,82 @@
+{
+  "assets": [
+    {
+      "id": "al-borde-del-estero",
+      "commonsTitle": "File:Al borde del estero.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Al_borde_del_estero.jpg",
+      "author": "Mitchele Vidal Castro",
+      "license": "CC0-1.0",
+      "dimensions": {
+        "width": 1006,
+        "height": 567
+      },
+      "localFile": "sources/01-al-borde-del-estero.jpg",
+      "sha256": "e72722e4ffb512e4a301af72e1ac47e7a1c987e4fc208a3e57ce4b597a5ea10f"
+    },
+    {
+      "id": "edificio-copacabana",
+      "commonsTitle": "File:Edificio Copacabana - Viña del Mar.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Edificio_Copacabana_-_Vi%C3%B1a_del_Mar.jpg",
+      "author": "Mitchele Vidal Castro",
+      "license": "CC0-1.0",
+      "dimensions": {
+        "width": 607,
+        "height": 607
+      },
+      "localFile": "sources/02-edificio-copacabana.jpg",
+      "sha256": "f1fb05a415d03a94ffca52bb6b4b5a552f3ce98c9f65c58afde56712de2132f1"
+    },
+    {
+      "id": "muelle-vergara",
+      "commonsTitle": "File:Muelle Vergara - Viña del Mar.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Muelle_Vergara_-_Vi%C3%B1a_del_Mar.jpg",
+      "author": "Mitchele Vidal Castro",
+      "license": "CC0-1.0",
+      "dimensions": {
+        "width": 341,
+        "height": 607
+      },
+      "localFile": "sources/03-muelle-vergara.jpg",
+      "sha256": "5eb53aed5cc0c1e6af012c5e0fdd95ee1f9ce5d5684de4c5ecbb496c43e60aaa"
+    },
+    {
+      "id": "entre-arboles",
+      "commonsTitle": "File:Entre Arboles.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Entre_Arboles.jpg",
+      "author": "Davidcromero",
+      "license": "CC0-1.0",
+      "dimensions": {
+        "width": 1024,
+        "height": 768
+      },
+      "localFile": "sources/04-entre-arboles.jpg",
+      "sha256": "149a5d088c978f7edfbef6231a2d916b9a07f6cadada60127cfb53e2c9c1c9d4"
+    },
+    {
+      "id": "valparaiso-406",
+      "commonsTitle": "File:Valparaiso 406.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Valparaiso_406.jpg",
+      "author": "Andrés Leiva",
+      "license": "Public-Domain-Worldwide",
+      "dimensions": {
+        "width": 1936,
+        "height": 1288
+      },
+      "localFile": "sources/05-valparaiso-406.jpg",
+      "sha256": "190df1e6156293022f43b285bffdc4e98d30e629f6c98ab877d4e291a433e9cd"
+    },
+    {
+      "id": "valparaiso-at-night",
+      "commonsTitle": "File:080722-Valparaíso at Night.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:080722-Valpara%C3%ADso_at_Night.jpg",
+      "author": "Karora",
+      "license": "Public-Domain-Worldwide",
+      "dimensions": {
+        "width": 6402,
+        "height": 1709
+      },
+      "localFile": "sources/06-valparaiso-at-night.jpg",
+      "sha256": "585e06c9d5144df3bd843dee0668c5d9df11aeecc5426c520618756a6c6bfe61"
+    }
+  ]
+}
