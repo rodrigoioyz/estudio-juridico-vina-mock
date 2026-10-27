@@ -2,59 +2,54 @@
 
 import Image from 'next/image';
 import { assetPath } from '@/lib/asset-path';
-import { useEffect, useRef, useState } from 'react';
+import { HERO_MEDIA } from '@/lib/hero-media';
+import { useEffect, useState } from 'react';
 
 export function HeroMedia() {
-  const containerRef = useRef<HTMLDivElement>(null);
   const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
   const [videoReady, setVideoReady] = useState(false);
 
   useEffect(() => {
-    const node = containerRef.current;
-    if (!node) return;
-
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     const desktop = window.matchMedia('(min-width: 768px)');
-    if (reducedMotion.matches || !desktop.matches) return;
-
     let timeoutId: ReturnType<typeof setTimeout> | undefined;
-    let idleId: number | undefined;
-    const idleApi = window as unknown as {
-      requestIdleCallback?: (callback: () => void, options?: { timeout: number }) => number;
-      cancelIdleCallback?: (id: number) => void;
+
+    const cancelPendingLoad = () => {
+      if (timeoutId !== undefined) globalThis.clearTimeout(timeoutId);
+      timeoutId = undefined;
     };
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting) return;
-        observer.disconnect();
+    const syncVideoPolicy = () => {
+      cancelPendingLoad();
+      if (reducedMotion.matches || !desktop.matches) {
+        setShouldLoadVideo(false);
+        setVideoReady(false);
+        return;
+      }
 
-        const load = () => setShouldLoadVideo(true);
-        if (idleApi.requestIdleCallback) {
-          idleId = idleApi.requestIdleCallback(load, { timeout: 1800 });
-        } else {
-          timeoutId = globalThis.setTimeout(load, 900);
-        }
-      },
-      { rootMargin: '160px' },
-    );
+      timeoutId = globalThis.setTimeout(() => setShouldLoadVideo(true), 900);
+    };
 
-    observer.observe(node);
+    syncVideoPolicy();
+    reducedMotion.addEventListener('change', syncVideoPolicy);
+    desktop.addEventListener('change', syncVideoPolicy);
+
     return () => {
-      observer.disconnect();
-      if (timeoutId !== undefined) globalThis.clearTimeout(timeoutId);
-      if (idleId !== undefined) idleApi.cancelIdleCallback?.(idleId);
+      reducedMotion.removeEventListener('change', syncVideoPolicy);
+      desktop.removeEventListener('change', syncVideoPolicy);
+      cancelPendingLoad();
     };
   }, []);
 
   return (
-    <div ref={containerRef} className="hero-home-media">
+    <div className="hero-home-media">
       <Image
-        src={assetPath('/images/fotos/vina-del-mar.jpg')}
-        alt="Costa de Viña del Mar al amanecer: el Pacífico en calma y una casona blanca sobre los acantilados"
+        src={assetPath(HERO_MEDIA.poster)}
+        alt=""
+        aria-hidden="true"
         className="hero-fallback"
         fill
-        sizes="(max-width: 1023px) 100vw, 42vw"
+        sizes="100vw"
         priority
       />
       {shouldLoadVideo && (
@@ -65,14 +60,17 @@ export function HeroMedia() {
           loop
           playsInline
           preload="metadata"
-          poster={assetPath('/images/fotos/vina-del-mar.jpg')}
+          poster={assetPath(HERO_MEDIA.poster)}
           onCanPlay={() => setVideoReady(true)}
           aria-hidden="true"
           tabIndex={-1}
         >
-          <source src={assetPath('/videos/hero-vina-del-mar-12s.mp4')} type="video/mp4" />
+          {HERO_MEDIA.sources.map((source) => (
+            <source key={source.type} src={assetPath(source.src)} type={source.type} />
+          ))}
         </video>
       )}
+      <div className="hero-media-tint" aria-hidden="true" />
       <div className="hero-overlay" aria-hidden="true" />
     </div>
   );

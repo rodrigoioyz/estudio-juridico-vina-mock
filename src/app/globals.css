@@ -335,29 +335,31 @@ input, select, textarea {
   margin-bottom: 1.25rem;
 }
 
-/* ── Hero split ────────────────────────────────────── */
+/* ── Hero Pacífico urbano full-bleed ───────────────── */
 .hero-home {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
-  min-height: 92vh;
-  background: var(--surface);
+  isolation: isolate;
+  display: flex;
+  min-height: calc(100svh - 5.25rem);
+  background: var(--navy-900);
   overflow: hidden;
 }
 .hero-home-text {
+  position: relative;
+  z-index: 3;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  padding-top: 16vh; /* primer pixel del H1 ~20-24% del fold (recipe-landing) */
-  padding-bottom: 8vh;
-  padding-left: max(1rem, calc((100vw - 1200px) / 2 + 1rem));
-  padding-right: 3rem;
+  justify-content: center;
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding: 8rem clamp(1.25rem, 4vw, 3rem);
+  padding-right: min(46vw, 42rem);
 }
 .hero-title {
   font-size: clamp(2.25rem, 4vw, 3.25rem);
   line-height: 1.15;
   letter-spacing: -0.01em;
-  color: var(--navy-900);
+  color: var(--white);
   max-width: 16ch;
   text-wrap: balance;
   margin: 0;
@@ -377,7 +379,7 @@ input, select, textarea {
 .hero-sub {
   font-size: 1.25rem;
   line-height: 1.6;
-  color: var(--slate-600);
+  color: rgba(255, 255, 255, 0.84);
   max-width: 38ch;
   text-wrap: pretty;
   margin-bottom: 2.25rem;
@@ -390,40 +392,62 @@ input, select, textarea {
 }
 .hero-trust {
   font-size: 0.875rem;
-  color: var(--slate-600);
+  color: rgba(255, 255, 255, 0.76);
   margin: 0;
 }
 .hero-home-media {
-  position: relative;
-}
-.hero-home-media img {
   position: absolute;
+  z-index: 0;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 62% 50%;
-  animation: heroFade 400ms ease-out both;
 }
-@keyframes heroFade {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* Hero video: ocupa el mismo slot que la imagen; el poster (foto real)
-   es el LCP. Fallback estatico bajo prefers-reduced-motion. */
+.hero-home-media img,
 .hero-home-media video {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 62% 50%;
+  object-position: 58% 50%;
 }
-.hero-home-media .hero-fallback { display: none; }
+
+/* El poster es visible desde el primer paint. El video aparece solo cuando
+   puede reproducirse; móvil y reduced-motion conservan el poster local. */
+.hero-home-media .hero-fallback { display: block; }
+.hero-home-media .hero-video {
+  opacity: 0;
+  transition: opacity 500ms ease-out;
+}
+.hero-home-media .hero-video.is-ready { opacity: 1; }
+.hero-media-tint {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(5, 17, 42, 0.94) 0%, rgba(5, 17, 42, 0.82) 34%, rgba(5, 17, 42, 0.3) 66%, rgba(5, 17, 42, 0.08) 100%),
+    linear-gradient(180deg, rgba(5, 17, 42, 0.08) 55%, rgba(5, 17, 42, 0.44) 100%);
+  pointer-events: none;
+}
+.hero-overlay {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  pointer-events: none;
+}
+.hero-home .cta-primary {
+  background: var(--sand-300);
+  color: var(--navy-900);
+}
+.hero-home .cta-primary:hover { background: var(--sand-200); }
+.hero-home .cta-ghost {
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.58);
+}
+.hero-home .cta-ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--white);
+}
 @media (prefers-reduced-motion: reduce) {
   .hero-home-media video { display: none; }
-  .hero-home-media .hero-fallback { display: block; }
 }
 
 /* ── CTAs (jerarquía de 3 niveles, sin empates) ────── */
@@ -652,16 +676,26 @@ input, select, textarea {
 /* ── Responsive ────────────────────────────────────── */
 @media (max-width: 1023px) {
   .hero-home {
-    grid-template-columns: 1fr;
-    min-height: 0;
+    min-height: calc(100svh - 5.25rem);
   }
   .hero-home-text {
-    padding: 4.5rem 1.25rem 3rem;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 6rem 1.25rem 3.5rem;
   }
   .hero-title { max-width: 20ch; }
   .hero-home-media {
-    height: 52vh;
-    min-height: 320px;
+    height: auto;
+    min-height: 0;
+  }
+  .hero-home-media img,
+  .hero-home-media video {
+    object-position: 62% 50%;
+  }
+  .hero-media-tint {
+    background:
+      linear-gradient(180deg, rgba(5, 17, 42, 0.18) 0%, rgba(5, 17, 42, 0.56) 46%, rgba(5, 17, 42, 0.94) 100%),
+      linear-gradient(90deg, rgba(5, 17, 42, 0.55), rgba(5, 17, 42, 0.12));
   }
   .proof-strip-row {
     flex-direction: column;
@@ -1236,4 +1270,101 @@ footer a { display: inline-flex; min-height: 44px; align-items: center; text-und
   .publication-image,
   .nav-link::after,
   .menu-icon span { transition: none; }
+}
+
+/* ═══════════════════════════════════════════════════════
+   HOME — Dirección Constangy/Nossaman (2026-10-27)
+   Cifras de prueba, equipo destacado y feed de publicaciones.
+   Sobre los tokens existentes; variance 6, editorial.
+   ═══════════════════════════════════════════════════════ */
+
+/* ── Banda de cifras de prueba (mínimos históricos) ── */
+.metrics-band {
+  border-top: 1px solid var(--mist-200);
+  border-bottom: 1px solid var(--mist-200);
+  background: var(--surface);
+  padding: clamp(2.5rem, 5vw, 3.5rem) 0;
+}
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2.5rem;
+}
+.metric-value {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(2.25rem, 4vw, 3rem);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--navy-900);
+  font-variant-numeric: tabular-nums;
+}
+.metric-label {
+  margin-top: 0.55rem;
+  color: var(--slate-600);
+  font-size: 0.9rem;
+  line-height: 1.45;
+  max-width: 24ch;
+  text-wrap: pretty;
+}
+
+/* ── Equipo destacado (firma Constangy: foto + especialidad) ── */
+.team-feature { background: var(--surface); }
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.5rem;
+}
+.team-card { display: flex; flex-direction: column; min-width: 0; }
+.team-photo-wrap {
+  overflow: hidden;
+  background: var(--paper);
+  margin-bottom: 1.5rem;
+}
+.team-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  filter: saturate(0.92) contrast(1.02);
+  transition: transform var(--motion-slow) var(--ease-out);
+}
+.team-card:hover .team-photo { transform: scale(1.02); }
+.team-area {
+  color: var(--wood-600);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.team-name {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 1.35rem;
+  line-height: 1.2;
+  color: var(--navy-900);
+  text-wrap: balance;
+  margin-bottom: 0.75rem;
+}
+.team-bio {
+  color: var(--slate-600);
+  font-size: 0.94rem;
+  line-height: 1.6;
+  text-wrap: pretty;
+  margin-bottom: 1.25rem;
+}
+.team-link {
+  margin-top: auto;
+}
+
+@media (max-width: 1023px) {
+  .metrics-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; }
+  .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; }
+}
+@media (max-width: 767px) {
+  .metrics-grid { grid-template-columns: 1fr 1fr; gap: 1.75rem 1.5rem; }
+  .team-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .team-photo { transition: none; }
 }

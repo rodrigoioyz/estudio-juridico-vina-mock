@@ -1,8 +1,12 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import { SITE_CONFIG, PRACTICE_AREAS } from '@/lib/site-config';
+import { EQUIPO } from '@/lib/equipo';
+import { assetPath } from '@/lib/asset-path';
 import { ScrollReveal } from '@/components/motion/scroll-reveal';
 import { HeroMedia } from '@/components/sections/hero-media';
+import articles from './publicaciones/articles-listing.json';
 
 export const metadata: Metadata = {
   title: `${SITE_CONFIG.name} — ${SITE_CONFIG.location.city}`,
@@ -42,6 +46,22 @@ const AUDIENCIAS = [
   },
 ] as const;
 
+const METRICAS = [
+  { value: '10+', label: 'años de trayectoria en litigación laboral' },
+  { value: '600+', label: 'juicios laborales en los que ha intervenido el estudio' },
+  { value: '3', label: 'dictámenes de la Dirección del Trabajo que citan su doctrina' },
+  { value: '1', label: 'especialidad exclusiva: Derecho del Trabajo' },
+] as const;
+
+const EQUIPO_DESTACADO = EQUIPO.filter((a) => a.foto !== null).slice(0, 3);
+
+const dateFormatter = new Intl.DateTimeFormat('es-CL', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+  timeZone: 'UTC',
+});
+
 export default function HomePage() {
   return (
     <>
@@ -73,15 +93,15 @@ export default function HomePage() {
         <HeroMedia />
       </section>
 
-      {/* ── 2. Prueba — franja de trayectoria institucional ── */}
-      <section className="proof-strip" aria-label="Trayectoria institucional">
-        <div className="container-wide proof-strip-row">
-          <span className="proof-label">Trayectoria ante</span>
-          <ul className="proof-items">
-            <li>Juzgados de Letras del Trabajo</li>
-            <li>Corte de Apelaciones de Valparaíso</li>
-            <li>Corte Suprema</li>
-          </ul>
+      {/* ── 2. Cifras de prueba — banda de mínimos históricos ── */}
+      <section className="metrics-band" aria-label="Trayectoria institucional">
+        <div className="container-wide metrics-grid">
+          {METRICAS.map((m) => (
+            <div key={m.value}>
+              <p className="metric-value nums">{m.value}</p>
+              <p className="metric-label">{m.label}</p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -133,8 +153,51 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 5. Doctrina — declaración editorial ── */}
-      <section className="section-white statement-section">
+      {/* ── 5. Equipo destacado — foto + especialidad + bio ── */}
+      <section className="section-white team-feature" aria-labelledby="equipo-destacado">
+        <div className="container-wide">
+          <div className="section-heading-row">
+            <div>
+              <h2 id="equipo-destacado" className="font-display section-title">El equipo</h2>
+              <p className="section-dek">
+                Cada asunto lo aborda un equipo jurídico, no una práctica
+                individual. Conozca quiénes llevan los casos.
+              </p>
+            </div>
+          </div>
+
+          <div className="team-grid">
+            {EQUIPO_DESTACADO.map((abogado) => (
+              <article className="team-card" key={abogado.slug}>
+                <Link
+                  href="/equipo"
+                  className="team-photo-wrap"
+                  tabIndex={-1}
+                  aria-hidden="true"
+                >
+                  <Image
+                    src={assetPath(abogado.foto as string)}
+                    alt=""
+                    width={1200}
+                    height={1500}
+                    sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                    className="team-photo"
+                  />
+                </Link>
+                <p className="team-area">{abogado.area}</p>
+                <h3 className="team-name">{abogado.nombre}</h3>
+                <p className="team-bio">{abogado.bio}</p>
+                <Link href="/equipo" className="ruled-link team-link">
+                  Conozca el equipo →
+                </Link>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 6. Doctrina — declaración editorial ── */}
+      <section className="section-paper statement-section">
         <div className="container-narrow">
           <p className="eyebrow">Conocimiento que respalda</p>
           <p className="font-display statement">
@@ -150,7 +213,67 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 6. CTA final ── */}
+      {/* ── 7. Publicaciones recientes — feed editorial ── */}
+      <section className="section-white" aria-labelledby="publicaciones-home">
+        <div className="container-wide">
+          <div className="section-heading-row">
+            <div>
+              <h2 id="publicaciones-home" className="font-display section-title">Análisis recientes</h2>
+              <p className="section-dek">
+                Doctrina y comentarios sobre remuneraciones, jornada y acceso a
+                la justicia, escritos por el equipo.
+              </p>
+            </div>
+            <p className="publication-count" aria-label={`${articles.length} publicaciones`}>
+              <strong>{articles.length}</strong> publicaciones
+            </p>
+          </div>
+
+          <div className="publication-list">
+            {articles.slice(0, 3).map((article, index) => (
+              <article className="publication-entry" key={article.slug}>
+                <Link
+                  href={`/publicaciones/${article.slug}`}
+                  className="publication-image-link"
+                  tabIndex={-1}
+                  aria-hidden="true"
+                >
+                  <Image
+                    src={assetPath(article.image)}
+                    alt=""
+                    width={1024}
+                    height={576}
+                    sizes="(max-width: 767px) 100vw, 34vw"
+                    className="publication-image"
+                  />
+                </Link>
+                <div className="publication-copy">
+                  <div className="publication-meta">
+                    <span>{article.area}</span>
+                    <time dateTime={article.date}>{dateFormatter.format(new Date(article.date))}</time>
+                  </div>
+                  <h3>
+                    <Link href={`/publicaciones/${article.slug}`}>{article.title}</Link>
+                  </h3>
+                  <p>{article.excerpt}</p>
+                  <Link href={`/publicaciones/${article.slug}`} className="ruled-link">
+                    Leer análisis <span aria-hidden="true">→</span>
+                  </Link>
+                </div>
+                <span className="publication-number nums" aria-hidden="true">0{index + 1}</span>
+              </article>
+            ))}
+          </div>
+
+          <div style={{ marginTop: '2.5rem' }}>
+            <Link href="/publicaciones" className="ruled-link">
+              Ver todas las publicaciones →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 8. CTA final ── */}
       <section className="final-cta">
         <div className="container-narrow">
           <h2 className="font-display final-title">
