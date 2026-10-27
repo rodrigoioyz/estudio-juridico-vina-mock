@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 1,
+  "approvedToolchain": "6.1.1-3ubuntu5",
+  "tools": {
+    "ffmpegVersion": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers\nbuilt with gcc 13 (Ubuntu 13.2.0-23ubuntu3)\nconfiguration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared\nlibavutil      58. 29.100 / 58. 29.100\nlibavcodec     60. 31.102 / 60. 31.102\nlibavformat    60. 16.100 / 60. 16.100\nlibavdevice    60.  3.100 / 60.  3.100\nlibavfilter     9. 12.100 /  9. 12.100\nlibswscale      7.  5.100 /  7.  5.100\nlibswresample   4. 12.100 /  4. 12.100\nlibpostproc    57.  3.100 / 57.  3.100\n",
+    "ffprobeVersion": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers\nbuilt with gcc 13 (Ubuntu 13.2.0-23ubuntu3)\nconfiguration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared\nlibavutil      58. 29.100 / 58. 29.100\nlibavcodec     60. 31.102 / 60. 31.102\nlibavformat    60. 16.100 / 60. 16.100\nlibavdevice    60.  3.100 / 60.  3.100\nlibavfilter     9. 12.100 /  9. 12.100\nlibswscale      7.  5.100 /  7.  5.100\nlibswresample   4. 12.100 /  4. 12.100\nlibpostproc    57.  3.100 / 57.  3.100\n"
+  },
+  "buildParameters": {
+    "canvas": "1920x1080",
+    "frameRate": 25,
+    "durationSeconds": 12,
+    "audio": false,
+    "grade": "eq=contrast=1.03:saturation=0.86:brightness=-0.015,colorbalance=bs=.025:gs=.005:rs=-.015",
+    "loopTransition": "0.30s fade in and 0.30s fade out",
+    "timeline": [
+      {
+        "source": "06-valparaiso-at-night.jpg",
+        "start": 0,
+        "end": 2.2,
+        "transitionIn": 0,
+        "treatment": "panoramic lateral pan"
+      },
+      {
+        "source": "05-valparaiso-406.jpg",
+        "start": 1.9,
+        "end": 4,
+        "transitionIn": 0.3,
+        "treatment": "slow pan and zoom"
+      },
+      {
+        "source": "04-entre-arboles.jpg",
+        "start": 3.7,
+        "end": 5.5,
+        "transitionIn": 0.3,
+        "treatment": "slow push in"
+      },
+      {
+        "source": "03-muelle-vergara.jpg",
+        "start": 5.2,
+        "end": 6.5,
+        "transitionIn": 0.3,
+        "treatment": "brief vertical inset over restrained blurred field"
+      },
+      {
+        "source": "02-edificio-copacabana.jpg",
+        "start": 6.2,
+        "end": 8,
+        "transitionIn": 0.3,
+        "treatment": "brief rising inset over restrained blurred field"
+      },
+      {
+        "source": "01-al-borde-del-estero.jpg",
+        "start": 7.7,
+        "end": 12,
+        "transitionIn": 0.3,
+        "treatment": "dominant lateral pan and final hold"
+      }
+    ],
+    "master": [
+      "ffv1",
+      "level=3",
+      "g=1",
+      "yuv420p"
+    ],
+    "mp4": [
+      "libx264",
+      "preset=slow",
+      "crf=25",
+      "profile=high",
+      "level=4.1",
+      "pix_fmt=yuv420p",
+      "movflags=+faststart",
+      "threads=1"
+    ],
+    "webm": [
+      "libvpx-vp9",
+      "crf=34",
+      "b:v=0",
+      "deadline=good",
+      "cpu-used=1",
+      "row-mt=0",
+      "threads=1",
+      "tile-columns=0",
+      "frame-parallel=0",
+      "fflags=+bitexact",
+      "flags:v=+bitexact"
+    ],
+    "poster": [
+      "ss=11.2",
+      "frames:v=1",
+      "q:v=3",
+      "codec=mjpeg"
+    ],
+    "sizeBudgetsBytes": {
+      "poster": 512000,
+      "video": 5242880
+    }
+  },
+  "inputs": {
+    "01-al-borde-del-estero.jpg": {
+      "bytes": 209965,
+      "sha256": "e72722e4ffb512e4a301af72e1ac47e7a1c987e4fc208a3e57ce4b597a5ea10f"
+    },
+    "02-edificio-copacabana.jpg": {
+      "bytes": 217459,
+      "sha256": "f1fb05a415d03a94ffca52bb6b4b5a552f3ce98c9f65c58afde56712de2132f1"
+    },
+    "03-muelle-vergara.jpg": {
+      "bytes": 96857,
+      "sha256": "5eb53aed5cc0c1e6af012c5e0fdd95ee1f9ce5d5684de4c5ecbb496c43e60aaa"
+    },
+    "04-entre-arboles.jpg": {
+      "bytes": 770011,
+      "sha256": "149a5d088c978f7edfbef6231a2d916b9a07f6cadada60127cfb53e2c9c1c9d4"
+    },
+    "05-valparaiso-406.jpg": {
+      "bytes": 1295886,
+      "sha256": "190df1e6156293022f43b285bffdc4e98d30e629f6c98ab877d4e291a433e9cd"
+    },
+    "06-valparaiso-at-night.jpg": {
+      "bytes": 2248877,
+      "sha256": "585e06c9d5144df3bd843dee0668c5d9df11aeecc5426c520618756a6c6bfe61"
+    }
+  },
+  "buildScript": {
+    "path": "scripts/build-pacifico-urbano-hero.sh",
+    "sha256": "9a0d550963bc5a225911c9ac619260f44420118d47a7287522dc7dc58acac176"
+  },
+  "outputs": {
+    "poster": {
+      "bytes": 372256,
+      "sha256": "9e7de7eeb027744ca006463e35eda28d8f43516741d7d7e04b73e44be2a38139",
+      "codec": "mjpeg",
+      "width": 1920,
+      "height": 1080
+    },
+    "mp4": {
+      "bytes": 3562138,
+      "sha256": "afd4ae9df1ea0db8872409e4e0ac9885be3d55da4933b4910dea01b56af38fa5",
+      "codec": "h264",
+      "pixelFormat": "yuv420p",
+      "width": 1920,
+      "height": 1080,
+      "fps": 25,
+      "duration": 12,
+      "streamCount": 1,
+      "faststart": {
+        "moovOffset": 32,
+        "mdatOffset": 4298
+      }
+    },
+    "webm": {
+      "bytes": 3704697,
+      "sha256": "b1d5c69f3edfc62ed4a046866d5349ed2551b23260ef4981a731a436fe9fdc2a",
+      "codec": "vp9",
+      "pixelFormat": "yuv420p",
+      "width": 1920,
+      "height": 1080,
+      "fps": 25,
+      "duration": 12,
+      "streamCount": 1
+    }
+  }
+}

@@ -12,6 +12,8 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
+    "hero:build": "bash scripts/build-pacifico-urbano-hero.sh",
+    "hero:verify": "node scripts/verify-pacifico-urbano-hero.mjs",
     "docker:up": "docker compose up -d",
     "docker:down": "docker compose down",
     "docker:reset": "docker compose down -v && docker compose up -d",
