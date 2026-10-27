@@ -74,11 +74,34 @@ function readJson<T>(path: string): T {
 function expectConfinedRelativePath(path: string, directory: AssetDirectory): void {
   expect(isAbsolute(path)).toBe(false);
   expect(win32.isAbsolute(path)).toBe(false);
+  expect(path).not.toContain('\\');
   expect(posix.normalize(path)).toBe(path);
   expect(path.split('/')).not.toContain('..');
   expect(path.startsWith(`${directory}/`)).toBe(true);
   expect(path).not.toBe(`${directory}/`);
 }
+
+describe('expectConfinedRelativePath', () => {
+  it('rejects cross-platform escapes and accepts expected manifest-relative paths', () => {
+    const rejectedPaths = [
+      'sources/..\\..\\escape.jpg',
+      'sources\\nested\\asset.jpg',
+      'sources/nested\\asset.jpg',
+      '/tmp/escape.jpg',
+      'C:\\temp\\escape.jpg',
+      '\\\\server\\share\\escape.jpg',
+    ];
+
+    for (const path of rejectedPaths) {
+      expect(() => expectConfinedRelativePath(path, 'sources'), path).toThrow();
+    }
+
+    const acceptedPaths = ['sources/asset.jpg', 'sources/nested/asset.jpg'];
+    for (const path of acceptedPaths) {
+      expect(() => expectConfinedRelativePath(path, 'sources'), path).not.toThrow();
+    }
+  });
+});
 
 describe('expediente de activos del hero Pacífico urbano', () => {
   it('contiene exactamente los seis originales aprobados y evidencia verificable', () => {
