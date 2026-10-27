@@ -24,7 +24,7 @@ export const EQUIPO: Abogado[] = [
       "Abogado, Pontificia Universidad Católica de Valparaíso (2009)",
       "Magíster en Derecho del Trabajo, Universidad de Talca / Universidad de Valencia (2012)",
     ],
-    foto: "/images/equipo/lautaro-farina.jpg",
+    foto: "/images/equipo/lautaro-farina-v2.jpg",
     email: "lautaro.farina@estudiovina.cl",
     bio: "Abogado especializado en Derecho del Trabajo. Autor de \"Regulación del Sueldo en el Código del Trabajo\" (2009), doctrina citada por la Dirección del Trabajo en su jurisprudencia administrativa sobre remuneraciones.",
   },

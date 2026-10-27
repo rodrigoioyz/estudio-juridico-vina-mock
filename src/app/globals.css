@@ -1012,14 +1012,13 @@ textarea:focus-visible {
 .hero-video.is-ready { opacity: 1; }
 .hero-overlay { z-index: 2; pointer-events: none; }
 
-/* Heroes interiores */
+/* Heroes interiores — dirección Constangy/Nossaman: claro + fotográfico */
 .internal-hero {
   position: relative;
   overflow: hidden;
   padding: clamp(4.5rem, 10vw, 8rem) 0 clamp(3.5rem, 8vw, 6rem);
-  background:
-    linear-gradient(120deg, rgba(4, 23, 80, 0.98), rgba(12, 29, 85, 0.9)),
-    var(--internal-hero-background) center / cover;
+  background: var(--surface);
+  border-bottom: 1px solid var(--mist-200);
 }
 .internal-hero::after {
   content: '';
@@ -1028,14 +1027,15 @@ textarea:focus-visible {
   aspect-ratio: 1;
   right: -8vw;
   bottom: -60%;
-  border: 1px solid rgba(192, 174, 140, 0.3);
+  border: 1px solid var(--sand-300);
   border-radius: 50%;
+  opacity: 0.35;
 }
-.internal-hero .eyebrow { color: var(--sand-300); }
+.internal-hero .eyebrow { color: var(--wood-600); }
 .internal-hero h1 {
   max-width: 18ch;
   margin: 0 0 1.25rem;
-  color: var(--white);
+  color: var(--navy-900);
   font-family: var(--font-display), Georgia, serif;
   font-size: clamp(2.35rem, 5vw, 4.5rem);
   letter-spacing: -0.025em;
@@ -1043,7 +1043,7 @@ textarea:focus-visible {
 }
 .internal-hero-dek {
   max-width: 55ch;
-  color: rgba(255,255,255,0.78);
+  color: var(--slate-600);
   font-size: clamp(1.05rem, 2vw, 1.3rem);
   line-height: 1.65;
 }
@@ -1193,13 +1193,14 @@ textarea:focus-visible {
 
 .article-header {
   padding: clamp(4.5rem, 9vw, 7rem) 0 clamp(6rem, 11vw, 9rem);
-  background: var(--navy-900);
+  background: var(--surface);
+  border-bottom: 1px solid var(--mist-200);
 }
-.article-back { display: inline-flex; min-height: 44px; gap: 0.5rem; align-items: center; margin-bottom: 3rem; color: rgba(255,255,255,0.72); font-size: 0.9rem; font-weight: 600; }
-.article-back:hover { color: var(--white); }
-.article-kicker { display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem; margin-bottom: 1rem; color: var(--sand-300); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
-.article-header h1 { max-width: 19ch; margin-bottom: 1.4rem; color: var(--white); font-family: var(--font-display), Georgia, serif; font-size: clamp(2.25rem, 5.6vw, 4.55rem); line-height: 1.08; letter-spacing: -0.03em; text-wrap: balance; }
-.article-header > .container-narrow > p { max-width: 58ch; color: rgba(255,255,255,0.75); font-size: 1.08rem; line-height: 1.7; }
+.article-back { display: inline-flex; min-height: 44px; gap: 0.5rem; align-items: center; margin-bottom: 3rem; color: var(--slate-600); font-size: 0.9rem; font-weight: 600; }
+.article-back:hover { color: var(--navy-900); }
+.article-kicker { display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem; margin-bottom: 1rem; color: var(--wood-600); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.article-header h1 { max-width: 19ch; margin-bottom: 1.4rem; color: var(--navy-900); font-family: var(--font-display), Georgia, serif; font-size: clamp(2.25rem, 5.6vw, 4.55rem); line-height: 1.08; letter-spacing: -0.03em; text-wrap: balance; }
+.article-header > .container-narrow > p { max-width: 58ch; color: var(--slate-600); font-size: 1.08rem; line-height: 1.7; }
 .article-media { position: relative; margin-top: clamp(-4.5rem, -7vw, -3.5rem); }
 .article-media img { display: block; width: min(100%, 1024px); aspect-ratio: 16 / 9; margin-inline: auto; object-fit: cover; box-shadow: 0 1.5rem 4rem rgba(4, 23, 80, 0.18); }
 .article-layout { display: grid; grid-template-columns: minmax(10rem, 0.52fr) minmax(0, 1.48fr); gap: clamp(2rem, 7vw, 7rem); align-items: start; padding-top: clamp(4rem, 8vw, 7rem); padding-bottom: clamp(5rem, 9vw, 8rem); }
