@@ -4,6 +4,8 @@ import { assetPath } from '@/lib/asset-path';
 import { SITE_CONFIG } from '@/lib/site-config';
 
 export function Footer() {
+  const { contact } = SITE_CONFIG;
+
   return (
     <footer className="bg-primary text-white/80 py-12 mt-auto">
       <div className="container-wide grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -39,6 +41,9 @@ export function Footer() {
             <Link href="/empresas" className="block hover:text-white transition-colors">
               Empresas
             </Link>
+            <Link href="/honorarios" className="block hover:text-white transition-colors">
+              Honorarios
+            </Link>
             <Link href="/publicaciones" className="block hover:text-white transition-colors">
               Publicaciones
             </Link>
@@ -50,17 +55,17 @@ export function Footer() {
           <p className="text-white font-semibold mb-3">Contacto</p>
           <div className="space-y-2 text-sm">
             <p>
-              <a href={`mailto:${SITE_CONFIG.contact.email}`} className="hover:text-white transition-colors">
-                {SITE_CONFIG.contact.email}
+              <a href={`mailto:${contact.email}`} className="hover:text-white transition-colors">
+                {contact.email}
               </a>
             </p>
-            {SITE_CONFIG.contact.phone && (
-              <p>
-                <a href={`tel:${SITE_CONFIG.contact.phone}`} className="hover:text-white transition-colors">
-                  {SITE_CONFIG.contact.phone}
-                </a>
-              </p>
-            )}
+            <p>
+              <a href={`tel:${contact.phone}`} className="hover:text-white transition-colors">
+                {contact.phone}
+              </a>
+            </p>
+            <p className="text-white/70">{contact.address}</p>
+            <p className="text-white/70">{contact.schedule}</p>
             <Link href="/contacto" className="inline-block text-white hover:underline transition-colors font-semibold mt-2">
               Formulario de contacto →
             </Link>

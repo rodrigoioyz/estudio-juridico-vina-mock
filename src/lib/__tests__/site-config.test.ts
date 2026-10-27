@@ -2,10 +2,11 @@ import { describe, expect, it } from 'vitest';
 import { getPublicContactEmail, getPublicSiteUrl, SITE_CONFIG } from '../site-config';
 
 describe('configuración institucional pública', () => {
-  it('no expone teléfono ni WhatsApp de marcador de posición', () => {
+  it('no expone datos de marcador de posición', () => {
     const values = [
       SITE_CONFIG.contact.email,
       SITE_CONFIG.contact.phone,
+      SITE_CONFIG.contact.phoneSecondary,
       SITE_CONFIG.contact.whatsapp,
     ];
 
@@ -14,14 +15,15 @@ describe('configuración institucional pública', () => {
     }
   });
 
-  it('mantiene canales no validados como null', () => {
-    expect(SITE_CONFIG.contact.phone).toBeNull();
+  it('expone los teléfonos reales y mantiene WhatsApp no validado como null', () => {
+    expect(SITE_CONFIG.contact.phone).toBe('+56 9 7378 1151');
+    expect(SITE_CONFIG.contact.phoneSecondary).toBe('+56 9 4563 1394');
     expect(SITE_CONFIG.contact.whatsapp).toBeNull();
   });
 
-  it('nunca usa un destinatario interno .local como correo público', () => {
+  it('usa el correo institucional real como fallback público', () => {
     expect(getPublicContactEmail('abogados@estudiojuridico.local')).toBe(
-      'contacto@estudiojuridicolaboral.cl',
+      'contacto@estudiovina.cl',
     );
     expect(getPublicContactEmail('contacto@ejemplo.cl')).toBe('contacto@ejemplo.cl');
   });

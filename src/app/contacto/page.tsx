@@ -10,6 +10,8 @@ export const metadata: Metadata = {
 };
 
 export default function ContactoPage() {
+  const { contact } = SITE_CONFIG;
+
   return (
     <>
       <section className="internal-hero contact-hero">
@@ -37,32 +39,24 @@ export default function ContactoPage() {
 
             <dl className="contact-details">
               <div>
-                <dt>Ubicación</dt>
-                <dd>Viña del Mar<br />Región de Valparaíso, Chile</dd>
+                <dt>Dirección</dt>
+                <dd>{contact.address}</dd>
               </div>
               <div>
                 <dt>Correo</dt>
-                <dd><a href={`mailto:${SITE_CONFIG.contact.email}`}>{SITE_CONFIG.contact.email}</a></dd>
+                <dd><a href={`mailto:${contact.email}`}>{contact.email}</a></dd>
               </div>
-              {SITE_CONFIG.contact.phone && (
-                <div>
-                  <dt>Teléfono</dt>
-                  <dd><a href={`tel:${SITE_CONFIG.contact.phone}`}>{SITE_CONFIG.contact.phone}</a></dd>
-                </div>
-              )}
-              {SITE_CONFIG.contact.whatsapp && (
-                <div>
-                  <dt>WhatsApp</dt>
-                  <dd>
-                    <a href={`https://wa.me/${SITE_CONFIG.contact.whatsapp}`} target="_blank" rel="noopener noreferrer">
-                      +{SITE_CONFIG.contact.whatsapp}
-                    </a>
-                  </dd>
-                </div>
-              )}
+              <div>
+                <dt>Teléfonos</dt>
+                <dd>
+                  <a href={`tel:${contact.phone}`}>{contact.phone}</a>
+                  <br />
+                  <a href={`tel:${contact.phoneSecondary}`}>{contact.phoneSecondary}</a>
+                </dd>
+              </div>
               <div>
                 <dt>Horario</dt>
-                <dd>Lunes a viernes<br />9:00–18:00</dd>
+                <dd>{contact.schedule}</dd>
               </div>
             </dl>
 

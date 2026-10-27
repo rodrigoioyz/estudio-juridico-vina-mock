@@ -213,6 +213,47 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── 6b. Compromiso + honorarios ── */}
+      <section className="section-white" aria-labelledby="compromiso-home">
+        <div className="container-wide">
+          <div className="areas-grid">
+            <div className="areas-intro">
+              <h2 id="compromiso-home" className="font-display section-title">Un compromiso claro</h2>
+              <p className="section-dek">
+                Nuestros clientes están informados de cada paso con anticipación
+                y participan plenamente en la toma de decisiones.
+              </p>
+              <Link href="/honorarios" className="ruled-link">
+                Conozca nuestro sistema de honorarios →
+              </Link>
+            </div>
+            <div className="index-list">
+              <div className="index-row">
+                <span className="index-title">Honorarios por resultas</span>
+                <span className="index-desc">
+                  Solo cobramos si ganamos su juicio: un porcentaje de lo obtenido,
+                  sin cobros por adelantado.
+                </span>
+              </div>
+              <div className="index-row">
+                <span className="index-title">Informado en cada paso</span>
+                <span className="index-desc">
+                  Le informamos con anticipación y usted participa en las decisiones
+                  relevantes de su causa.
+                </span>
+              </div>
+              <div className="index-row">
+                <span className="index-title">Consulta sin costo</span>
+                <span className="index-desc">
+                  Solicite una evaluación de su caso. Le diremos con claridad si
+                  existe un caso y qué puede obtener.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── 7. Publicaciones recientes — feed editorial ── */}
       <section className="section-white" aria-labelledby="publicaciones-home">
         <div className="container-wide">
