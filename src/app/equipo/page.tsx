@@ -119,6 +119,7 @@ export default function EquipoPage() {
                   </div>
                 ) : (
                   <div className="team-photo-wrap" aria-hidden="true">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={assetPath('/images/equipo/silueta.svg')}
                       alt=""
