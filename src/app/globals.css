@@ -72,9 +72,12 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; color: var(--primary); }
 h1 { font-size: 2.5rem; } h2 { font-size: 2rem; } h3 { font-size: 1.5rem; }
 
 /* Foco visible global (teclado) */
+/* Doble anillo: sand por fuera (contrasta sobre navy) + navy-900 pegado
+   al borde (contrasta sobre fondos claros). WCAG 2.4.7 / 1.4.11 AA. */
 :focus-visible {
-  outline: 2px solid var(--navy-700);
+  outline: 2px solid var(--sand-300);
   outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--navy-900);
   border-radius: 2px;
 }
 
@@ -861,11 +864,17 @@ main { min-width: 0; }
 main:focus { outline: none; }
 button, input, select, textarea { font: inherit; }
 button { color: inherit; }
-button:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--sand-300);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--navy-900);
+}
+/* Los campos viven sobre fondo claro: navy-900 da 12:1 (el sand solo 2.17:1).
+   No usar box-shadow aquí: .form-field input lo sobrescribe por orden. */
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 3px solid var(--sand-300);
+  outline: 3px solid var(--navy-900);
   outline-offset: 2px;
 }
 .sr-only {

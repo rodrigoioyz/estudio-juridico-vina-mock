@@ -64,7 +64,7 @@ export function Footer() {
         {/* Navegación */}
         <div>
           <p className="text-white font-semibold mb-3">Navegación</p>
-          <nav className="space-y-2 text-sm">
+          <nav className="space-y-2 text-sm" aria-label="Navegación del pie">
             <Link href="/estudio" className="block hover:text-white transition-colors">
               El Estudio
             </Link>

@@ -25,8 +25,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: assetPath('/images/fotos/vina-del-mar.jpg'),
-        width: 1536,
-        height: 1024,
+        width: 1200,
+        height: 675,
         alt: 'Costa de Viña del Mar al amanecer',
       },
     ],

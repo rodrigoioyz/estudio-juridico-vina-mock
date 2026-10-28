@@ -5,7 +5,7 @@ import { PRACTICE_AREAS } from '@/lib/site-config';
 export const metadata: Metadata = {
   title: 'Áreas de Práctica',
   description:
-    'Siete áreas de especialización exclusiva en Derecho del Trabajo. Terminación del contrato, remuneraciones, tutela laboral, relación laboral, derecho colectivo, litigación y accidentes laborales.',
+    'Siete áreas de especialización exclusiva en Derecho del Trabajo: término de contrato, remuneraciones, tutela, relación laboral, colectivo, litigación y accidentes.',
   alternates: { canonical: '/areas' },
   openGraph: { url: '/areas' },
 };

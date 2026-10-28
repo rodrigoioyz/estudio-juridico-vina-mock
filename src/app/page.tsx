@@ -22,6 +22,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'es_CL',
     url: '/',
+    images: [
+      {
+        url: assetPath('/images/fotos/vina-del-mar.jpg'),
+        width: 1200,
+        height: 675,
+        alt: 'Costa de Viña del Mar al amanecer',
+      },
+    ],
   },
 };
 
