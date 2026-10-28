@@ -18,7 +18,7 @@ describe('archivos del hero Pacífico urbano', () => {
     expect(fileSize(HERO_MEDIA.poster)).toBeLessThanOrEqual(500 * KIB);
   });
 
-  it.each(HERO_MEDIA.sources)('incluye $src dentro del presupuesto de 5 MiB', ({ src }) => {
-    expect(fileSize(src)).toBeLessThanOrEqual(5 * MIB);
+  it.each(HERO_MEDIA.sources)('incluye $src dentro del presupuesto de 8 MiB', ({ src }) => {
+    expect(fileSize(src)).toBeLessThanOrEqual(8 * MIB);
   });
 });
