@@ -1,5 +1,5 @@
 export const HERO_MEDIA = {
-  poster: '/hero/pacifico-urbano/pacifico-urbano-poster.jpg',
+  poster: '/hero/pacifico-urbano/pacifico-poster-v2.jpg',
   sources: [
     {
       src: '/hero/pacifico-urbano/pacifico-plat.webm',

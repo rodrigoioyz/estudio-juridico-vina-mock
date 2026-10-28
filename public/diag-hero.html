@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Diagnóstico hero — solo el video</title>
+<style>
+  html,body{margin:0;background:#111;color:#eee;font:14px/1.5 system-ui,sans-serif}
+  .box{position:relative;width:100%;height:70vh;overflow:hidden;background:#000}
+  video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .info{padding:14px 18px;font-family:ui-monospace,monospace;font-size:13px;white-space:pre-wrap}
+  b{color:#7ee787}
+</style>
+</head>
+<body>
+<div class="box">
+  <video id="v" src="/hero/pacifico-urbano/pacifico-plat.mp4" autoplay muted loop playsinline preload="auto"></video>
+</div>
+<div class="info" id="info">cargando…</div>
+<script>
+  var v = document.getElementById('v');
+  var t0 = performance.now(), frames = 0, last = performance.now(), maxD = 0;
+  (function loop(){
+    var now = performance.now(), d = now - last; last = now;
+    frames++; if (d > maxD) maxD = d;
+    requestAnimationFrame(loop);
+  })();
+
+  function update(){
+    var fps = frames / ((performance.now() - t0) / 1000);
+    document.getElementById('info').textContent =
+      'archivo:        ' + (v.currentSrc || '(ninguno)').split('/').pop() + '\n' +
+      'duración:       ' + (v.duration ? v.duration.toFixed(2) + ' s' : '—') + '\n' +
+      'tamaño:         ' + v.videoWidth + ' x ' + v.videoHeight + '\n' +
+      'tiempo actual:  ' + v.currentTime.toFixed(2) + ' s\n' +
+      'reproduciendo:  ' + (!v.paused) + '\n' +
+      'fps del navegador: ' + fps.toFixed(1) + '   (frame más largo: ' + Math.round(maxD) + ' ms)';
+  }
+  setInterval(update, 400);
+</script>
+</body>
+</html>

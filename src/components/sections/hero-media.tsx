@@ -64,6 +64,9 @@ export function HeroMedia() {
         fill
         sizes="100vw"
         priority
+        /* inline: gana a cualquier hoja de estilos antigua que aun tenga
+           el zoom (el estilo en linea no se cachea con el CSS) */
+        style={{ animation: 'none', transform: 'none' }}
       />
       {shouldLoadVideo && (
         <video
