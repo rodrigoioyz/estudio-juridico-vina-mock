@@ -833,7 +833,9 @@ header button[aria-label="Menú"] {
   to   { transform: scale(1.045); }
 }
 @media (prefers-reduced-motion: no-preference) {
-  .hero-home-media video {
+  /* Ken Burns solo en el poster: animar transform sobre un <video>
+     provoca repaints y tirones en GPU discretas/móviles. */
+  .hero-home-media .hero-fallback {
     transform-origin: 62% 50%;
     animation: hero-kenburns 18s cubic-bezier(0.25, 0.1, 0.25, 0.9) infinite alternate;
     will-change: transform;

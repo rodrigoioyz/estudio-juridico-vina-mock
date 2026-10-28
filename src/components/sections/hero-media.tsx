@@ -59,7 +59,7 @@ export function HeroMedia() {
           muted
           loop
           playsInline
-          preload="metadata"
+          preload="auto"
           poster={assetPath(HERO_MEDIA.poster)}
           onCanPlay={() => setVideoReady(true)}
           aria-hidden="true"
