@@ -798,20 +798,21 @@ header button[aria-label="Menú"] {
        translateY() sobre un <video> reescala en cada tick del scroll y el
        overscan al 140% obliga a remuestrear 1080p -> la imagen tiembla.
        El hero queda estable; overlay y texto conservan su salida. */
+    /* Animacion RETIRADA (2026-10-27): el overlay cambiaba de opacidad
+       (0 -> 0.9) atado al scroll, sobre una altura de hero fraccionaria
+       (771.5 px). La linea de tiempo se recalculaba en cada frame y la
+       imagen se oscurecia/aclaraba sola: eso es el "tirita".
+       Ahora overlay estatico e invisible y texto sin animacion. */
     .hero-overlay {
       position: absolute;
-      inset: -20% 0;
+      inset: 0;
       background: var(--navy-900);
       opacity: 0;
       pointer-events: none;
-      animation: hero-overlay-in linear both;
-      animation-timeline: --hero-exit;
-      animation-range: exit 0% exit 100%;
+      animation: none;
     }
     .hero-home-text {
-      animation: hero-text-out linear both;
-      animation-timeline: --hero-exit;
-      animation-range: exit 0% exit 100%;
+      animation: none;
     }
   }
 }
