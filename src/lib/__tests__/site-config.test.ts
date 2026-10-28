@@ -15,10 +15,15 @@ describe('configuración institucional pública', () => {
     }
   });
 
-  it('expone los teléfonos reales y mantiene WhatsApp no validado como null', () => {
+  it('expone los teléfonos reales y usa el mismo número para WhatsApp', () => {
     expect(SITE_CONFIG.contact.phone).toBe('+56 9 7378 1151');
     expect(SITE_CONFIG.contact.phoneSecondary).toBe('+56 9 4563 1394');
-    expect(SITE_CONFIG.contact.whatsapp).toBeNull();
+    // WhatsApp es el teléfono que el estudio ya publica, no un número nuevo.
+    expect(SITE_CONFIG.contact.whatsapp).toBe(SITE_CONFIG.contact.phone);
+  });
+
+  it('por defecto el contacto es directo: no hay backend que reciba el formulario', () => {
+    expect(SITE_CONFIG.contact.mode).toBe('direct');
   });
 
   it('usa el correo institucional real como fallback público', () => {

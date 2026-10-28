@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { BreadcrumbLd } from '@/components/seo/breadcrumb-ld';
 import { ContactForm } from '@/components/sections/contact-form';
+import { ContactoDirecto } from '@/components/sections/contact-direct';
+import { CONTACTO_COPY } from '@/lib/contacto';
 import { SITE_CONFIG } from '@/lib/site-config';
 import Image from 'next/image';
 import { assetPath } from '@/lib/asset-path';
@@ -15,24 +17,23 @@ export const metadata: Metadata = {
 
 export default function ContactoPage() {
   const { contact } = SITE_CONFIG;
+  const copy = CONTACTO_COPY;
 
   return (
     <>
       <BreadcrumbLd items={[{ name: 'Inicio', path: '/' }, { name: 'Contacto', path: '/contacto' }]} />
       <section className="internal-hero contact-hero">
         <div className="container-narrow">
-          <p className="eyebrow">Primer paso</p>
+          <p className="eyebrow">{copy.hero.eyebrow}</p>
           <h1>Conversemos sobre su situación laboral.</h1>
-          <p className="internal-hero-dek">
-            Comparta los antecedentes esenciales. Le responderemos con claridad sobre los próximos pasos posibles.
-          </p>
+          <p className="internal-hero-dek">{copy.hero.dek[contact.mode]}</p>
         </div>
       </section>
 
       <section className="contact-section">
         <div className="container-wide contact-layout">
           <div className="contact-form-column">
-            <ContactForm />
+            {contact.mode === 'form' ? <ContactForm /> : <ContactoDirecto />}
           </div>
 
           <aside className="contact-information" aria-labelledby="contact-information-title">

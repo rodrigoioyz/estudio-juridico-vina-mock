@@ -1804,3 +1804,36 @@ footer a { display: inline-flex; min-height: 44px; align-items: center; text-und
 .section-white--cierre {
   padding-bottom: clamp(2.75rem, 4vw, 3.75rem);
 }
+
+/* ── Contacto directo (modo sin backend) ─────────────────
+   Dos acciones que funcionan: WhatsApp y correo. Sin formulario. */
+.contact-direct { border-top: 3px solid var(--navy-900); padding-top: 2rem; }
+.contact-direct-title {
+  margin-bottom: 0.75rem;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(1.65rem, 3vw, 2.2rem);
+  line-height: 1.15;
+}
+.contact-direct-dek { margin-bottom: 1.75rem; color: var(--slate-600); font-size: 0.95rem; line-height: 1.65; }
+.contact-actions { display: grid; gap: 1rem; margin: 0; padding: 0; list-style: none; }
+.contact-action {
+  display: grid;
+  gap: 0.3rem;
+  padding: 1.25rem 1.4rem;
+  border: 1px solid var(--mist-300);
+  border-radius: 6px;
+  background: var(--surface);
+  transition: border-color 150ms ease-out, background-color 150ms ease-out, transform 100ms ease-out;
+}
+.contact-action:hover { border-color: var(--navy-800); }
+.contact-action:active { transform: scale(0.99); }
+.contact-action-label { font-family: var(--font-display), Georgia, serif; font-size: 1.2rem; color: var(--navy-900); }
+.contact-action-detail { color: var(--slate-600); font-size: 0.9rem; line-height: 1.5; }
+.contact-action-value { color: var(--navy-800); font-size: 0.95rem; font-weight: 600; }
+.contact-action--primary { background: var(--navy-800); border-color: var(--navy-800); }
+.contact-action--primary .contact-action-label { color: #ffffff; }
+.contact-action--primary .contact-action-detail { color: rgba(255, 255, 255, 0.8); }
+.contact-action--primary .contact-action-value { color: #ffffff; }
+.contact-action--primary:hover { background: var(--navy-700); border-color: var(--navy-700); }
+.contact-direct-note { margin-top: 1.5rem; color: var(--slate-500); font-size: 0.8rem; line-height: 1.55; }
+.contact-action:focus-visible { outline: 2px solid var(--navy-800); outline-offset: 3px; }

@@ -99,7 +99,7 @@ export function Footer() {
             <p className="text-white/70">{contact.address}</p>
             <p className="text-white/70">{contact.schedule}</p>
             <Link href="/contacto" className="inline-block text-white hover:underline transition-colors font-semibold mt-2">
-              Formulario de contacto →
+              Cómo contactarnos →
             </Link>
           </div>
         </div>
