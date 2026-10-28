@@ -1798,3 +1798,9 @@ footer a { display: inline-flex; min-height: 44px; align-items: center; text-und
 /* La sección de públicos quedó más corta al separar trabajadores de la franja
    secundaria: sin esto, su padding inferior deja una banda vacía. */
 .section-audiencias { padding-bottom: clamp(3rem, 4.5vw, 4.25rem); }
+
+/* Dos secciones blancas seguidas suman 240 px de relleno entre bloques.
+   Este modificador cierra la primera para que no se lea como hueco. */
+.section-white--cierre {
+  padding-bottom: clamp(2.75rem, 4vw, 3.75rem);
+}

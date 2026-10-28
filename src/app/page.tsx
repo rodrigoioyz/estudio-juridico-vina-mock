@@ -240,7 +240,7 @@ export default function HomePage() {
       </section>
 
       {/* ── 6b. Cómo trabajamos — bloque único ── */}
-      <section className="section-white" aria-labelledby="trabajamos-home">
+      <section className="section-white section-white--cierre" aria-labelledby="trabajamos-home">
         <div className="container-wide">
           <div className="areas-grid">
             <div className="areas-intro">
