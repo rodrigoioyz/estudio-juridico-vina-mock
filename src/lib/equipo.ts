@@ -32,7 +32,7 @@ export const EQUIPO: Abogado[] = [
       "Abogado, Pontificia Universidad Católica de Valparaíso (2009)",
       "Magíster en Derecho del Trabajo, Universidad de Talca / Universidad de Valencia, España (2012)",
     ],
-    foto: "/images/equipo/lautaro-farina-v2.jpg",
+    foto: "/images/equipo/lautaro-farina-v3.jpg",
     email: "lautaro.farina@estudiovina.cl",
     bio: "Abogado especializado en Derecho del Trabajo. Su producción doctrinal sobre remuneraciones ha sido citada por la Dirección del Trabajo en su jurisprudencia administrativa.",
     publicaciones: [
