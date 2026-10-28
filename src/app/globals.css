@@ -794,18 +794,10 @@ header button[aria-label="Menú"] {
     .hero-home {
       view-timeline-name: --hero-exit;
     }
-    /* parallax en la celda (video + overlay viajan juntos);
-       overscan 140%: el lag de 16vh nunca expone bordes */
-    .hero-home-media {
-      animation: hero-media-lag linear both;
-      animation-timeline: --hero-exit;
-      animation-range: exit 0% exit 100%;
-    }
-    .hero-home-media video,
-    .hero-home-media .hero-fallback {
-      top: -20%;
-      height: 140%;
-    }
+    /* Parallax RETIRADO (2026-10-27): mover el contenedor con
+       translateY() sobre un <video> reescala en cada tick del scroll y el
+       overscan al 140% obliga a remuestrear 1080p -> la imagen tiembla.
+       El hero queda estable; overlay y texto conservan su salida. */
     .hero-overlay {
       position: absolute;
       inset: -20% 0;
