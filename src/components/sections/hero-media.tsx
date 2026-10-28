@@ -1,5 +1,13 @@
 'use client';
 
+/*
+ * PRUEBA 2026-10-27: el hero se queda solo con la imagen (sin video) para
+ * aislar el origen del "zoom que tirita". Con esto no hay ningun elemento
+ * animado ni ningun video en el hero.
+ * Volver a true para reactivar el video.
+ */
+const HERO_VIDEO_ENABLED = false;
+
 import Image from 'next/image';
 import { assetPath } from '@/lib/asset-path';
 import { HERO_MEDIA } from '@/lib/hero-media';
@@ -68,7 +76,7 @@ export function HeroMedia() {
            el zoom (el estilo en linea no se cachea con el CSS) */
         style={{ animation: 'none', transform: 'none' }}
       />
-      {shouldLoadVideo && (
+      {HERO_VIDEO_ENABLED && shouldLoadVideo && (
         <video
           className={`hero-video${videoReady ? ' is-ready' : ''}`}
           autoPlay
