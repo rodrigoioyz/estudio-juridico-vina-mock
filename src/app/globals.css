@@ -1328,6 +1328,11 @@ footer a { display: inline-flex; min-height: 44px; align-items: center; text-und
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2.5rem;
 }
+/* Home: los 4 abogados en una sola fila */
+.team-grid--four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.75rem;
+}
 .team-card { display: flex; flex-direction: column; min-width: 0; }
 .team-photo-wrap {
   overflow: hidden;
@@ -1346,17 +1351,10 @@ footer a { display: inline-flex; min-height: 44px; align-items: center; text-und
   transition: transform var(--motion-slow) var(--ease-out);
 }
 .team-card:hover .team-photo { transform: scale(1.02); }
-.team-photo--placeholder {
-  display: grid;
-  place-items: center;
-  width: 100%;
-  aspect-ratio: 4 / 5;
+.team-photo--silueta {
   background: var(--paper);
   border: 1px solid var(--mist-300);
-  color: var(--navy-700);
-  font-family: var(--font-display), Georgia, serif;
-  font-size: 2.6rem;
-  letter-spacing: 0.04em;
+  filter: none;
 }
 .team-area {
   color: var(--wood-600);
@@ -1389,10 +1387,12 @@ footer a { display: inline-flex; min-height: 44px; align-items: center; text-und
 @media (max-width: 1023px) {
   .metrics-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; }
   .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; }
+  .team-grid--four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 767px) {
   .metrics-grid { grid-template-columns: 1fr 1fr; gap: 1.75rem 1.5rem; }
   .team-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .team-grid--four { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) {
   .team-photo { transition: none; }

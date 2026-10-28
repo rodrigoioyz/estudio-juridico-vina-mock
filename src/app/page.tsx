@@ -217,7 +217,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="team-grid">
+          <div className="team-grid team-grid--four">
             {EQUIPO_DESTACADO.map((abogado) => (
               <article className="team-card" key={abogado.slug}>
                 <Link
@@ -234,11 +234,16 @@ export default function HomePage() {
                       height={1500}
                       sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
                       className="team-photo"
+                      style={{ objectPosition: abogado.fotoPosition }}
                     />
                   ) : (
-                    <span className="team-photo team-photo--placeholder" aria-hidden="true">
-                      {abogado.nombre.split(' ').map((w) => w[0]).slice(0, 2).join('')}
-                    </span>
+                    <img
+                      src={assetPath('/images/equipo/silueta.svg')}
+                      alt=""
+                      className="team-photo team-photo--silueta"
+                      style={{ objectPosition: abogado.fotoPosition }}
+                      aria-hidden="true"
+                    />
                   )}
                 </Link>
                 <p className="team-area">{abogado.area}</p>

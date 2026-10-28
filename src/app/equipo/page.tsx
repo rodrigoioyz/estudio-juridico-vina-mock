@@ -118,8 +118,12 @@ export default function EquipoPage() {
                     />
                   </div>
                 ) : (
-                  <div className="team-photo-wrap team-photo--placeholder" aria-hidden="true">
-                    {abogado.nombre.split(' ').map((w) => w[0]).slice(0, 2).join('')}
+                  <div className="team-photo-wrap" aria-hidden="true">
+                    <img
+                      src={assetPath('/images/equipo/silueta.svg')}
+                      alt=""
+                      className="team-photo team-photo--silueta"
+                    />
                   </div>
                 )}
                 <p className="team-area">{abogado.area}</p>
