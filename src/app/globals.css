@@ -418,7 +418,14 @@ input, select, textarea {
 
 /* El poster es visible desde el primer paint. El video aparece solo cuando
    puede reproducirse; móvil y reduced-motion conservan el poster local. */
-.hero-home-media .hero-fallback { display: block; }
+.hero-home-media .hero-fallback {
+  display: block;
+  /* Capa propia: la foto se rasteriza UNA vez a escala fija. Sin esto, el
+     object-fit: cover sobre una caja de altura fraccionaria (771.5 px)
+     remuestrea la imagen en cada repintado y se ve "temblar" / hacer zoom. */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
 .hero-home-media .hero-video {
   opacity: 0;
   transition: opacity 500ms ease-out;

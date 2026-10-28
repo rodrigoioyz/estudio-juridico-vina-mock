@@ -74,7 +74,7 @@ export function HeroMedia() {
         priority
         /* inline: gana a cualquier hoja de estilos antigua que aun tenga
            el zoom (el estilo en linea no se cachea con el CSS) */
-        style={{ animation: 'none', transform: 'none' }}
+        style={{ animation: 'none' }}
       />
       {HERO_VIDEO_ENABLED && shouldLoadVideo && (
         <video
