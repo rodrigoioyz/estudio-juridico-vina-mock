@@ -81,10 +81,7 @@ const jsonLd = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es-CL">
-      <body
-        className="flex flex-col min-h-screen"
-        style={{ '--internal-hero-background': `url("${assetPath('/images/fotos/codigo-trabajo.jpg')}")` } as React.CSSProperties}
-      >
+      <body className="flex flex-col min-h-screen">
         <a href="#contenido-principal" className="skip-link">
           Saltar al contenido principal
         </a>

@@ -1,7 +1,5 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
-import { assetPath } from '@/lib/asset-path';
 import { PRACTICE_AREAS } from '@/lib/site-config';
 import { notFound } from 'next/navigation';
 import articles from '@/app/publicaciones/articles-listing.json';
@@ -19,7 +17,6 @@ const AREA_CONTENT: Record<string, {
   subtemas: { title: string; body: string }[];
   evidencia?: string;
   doctrine?: { title: string; body: string };
-  image?: string;
 }> = {
   'terminacion-contrato': {
     intro:
@@ -71,7 +68,6 @@ const AREA_CONTENT: Record<string, {
       'El estudio ha representado a trabajadores en procedimientos por despido injustificado, ' +
       'despido indirecto y nulidad del despido ante los Juzgados de Letras del Trabajo, con ' +
       'actuaciones documentadas en causas recientes (2024-2025).',
-    image: '/images/fotos/terminacion-contrato.jpg',
   },
 
   remuneraciones: {
@@ -124,7 +120,6 @@ const AREA_CONTENT: Record<string, {
         'sido reiterado en pronunciamientos posteriores, incluyendo el Ordinario 2734/47 y el Ordinario ' +
         '457. La obra del estudio forma parte de la jurisprudencia administrativa laboral chilena.',
     },
-    image: '/images/fotos/codigo-trabajo.jpg',
   },
 
   'derechos-fundamentales': {
@@ -164,7 +159,6 @@ const AREA_CONTENT: Record<string, {
       'Existen antecedentes de actuaciones del estudio en procedimientos de tutela laboral con ocasión ' +
       'del despido, así como de acuerdos alcanzados dentro de esos procedimientos, lo que demuestra ' +
       'experiencia tanto en litigación como en negociación de soluciones.',
-    image: '/images/fotos/derechos-fundamentales.jpg',
   },
 
   'relacion-laboral': {
@@ -199,7 +193,6 @@ const AREA_CONTENT: Record<string, {
           'lo que revela experiencia en conflictos laborales con estructuras empresariales complejas.',
       },
     ],
-    image: '/images/fotos/relacion-laboral.jpg',
   },
 
   'derecho-colectivo': {
@@ -232,7 +225,6 @@ const AREA_CONTENT: Record<string, {
           'del instrumento colectivo o la resolución del conflicto por la vía que corresponda.',
       },
     ],
-    image: '/images/fotos/derecho-colectivo.jpg',
   },
 
   'litigacion-recursos': {
@@ -269,7 +261,6 @@ const AREA_CONTENT: Record<string, {
     ],
     evidencia:
       'Corte Suprema, Rol N° 24.934-2025 — recurso de queja con intervención del equipo del estudio.',
-    image: '/images/fotos/litigante.jpg',
   },
 
   'accidentes-laborales': {
@@ -306,7 +297,6 @@ const AREA_CONTENT: Record<string, {
           'acciones pertinentes para obtener la reparación que en derecho proceda.',
       },
     ],
-    image: '/images/fotos/accidentes-laborales.jpg',
   },
 };
 
@@ -361,18 +351,6 @@ export default async function AreaPage({ params }: Props) {
       {/* ── Contenido ────────────────────────────────────── */}
       <section className="section-white">
         <div className="container-narrow">
-          {content?.image && (
-            <div className="rounded-lg overflow-hidden mb-12">
-              <Image
-                src={assetPath(content.image)}
-                alt={area.title}
-                width={1200}
-                height={800}
-                sizes="(max-width: 768px) 100vw, 768px"
-                className="w-full h-auto"
-              />
-            </div>
-          )}
           {content ? (
             <div className="prose max-w-none">
               <p className="text-lg leading-relaxed">{content.intro}</p>
