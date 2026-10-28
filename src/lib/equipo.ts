@@ -34,7 +34,6 @@ export const EQUIPO: Abogado[] = [
     ],
     foto: "/images/equipo/lautaro-farina-v2.jpg",
     email: "lautaro.farina@estudiovina.cl",
-    linkedin: "https://cl.linkedin.com/in/lautaro-fari%C3%B1a-3442b479",
     bio: "Abogado especializado en Derecho del Trabajo. Su producción doctrinal sobre remuneraciones ha sido citada por la Dirección del Trabajo en su jurisprudencia administrativa.",
     publicaciones: [
       {
@@ -65,7 +64,6 @@ export const EQUIPO: Abogado[] = [
     ],
     foto: "/images/equipo/pablo-vilches.jpg",
     email: "pablovilches@estudiovina.cl",
-    linkedin: "https://cl.linkedin.com/in/pablo-vilches-letelier-07054093",
     bio: "Abogado del estudio con experiencia en litigación laboral y comparecencia ante los Juzgados de Letras del Trabajo, con formación especializada en derecho laboral colectivo.",
   },
   {
