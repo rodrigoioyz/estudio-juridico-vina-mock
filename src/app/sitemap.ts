@@ -10,6 +10,7 @@ const AREA_FILE = 'src/app/areas/[slug]/page.tsx';
 /** Fecha de última modificación del archivo fuente, con fallback. */
 function fileDate(relPath: string): Date {
   try {
+    // eslint-disable-next-line security/detect-non-literal-fs-filename
     return statSync(join(process.cwd(), relPath)).mtime;
   } catch {
     return FALLBACK;

@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import { BreadcrumbLd } from '@/components/seo/breadcrumb-ld';
-import Image from 'next/image';
 import Link from 'next/link';
-import { assetPath } from '@/lib/asset-path';
 import { SITE_CONFIG } from '@/lib/site-config';
 
 export const metadata: Metadata = {
@@ -152,20 +150,9 @@ export default function EstudioPage() {
 
       {/* ── Cómo trabajamos ──────────────────────────────── */}
       <section className="section-paper">
-        <div className="container-wide grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="overflow-hidden">
-            <Image
-              src={assetPath('/images/fotos/pareja-abogados.jpg')}
-              alt="Abogados revisando documentos con el Código del Trabajo"
-              width={1200}
-              height={800}
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="w-full h-auto"
-            />
-          </div>
-          <div>
-            <h2 className="section-title">Cómo trabajamos</h2>
-            <div className="prose max-w-none" style={{ marginTop: '2rem' }}>
+        <div className="container-narrow">
+          <h2 className="section-title">Cómo trabajamos</h2>
+          <div className="prose max-w-none" style={{ marginTop: '2rem' }}>
             <p>
               Los asuntos son abordados por un <strong>equipo jurídico</strong>, no mediante
               una práctica individual organizada alrededor de un único abogado. En los
@@ -185,7 +172,6 @@ export default function EstudioPage() {
               jurídico, conocimiento de los tribunales y experiencia práctica en las distintas
               etapas del procedimiento laboral.
             </p>
-          </div>
           </div>
         </div>
       </section>
