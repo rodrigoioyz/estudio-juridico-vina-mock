@@ -317,7 +317,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const area = PRACTICE_AREAS.find((a) => a.slug === slug);
   if (!area) return { title: 'Área no encontrada' };
-  return { title: area.title, description: area.description };
+  return {
+    title: area.title,
+    description: area.description,
+    alternates: { canonical: `/areas/${slug}` },
+    openGraph: { url: `/areas/${slug}` },
+  };
 }
 
 export default async function AreaPage({ params }: Props) {

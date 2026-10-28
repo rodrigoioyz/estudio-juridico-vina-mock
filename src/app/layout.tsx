@@ -51,9 +51,12 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LegalService',
+  '@id': `${siteUrl}/#legalservice`,
   name: SITE_CONFIG.name,
   description: SITE_CONFIG.description,
   url: siteUrl,
+  priceRange: '$$',
+  ...(SITE_CONFIG.social.facebook ? { sameAs: [SITE_CONFIG.social.facebook] } : {}),
   image: `${siteUrl}/images/logo.png`,
   email: SITE_CONFIG.contact.email,
   ...(SITE_CONFIG.contact.phone ? { telephone: SITE_CONFIG.contact.phone } : {}),

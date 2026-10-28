@@ -340,7 +340,7 @@ export default function HomePage() {
                     <Link href={`/publicaciones/${article.slug}`}>{article.title}</Link>
                   </h3>
                   <p>{article.excerpt}</p>
-                  <Link href={`/publicaciones/${article.slug}`} className="ruled-link">
+                  <Link href={`/publicaciones/${article.slug}`} className="ruled-link" aria-label={`Leer análisis: ${article.title}`}>
                     Leer análisis <span aria-hidden="true">→</span>
                   </Link>
                 </div>

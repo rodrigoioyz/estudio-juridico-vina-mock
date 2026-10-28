@@ -5,6 +5,8 @@ export const metadata: Metadata = {
   title: 'Empresas',
   description:
     'Asesoría preventiva, cumplimiento normativo y representación judicial para empleadores. Derecho del Trabajo para empresas en Viña del Mar y todo Chile.',
+  alternates: { canonical: '/empresas' },
+  openGraph: { url: '/empresas' },
 };
 
 const SERVICIOS = [

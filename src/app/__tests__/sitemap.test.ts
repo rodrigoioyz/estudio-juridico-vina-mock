@@ -9,12 +9,14 @@ const articleSlugs = articles.map((article) => article.slug);
 describe('sitemap editorial', () => {
   it('publica exactamente los cuatro artículos reales y ninguna ruta de ejemplo', () => {
     const urls = sitemap().map((entry) => entry.url);
-    const publicationUrls = urls.filter((url) => url.includes('/publicaciones/'));
+    // Solo artículos (slug + barra final); excluye el índice /publicaciones/
+    const publicationUrls = urls.filter((url) => /\/publicaciones\/[^/]+\/$/.test(url));
 
     expect(publicationUrls).toHaveLength(4);
     expect(publicationUrls.some((url) => url.includes('ejemplo-articulo'))).toBe(false);
     for (const slug of articleSlugs) {
-      expect(publicationUrls.some((url) => url.endsWith(`/publicaciones/${slug}`))).toBe(true);
+      // trailingSlash: true → el sitemap publica las URLs con barra final
+      expect(publicationUrls.some((url) => url.endsWith(`/publicaciones/${slug}/`))).toBe(true);
     }
   });
 
@@ -22,7 +24,7 @@ describe('sitemap editorial', () => {
     const entries = sitemap();
 
     for (const article of articles) {
-      const entry = entries.find((item) => item.url.endsWith(`/publicaciones/${article.slug}`));
+      const entry = entries.find((item) => item.url.endsWith(`/publicaciones/${article.slug}/`));
       expect(entry?.lastModified).toEqual(new Date(article.date));
     }
   });

@@ -335,6 +335,9 @@ input, select, textarea {
   margin-bottom: 1.25rem;
 }
 
+/* Eyebrow sobre el hero navy: arena claro (WCAG AA ~7:1) */
+.hero-home .eyebrow { color: var(--sand-300); }
+
 /* ── Hero Pacífico urbano full-bleed ───────────────── */
 .hero-home {
   position: relative;

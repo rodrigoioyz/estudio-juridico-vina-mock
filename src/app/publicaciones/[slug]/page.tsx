@@ -38,8 +38,13 @@ function prepareArticleBody(html: string) {
     '',
   );
 
-  return withoutInlineSchema.replace(/href=["']\/([^"'/]+)["']/g, (match, slug: string) =>
+  const withLinks = withoutInlineSchema.replace(/href=["']\/([^"'/]+)["']/g, (match, slug: string) =>
     ARTICLE_SLUGS.has(slug) ? `href="/publicaciones/${slug}"` : match,
+  );
+
+  // Accesibilidad: un <th> sin scope no se anuncia como encabezado de columna
+  return withLinks.replace(/<th(\s[^>]*)?>/gi, (m, attrs: string | undefined) =>
+    attrs && /scope=/i.test(attrs) ? m : `<th scope="col"${attrs ?? ''}>`,
   );
 }
 
@@ -121,7 +126,7 @@ export default async function PublicacionPage({ params }: Props) {
       <div className="article-media container-wide">
         <Image
           src={assetPath(article.image)}
-          alt=""
+          alt={`Portada del análisis: ${article.title}`}
           width={1024}
           height={576}
           sizes="(max-width: 900px) 100vw, 1024px"

@@ -4,7 +4,13 @@ import Link from 'next/link';
 import { assetPath } from '@/lib/asset-path';
 import { EQUIPO } from '@/lib/equipo';
 
-export const metadata: Metadata = { title: 'Equipo' };
+export const metadata: Metadata = {
+  title: 'Equipo',
+  description:
+    'Los abogados del Estudio Jurídico Laboral de Viña del Mar: especialistas en Derecho del Trabajo con formación en la PUCV, UAI y UNAB.',
+  alternates: { canonical: '/equipo' },
+  openGraph: { url: '/equipo' },
+};
 
 const [FUNDADOR, ...RESTO] = EQUIPO;
 

@@ -7,6 +7,8 @@ import { SITE_CONFIG } from '@/lib/site-config';
 export const metadata: Metadata = {
   title: 'El Estudio',
   description: `Conozca al ${SITE_CONFIG.name}. Especialistas en Derecho del Trabajo con más de una década de trayectoria en Viña del Mar.`,
+  alternates: { canonical: '/estudio' },
+  openGraph: { url: '/estudio' },
 };
 
 const PILARES = [

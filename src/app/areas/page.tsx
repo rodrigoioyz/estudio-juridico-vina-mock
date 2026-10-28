@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   title: 'Áreas de Práctica',
   description:
     'Siete áreas de especialización exclusiva en Derecho del Trabajo. Terminación del contrato, remuneraciones, tutela laboral, relación laboral, derecho colectivo, litigación y accidentes laborales.',
+  alternates: { canonical: '/areas' },
+  openGraph: { url: '/areas' },
 };
 
 export default function AreasPage() {
