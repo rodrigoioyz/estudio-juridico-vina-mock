@@ -105,6 +105,34 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── 2a. El estudio — texto del sitio antiguo (a cargo de Lautaro) ── */}
+      <section className="section-paper" aria-labelledby="estudio-intro-home">
+        <div className="container-narrow">
+          <p className="eyebrow">El estudio</p>
+          <h2 id="estudio-intro-home" className="section-title">
+            Un estudio dedicado exclusivamente al Derecho del Trabajo
+          </h2>
+          <div className="prose max-w-none" style={{ marginTop: '1.5rem' }}>
+            <p>
+              Somos un Estudio Jurídico dedicado de manera exclusiva al Derecho del
+              Trabajo. Este Estudio está a cargo de{' '}
+              <strong>Lautaro Fariña Quezada</strong>, abogado de la Pontificia
+              Universidad Católica de Valparaíso y Magíster en Derecho del Trabajo
+              por la Universidad de Talca y la Universidad de Valencia (España).
+            </p>
+            <p>
+              Nuestra área de litigación es exclusivamente el Derecho Laboral, y
+              llevamos más de una década litigando en distintos tribunales del país
+              en esta materia, especialmente en la V Región y la Región
+              Metropolitana.
+            </p>
+          </div>
+          <Link href="/estudio" className="ruled-link">
+            Conozca el estudio →
+          </Link>
+        </div>
+      </section>
+
       {/* ── 2b. OFRECEMOS — 6 ítems del sitio antiguo ── */}
       <section className="offers-section" aria-labelledby="ofrecemos-home">
         <div className="container-wide">
