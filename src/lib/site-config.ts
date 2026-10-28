@@ -40,12 +40,30 @@ export const SITE_CONFIG = {
     address: "1 Oriente 252, oficinas 203 y 307, Viña del Mar",
     schedule: "Lunes a viernes, 09:00–18:00",
   },
-  social: {
-    linkedin: "", // Validar
-    instagram: "", // Pendiente: URL de Instagram del estudio no identificado
-    facebook: "https://www.facebook.com/profile.php?id=100064638596912",
-  },
 } as const;
+
+export type SocialNetwork = "facebook" | "instagram" | "linkedin";
+
+export interface SocialLink {
+  network: SocialNetwork;
+  label: string;
+  href: string;
+}
+
+/**
+ * Solo las redes que el estudio tiene de verdad (confirmado 2026-10-28):
+ * no hay LinkedIn ni Instagram, únicamente Facebook.
+ * El footer y el schema iteran sobre esta lista, así que una red que no
+ * esté aquí no se renderiza ni entra en `sameAs`. Agregar una red es
+ * agregar un objeto; no hace falta tocar componentes.
+ */
+export const SOCIAL_LINKS: SocialLink[] = [
+  {
+    network: "facebook",
+    label: "Facebook",
+    href: "https://www.facebook.com/profile.php?id=100064638596912",
+  },
+];
 
 export const NAV_LINKS = [
   { href: "/estudio", label: "El Estudio" },

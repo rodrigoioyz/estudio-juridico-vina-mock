@@ -19,7 +19,6 @@ export type Abogado = {
   /** Iniciales para la tarjeta cuando no hay foto (ej. "EB"). */
   monograma?: string;
   email?: string;
-  linkedin?: string;
   bio: string;
   publicaciones?: Publicacion[];
 };

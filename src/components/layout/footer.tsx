@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { assetPath } from '@/lib/asset-path';
-import { SITE_CONFIG } from '@/lib/site-config';
+import { SITE_CONFIG, SOCIAL_LINKS } from '@/lib/site-config';
 
 const FACEBOOK_SVG = (
   <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
@@ -15,8 +15,13 @@ const INSTAGRAM_SVG = (
   </svg>
 );
 
+const SOCIAL_ICONS: Record<string, React.ReactNode> = {
+  facebook: FACEBOOK_SVG,
+  instagram: INSTAGRAM_SVG,
+};
+
 export function Footer() {
-  const { contact, social } = SITE_CONFIG;
+  const { contact } = SITE_CONFIG;
 
   return (
     <footer className="bg-primary text-white/80 py-12 mt-auto">
@@ -35,28 +40,19 @@ export function Footer() {
             <br />
             {SITE_CONFIG.location.city}, {SITE_CONFIG.location.region}.
           </p>
-          {(social.facebook || social.instagram) && (
+          {SOCIAL_LINKS.length > 0 && (
             <div className="footer-social">
-              {social.facebook && (
+              {SOCIAL_LINKS.map((link) => (
                 <a
-                  href={social.facebook}
+                  key={link.network}
+                  href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Facebook del estudio"
+                  aria-label={`${link.label} del estudio`}
                 >
-                  {FACEBOOK_SVG}
+                  {SOCIAL_ICONS[link.network]}
                 </a>
-              )}
-              {social.instagram && (
-                <a
-                  href={social.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram del estudio"
-                >
-                  {INSTAGRAM_SVG}
-                </a>
-              )}
+              ))}
             </div>
           )}
         </div>

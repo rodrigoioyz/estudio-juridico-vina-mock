@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { assetPath } from '@/lib/asset-path';
-import { SITE_CONFIG } from '@/lib/site-config';
+import { SITE_CONFIG, SOCIAL_LINKS } from '@/lib/site-config';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import './globals.css';
@@ -61,7 +61,7 @@ const jsonLd = {
   description: SITE_CONFIG.description,
   url: siteUrl,
   priceRange: 'Honorarios por resultas',
-  ...(SITE_CONFIG.social.facebook ? { sameAs: [SITE_CONFIG.social.facebook] } : {}),
+  ...(SOCIAL_LINKS.length ? { sameAs: SOCIAL_LINKS.map((link) => link.href) } : {}),
   image: `${siteUrl}/images/logo.png`,
   email: SITE_CONFIG.contact.email,
   ...(SITE_CONFIG.contact.phone ? { telephone: SITE_CONFIG.contact.phone } : {}),
