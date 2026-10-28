@@ -4,10 +4,23 @@ import Image from 'next/image';
 import { assetPath } from '@/lib/asset-path';
 import { HERO_MEDIA } from '@/lib/hero-media';
 import { useEffect, useState } from 'react';
+import type { SyntheticEvent } from 'react';
 
 export function HeroMedia() {
   const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
   const [videoReady, setVideoReady] = useState(false);
+
+  /*
+   * El `loop` nativo vacía y rellena el buffer al reiniciar (comportamiento
+   * documentado en Chrome y Firefox), y ese relleno es el salto que se ve
+   * antes de que el ciclo vuelva a empezar. Reencuadramos a mano en `ended`:
+   * el video nunca llega a "terminar", así que no hay reinicio de buffer.
+   */
+  const handleEnded = (event: SyntheticEvent<HTMLVideoElement>) => {
+    const video = event.currentTarget;
+    video.currentTime = 0;
+    void video.play();
+  };
 
   useEffect(() => {
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -57,11 +70,11 @@ export function HeroMedia() {
           className={`hero-video${videoReady ? ' is-ready' : ''}`}
           autoPlay
           muted
-          loop
           playsInline
           preload="auto"
           poster={assetPath(HERO_MEDIA.poster)}
           onCanPlay={() => setVideoReady(true)}
+          onEnded={handleEnded}
           aria-hidden="true"
           tabIndex={-1}
         >
