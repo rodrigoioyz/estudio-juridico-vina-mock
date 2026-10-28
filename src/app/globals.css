@@ -1560,3 +1560,25 @@ footer a { display: inline-flex; min-height: 44px; align-items: center; text-und
 .li-link:hover { background: var(--navy-800); border-color: var(--navy-800); color: var(--white); }
 .li-link svg { flex: 0 0 auto; }
 .li-link--sm { margin-bottom: 0.85rem; padding: 0.3rem 0.65rem; font-size: 0.8rem; }
+
+/* Footer — iconos sociales */
+.footer-social {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+.footer-social a {
+  display: inline-grid;
+  place-items: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.85);
+  transition: background-color 120ms ease-out, border-color 120ms ease-out, color 120ms ease-out;
+}
+.footer-social a:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.55);
+  color: #fff;
+}

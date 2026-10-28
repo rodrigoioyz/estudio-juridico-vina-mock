@@ -43,8 +43,8 @@ export const SITE_CONFIG = {
   },
   social: {
     linkedin: "", // Validar
-    instagram: "", // Validar
-    facebook: "", // Validar
+    instagram: "", // Pendiente: URL de Instagram del estudio no identificado
+    facebook: "https://www.facebook.com/p/Problemas-Laborales-V-regi%C3%B3n-100064638596912",
   },
 } as const;
 
