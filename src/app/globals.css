@@ -1385,3 +1385,97 @@ footer a { display: inline-flex; min-height: 44px; align-items: center; text-und
 @media (max-width: 1023px) {
   .ruled-row--no-link { grid-template-columns: 1fr; }
 }
+/* ═══════════════════════════════════════════════════════
+   EQUIPO — Fundador destacado + publicaciones (2026-10-27)
+   Datos de la página antigua /abogados/. Marca: navy + serif.
+   ═══════════════════════════════════════════════════════ */
+.founder-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: start;
+}
+.founder-photo { overflow: hidden; background: var(--paper); }
+.founder-img { width: 100%; height: auto; display: block; filter: saturate(0.92) contrast(1.03); }
+.founder-area {
+  color: var(--wood-600);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+.founder-name {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  line-height: 1.08;
+  color: var(--navy-900);
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  text-wrap: balance;
+}
+.founder-cred {
+  list-style: none;
+  border-top: 1px solid var(--mist-200);
+  margin-bottom: 1.25rem;
+}
+.founder-cred li {
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--mist-200);
+  color: var(--slate-600);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.founder-email { margin-bottom: 1.25rem; }
+.founder-email a {
+  color: var(--navy-700);
+  font-size: 0.95rem;
+  text-decoration: underline;
+  text-decoration-color: var(--sand-300);
+  text-underline-offset: 3px;
+}
+.founder-bio { color: var(--slate-600); line-height: 1.65; max-width: 58ch; margin-bottom: 1.75rem; }
+
+.founder-pubs { border-top: 3px solid var(--navy-900); padding-top: 1.25rem; }
+.founder-pubs-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--wood-600);
+  margin-bottom: 1rem;
+}
+.founder-pubs ol { list-style: none; counter-reset: pub; }
+.founder-pubs li {
+  counter-increment: pub;
+  position: relative;
+  padding: 0.85rem 0 0.85rem 2.4rem;
+  border-bottom: 1px solid var(--mist-200);
+  line-height: 1.5;
+}
+.founder-pubs li::before {
+  content: '0' counter(pub);
+  position: absolute;
+  left: 0;
+  top: 0.85rem;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 1rem;
+  color: var(--sand-300);
+}
+.founder-pubs strong { display: block; color: var(--ink-900); font-weight: 600; font-size: 0.98rem; }
+.founder-pubs span { display: block; color: var(--slate-600); font-size: 0.85rem; margin-top: 0.2rem; }
+
+.team-cred { list-style: none; margin-bottom: 0.85rem; }
+.team-cred li { color: var(--slate-600); font-size: 0.85rem; line-height: 1.5; margin-bottom: 0.25rem; }
+.team-email { margin-bottom: 0.85rem; }
+.team-email a {
+  color: var(--navy-700);
+  font-size: 0.85rem;
+  text-decoration: underline;
+  text-decoration-color: var(--sand-300);
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+  .founder-grid { grid-template-columns: 1fr; gap: 2rem; }
+}

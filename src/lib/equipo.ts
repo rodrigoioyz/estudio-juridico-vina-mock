@@ -1,17 +1,24 @@
 // lib/equipo.ts
 // Datos canónicos del equipo del estudio.
-// Fuente: WordPress original (vps-5952525-x.dattaweb.com/abogados/), recuperado 2026-10-27
-// y aprobado en docs/superpowers/specs/2026-10-27-estudiovina-contenido-original-design.md §4.2.
+// FUENTE DE VERDAD: página antigua /abogados/ (vps-5952525-x.dattaweb.com/abogados/), 2026-10-27.
+// Datos extraídos textualmente de la antigua: formación, emails y publicaciones de Lautaro.
 // Fotos: /images/equipo/{lautaro-farina,pablo-vilches,diego-zarate}.jpg (1200×1748, sin EXIF).
+
+export type Publicacion = {
+  titulo: string;
+  medio: string;
+  anio: string;
+};
 
 export type Abogado = {
   slug: string;
   nombre: string;
-  area: string; // especialidad destacada (titular en la home)
-  credenciales: string[]; // formación verificada
+  area: string; // especialidad destacada (titular)
+  credenciales: string[]; // formación verificada (línea por línea, como la antigua)
   foto: string | null;
   email?: string;
   bio: string;
+  publicaciones?: Publicacion[];
 };
 
 export const EQUIPO: Abogado[] = [
@@ -22,11 +29,28 @@ export const EQUIPO: Abogado[] = [
     credenciales: [
       "Licenciado en Ciencias Jurídicas y Sociales (2005)",
       "Abogado, Pontificia Universidad Católica de Valparaíso (2009)",
-      "Magíster en Derecho del Trabajo, Universidad de Talca / Universidad de Valencia (2012)",
+      "Magíster en Derecho del Trabajo, Universidad de Talca / Universidad de Valencia, España (2012)",
     ],
     foto: "/images/equipo/lautaro-farina-v2.jpg",
     email: "lautaro.farina@estudiovina.cl",
-    bio: "Abogado especializado en Derecho del Trabajo. Autor de \"Regulación del Sueldo en el Código del Trabajo\" (2009), doctrina citada por la Dirección del Trabajo en su jurisprudencia administrativa sobre remuneraciones.",
+    bio: "Abogado especializado en Derecho del Trabajo. Su producción doctrinal sobre remuneraciones ha sido citada por la Dirección del Trabajo en su jurisprudencia administrativa.",
+    publicaciones: [
+      {
+        titulo: "Regulación del Sueldo en el Código del Trabajo",
+        medio: "Editorial Legal Publishing",
+        anio: "2010",
+      },
+      {
+        titulo: "El Despido Implícito o Constructivo",
+        medio: "Revista Estudios Laborales, Sociedad Chilena de Derecho del Trabajo",
+        anio: "2016",
+      },
+      {
+        titulo: "Remuneración Variable: Elemento Diferenciador y Relación con las Remuneraciones Participativas",
+        medio: "Revista Chilena de Derecho del Trabajo, Vol. 6, N° 11",
+        anio: "2015",
+      },
+    ],
   },
   {
     slug: "pablo-vilches",
@@ -52,13 +76,5 @@ export const EQUIPO: Abogado[] = [
     foto: "/images/equipo/diego-zarate.jpg",
     email: "diegozarate@estudiovina.cl",
     bio: "Abogado de la Universidad Andrés Bello (2019). Integra el equipo de Derecho del Trabajo del estudio.",
-  },
-  {
-    slug: "joaquin-hernandez",
-    nombre: "Joaquín Hernández Sepúlveda",
-    area: "Derecho del Trabajo",
-    credenciales: [],
-    foto: null,
-    bio: "Abogado con práctica en asesoría y representación de trabajadores, empresas y organizaciones sindicales. Su experiencia comprende litigación laboral, cumplimiento normativo y asesoría preventiva para empleadores.",
   },
 ] as const;
