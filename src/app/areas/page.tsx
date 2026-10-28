@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { BreadcrumbLd } from '@/components/seo/breadcrumb-ld';
 import Link from 'next/link';
 import { PRACTICE_AREAS } from '@/lib/site-config';
 
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
 export default function AreasPage() {
   return (
     <>
+      <BreadcrumbLd items={[{ name: 'Inicio', path: '/' }, { name: 'Áreas de Práctica', path: '/areas' }]} />
       {/* ── Hero editorial ─────────────────────────── */}
       <section className="section-white" style={{ paddingBottom: '3rem' }}>
         <div className="container-wide">
@@ -32,7 +34,7 @@ export default function AreasPage() {
             {PRACTICE_AREAS.map((area) => (
               <div key={area.slug} className="area-block">
                 <Link href={`/areas/${area.slug}`} className="index-row no-underline">
-                  <span className="index-title">{area.title}</span>
+                  <h2 className="index-title">{area.title}</h2>
                   <span className="index-desc">{area.description}</span>
                 </Link>
                 {area.servicios && area.servicios.length > 0 && (

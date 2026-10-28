@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { BreadcrumbLd } from '@/components/seo/breadcrumb-ld';
 import Image from 'next/image';
 import Link from 'next/link';
 import { assetPath } from '@/lib/asset-path';
@@ -37,6 +38,7 @@ const PILARES = [
 export default function EstudioPage() {
   return (
     <>
+      <BreadcrumbLd items={[{ name: 'Inicio', path: '/' }, { name: 'El Estudio', path: '/estudio' }]} />
       {/* ── Hero editorial ─────────────────────────────────── */}
       <section className="internal-hero">
         <div className="container-narrow">

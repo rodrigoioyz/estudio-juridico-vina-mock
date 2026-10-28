@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { BreadcrumbLd } from '@/components/seo/breadcrumb-ld';
 import Image from 'next/image';
 import Link from 'next/link';
 import { assetPath } from '@/lib/asset-path';
@@ -22,6 +23,7 @@ const dateFormatter = new Intl.DateTimeFormat('es-CL', {
 export default function PublicacionesPage() {
   return (
     <>
+      <BreadcrumbLd items={[{ name: 'Inicio', path: '/' }, { name: 'Publicaciones', path: '/publicaciones' }]} />
       <section className="internal-hero internal-hero-publications">
         <div className="container-narrow">
           <p className="eyebrow">Doctrina y análisis</p>

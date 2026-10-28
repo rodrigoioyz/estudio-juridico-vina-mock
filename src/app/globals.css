@@ -618,6 +618,7 @@ input, select, textarea {
 }
 .index-row:hover { background: rgba(4, 23, 80, 0.03); }
 .index-title {
+  margin: 0;
   font-weight: 600;
   font-size: 1.0625rem;
   color: var(--ink-900);
@@ -1352,6 +1353,7 @@ footer a { display: inline-flex; min-height: 44px; align-items: center; text-und
   margin-bottom: 0.5rem;
 }
 .team-name {
+  margin: 0;
   font-family: var(--font-display), Georgia, serif;
   font-size: 1.35rem;
   line-height: 1.2;

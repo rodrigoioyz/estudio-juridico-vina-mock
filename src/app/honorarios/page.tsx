@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { BreadcrumbLd } from '@/components/seo/breadcrumb-ld';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
 export default function HonorariosPage() {
   return (
     <>
+      <BreadcrumbLd items={[{ name: 'Inicio', path: '/' }, { name: 'Honorarios', path: '/honorarios' }]} />
       <section className="internal-hero">
         <div className="container-narrow">
           <p className="eyebrow">Condiciones claras</p>

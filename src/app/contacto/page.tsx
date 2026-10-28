@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { BreadcrumbLd } from '@/components/seo/breadcrumb-ld';
 import { ContactForm } from '@/components/sections/contact-form';
 import { SITE_CONFIG } from '@/lib/site-config';
 
@@ -14,6 +15,7 @@ export default function ContactoPage() {
 
   return (
     <>
+      <BreadcrumbLd items={[{ name: 'Inicio', path: '/' }, { name: 'Contacto', path: '/contacto' }]} />
       <section className="internal-hero contact-hero">
         <div className="container-narrow">
           <p className="eyebrow">Primer paso</p>

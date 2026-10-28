@@ -3,7 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { assetPath } from '@/lib/asset-path';
-import { SITE_CONFIG } from '@/lib/site-config';
+import { SITE_CONFIG, PRACTICE_AREAS } from '@/lib/site-config';
+import { BreadcrumbLd } from '@/components/seo/breadcrumb-ld';
 import articlesData from '../articles-data.json';
 
 interface ArticleData {
@@ -20,6 +21,14 @@ interface ArticleData {
 const ARTICLE_ENTRIES = Object.entries(articlesData) as [string, ArticleData][];
 const ARTICLES = new Map(ARTICLE_ENTRIES);
 const ARTICLE_SLUGS = new Set(ARTICLES.keys());
+
+// Las etiquetas de área del artículo no coinciden con los títulos de
+// PRACTICE_AREAS; se mapean al slug de práctica correspondiente.
+const AREA_SLUG_BY_ARTICLE_AREA: Record<string, string> = {
+  'Jornada Laboral': 'remuneraciones',
+  Remuneraciones: 'remuneraciones',
+  'Derecho Procesal Laboral': 'litigacion-recursos',
+};
 const dateFormatter = new Intl.DateTimeFormat('es-CL', {
   day: 'numeric',
   month: 'long',
@@ -105,6 +114,13 @@ export default async function PublicacionPage({ params }: Props) {
 
   return (
     <>
+      <BreadcrumbLd
+        items={[
+          { name: 'Inicio', path: '/' },
+          { name: 'Publicaciones', path: '/publicaciones' },
+          { name: article.title, path: `/publicaciones/${slug}` },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd).replace(/</g, '\\u003c') }}
@@ -139,6 +155,16 @@ export default async function PublicacionPage({ params }: Props) {
           <span className="eyebrow">Análisis jurídico</span>
           <p>Publicado por el equipo de {SITE_CONFIG.name}.</p>
           <Link href="/contacto" className="ruled-link">Consultar esta materia →</Link>
+          {(() => {
+            const relatedArea = PRACTICE_AREAS.find(
+              (a) => a.slug === AREA_SLUG_BY_ARTICLE_AREA[article.area],
+            );
+            return relatedArea ? (
+              <Link href={`/areas/${relatedArea.slug}`} className="ruled-link">
+                Ver área de práctica: {relatedArea.title} →
+              </Link>
+            ) : null;
+          })()}
         </aside>
         <article className="article-prose" dangerouslySetInnerHTML={{ __html: articleBody }} />
       </div>

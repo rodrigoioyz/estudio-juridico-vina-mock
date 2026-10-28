@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { BreadcrumbLd } from '@/components/seo/breadcrumb-ld';
 import Image from 'next/image';
 import Link from 'next/link';
 import { assetPath } from '@/lib/asset-path';
@@ -17,6 +18,7 @@ const [FUNDADOR, ...RESTO] = EQUIPO;
 export default function EquipoPage() {
   return (
     <>
+      <BreadcrumbLd items={[{ name: 'Inicio', path: '/' }, { name: 'Equipo', path: '/equipo' }]} />
       {/* ── Hero ────────────────────────────────────────── */}
       <section className="internal-hero">
         <div className="container-narrow">
@@ -130,7 +132,7 @@ export default function EquipoPage() {
                   </div>
                 )}
                 <p className="team-area">{abogado.area}</p>
-                <h3 className="team-name">{abogado.nombre}</h3>
+                <h2 className="team-name">{abogado.nombre}</h2>
                 <ul className="team-cred">
                   {abogado.credenciales.map((c) => (
                     <li key={c}>{c}</li>

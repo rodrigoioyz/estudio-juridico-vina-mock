@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { assetPath } from '@/lib/asset-path';
 import { PRACTICE_AREAS } from '@/lib/site-config';
 import { notFound } from 'next/navigation';
+import articles from '@/app/publicaciones/articles-listing.json';
+import { BreadcrumbLd } from '@/components/seo/breadcrumb-ld';
 
 export function generateStaticParams() {
   return PRACTICE_AREAS.map(({ slug }) => ({ slug }));
@@ -333,8 +335,17 @@ export default async function AreaPage({ params }: Props) {
 
   if (!area) notFound();
 
+  const related = articles.filter((a) => a.area === area.title);
+
   return (
     <>
+      <BreadcrumbLd
+        items={[
+          { name: 'Inicio', path: '/' },
+          { name: 'Áreas de Práctica', path: '/areas' },
+          { name: area.title, path: `/areas/${slug}` },
+        ]}
+      />
       {/* ── Hero del área ───────────────────────────────── */}
       <section className="internal-hero">
         <div className="container-narrow">
@@ -395,6 +406,21 @@ export default async function AreaPage({ params }: Props) {
                 específico para <strong>{area.title}</strong> está en preparación y será
                 publicado próximamente.
               </p>
+            </div>
+          )}
+
+          {related.length > 0 && (
+            <div className="mt-12">
+              <h2>Publicaciones sobre esta área</h2>
+              <ul className="mt-4 space-y-2">
+                {related.map((a) => (
+                  <li key={a.slug}>
+                    <Link href={`/publicaciones/${a.slug}`} className="ruled-link">
+                      {a.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           )}
 
