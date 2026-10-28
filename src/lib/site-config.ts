@@ -44,7 +44,7 @@ export const SITE_CONFIG = {
   social: {
     linkedin: "", // Validar
     instagram: "", // Pendiente: URL de Instagram del estudio no identificado
-    facebook: "https://www.facebook.com/p/Problemas-Laborales-V-regi%C3%B3n-100064638596912",
+    facebook: "https://www.facebook.com/profile.php?id=100064638596912",
   },
 } as const;
 
