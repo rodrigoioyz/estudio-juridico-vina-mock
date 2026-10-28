@@ -23,7 +23,7 @@ image: /images/og-tutela-laboral-corte-suprema.png
 
 <p>Para entender la relevancia de este fallo, conviene explicar primero qué es el procedimiento monitorio y cómo se diferencia del procedimiento ordinario.</p>
 
-<p>El procedimiento monitorio está regulado en los artículos 496 a 498 del Código del Trabajo. Fue introducido por la Ley N.º 20.087 de 2006, que reformó integralmente el procedimiento laboral chileno. Su diseño responde a una lógica clara: ofrecer una vía rápida y de bajo costo para reclamaciones de menor cuantía.</p>
+<p>El procedimiento monitorio está regulado en los artículos 496 y siguientes del Código del Trabajo. Fue introducido por la Ley N.º 20.087 de 2006, que reformó integralmente el procedimiento laboral chileno. Su diseño responde a una lógica clara: ofrecer una vía rápida y de bajo costo para reclamaciones de menor cuantía.</p>
 
 <h3>Características del procedimiento monitorio</h3>
 
@@ -38,7 +38,7 @@ image: /images/og-tutela-laboral-corte-suprema.png
 <tbody>
 <tr>
 <td>Cuantía máxima</td>
-<td>Hasta 15 Ingresos Mínimos Mensuales (~$8.303.295 a 2026)</td>
+<td>Hasta 10 Ingresos Mínimos Mensuales (unos $5.535.530 con el IMM vigente)</td>
 <td>Sin límite</td>
 </tr>
 <tr>
@@ -75,13 +75,13 @@ image: /images/og-tutela-laboral-corte-suprema.png
 
 <p>El artículo 497 del CT contempla que, para acceder al procedimiento monitorio, el trabajador debe presentar su reclamo ante la Inspección del Trabajo, la cual citará a las partes a un comparendo de conciliación. Si no hay acuerdo, la Inspección remite los antecedentes al tribunal para que continúe el procedimiento monitorio.</p>
 
-<p>El reclamo administrativo previo es, por tanto, un <strong>requisito de acceso al procedimiento monitorio</strong>. Pero esto no significa que si el trabajador omite ese paso quede sin acceso a la justicia: puede presentar su demanda directamente ante el tribunal por la vía del <strong>procedimiento de aplicación general</strong> (ordinario), regulado en los artículos 497 y siguientes del CT. El monitorio es una opción más rápida; no la única vía.</p>
+<p>El reclamo administrativo previo es, por tanto, un <strong>requisito de acceso al procedimiento monitorio</strong>. Pero esto no significa que si el trabajador omite ese paso quede sin acceso a la justicia: puede presentar su demanda directamente ante el tribunal por la vía del <strong>procedimiento de aplicación general</strong> (ordinario), regulado en los artículos 446 y siguientes del CT. El monitorio es una opción más rápida; no la única vía.</p>
 
 <h2>El caso concreto: Rol 24.934-2025</h2>
 
 <h3>Los hechos</h3>
 
-<p>El trabajador —cuya identidad se omite por razones de reserva— fue despedido y presentó demanda de despido injustificado ante el Juzgado de Letras del Trabajo competente. El tribunal rechazó la demanda in limine: consideró que, tratándose de una pretensión que no superaba las 15 IMM, el trabajador debió haber interpuesto su reclamo por la vía del procedimiento monitorio, para lo cual necesitaba haber presentado previamente el reclamo administrativo ante la Inspección del Trabajo. Al no haberlo hecho, el tribunal entendió que la demanda por la vía ordinaria era inadmisible.</p>
+<p>El trabajador —cuya identidad se omite por razones de reserva— fue despedido y presentó demanda de despido injustificado ante el Juzgado de Letras del Trabajo competente. El tribunal rechazó la demanda in limine: consideró que, tratándose de una pretensión que no superaba los 10 IMM, el trabajador debió haber interpuesto su reclamo por la vía del procedimiento monitorio, para lo cual necesitaba haber presentado previamente el reclamo administrativo ante la Inspección del Trabajo. Al no haberlo hecho, el tribunal entendió que la demanda por la vía ordinaria era inadmisible.</p>
 
 <p>La decisión fue confirmada por la Corte de Apelaciones respectiva, que compartió el criterio de que el reclamo administrativo previo constituía un presupuesto procesal de admisibilidad.</p>
 
@@ -97,9 +97,9 @@ image: /images/og-tutela-laboral-corte-suprema.png
 
 <ol>
 
-<li><strong>El reclamo previo es requisito para el procedimiento monitorio, pero su omisión no cierra el acceso a la justicia.</strong> Si el trabajador no presentó el reclamo ante la Inspección del Trabajo, no puede acceder a la vía monitoria. Pero ello no lo inhabilita para acceder al procedimiento de aplicación general, establecido en los artículos 497 y siguientes del CT, que no exige dicho trámite administrativo.</li>
+<li><strong>El reclamo previo es requisito para el procedimiento monitorio, pero su omisión no cierra el acceso a la justicia.</strong> Si el trabajador no presentó el reclamo ante la Inspección del Trabajo, no puede acceder a la vía monitoria. Pero ello no lo inhabilita para acceder al procedimiento de aplicación general, establecido en los artículos 446 y siguientes del CT, que no exige dicho trámite administrativo.</li>
 
-<li><strong>El procedimiento monitorio es una herramienta al servicio del trabajador, no una carga.</strong> Su diseño normativo —arts. 496 a 498 del CT— revela que el legislador quiso ofrecer una vía adicional rápida y de bajo costo. Convertir el incumplimiento de su requisito de acceso en una barrera para toda forma de tutela judicial desnaturaliza su propósito.</li>
+<li><strong>El procedimiento monitorio es una herramienta al servicio del trabajador, no una carga.</strong> Su diseño normativo —arts. 496 y siguientes del CT— revela que el legislador quiso ofrecer una vía adicional rápida y de bajo costo. Convertir el incumplimiento de su requisito de acceso en una barrera para toda forma de tutela judicial desnaturaliza su propósito.</li>
 
 <li><strong>Impedir el acceso al procedimiento de aplicación general por no cumplir un requisito del monitorio vulnera el artículo 19 N.º 3 de la Constitución.</strong> La garantía de igual protección de la ley en el ejercicio de los derechos y el principio de inexcusabilidad (art. 76 de la Constitución) obligan a que exista siempre una vía para que el conflicto sea conocido y resuelto por un tribunal.</li>
 
@@ -131,7 +131,7 @@ image: /images/og-tutela-laboral-corte-suprema.png
 
 <ul>
 
-<li><strong>Procedimiento monitorio</strong>: es la vía procesal para reclamaciones de hasta 15 IMM. Requiere reclamo administrativo previo ante la Inspección del Trabajo como requisito de acceso.</li>
+<li><strong>Procedimiento monitorio</strong>: es la vía procesal para reclamaciones de hasta 10 IMM y para las contiendas por fuero maternal del artículo 201. Requiere reclamo administrativo previo ante la Inspección del Trabajo como requisito de acceso.</li>
 
 <li><strong>Procedimiento de aplicación general</strong>: es la vía ordinaria, disponible para cualquier cuantía y sin necesidad de reclamo administrativo previo. Si el trabajador omite el reclamo, pierde el acceso al monitorio, pero conserva intacto su derecho a demandar por esta vía.</li>
 

@@ -31,7 +31,7 @@ image: /images/og-sueldo-chile-fijeza.png
 
 <li><strong>Fijo</strong>: su monto no depende del resultado de la empresa, del desempeño del trabajador ni de ninguna variable externa. Debe estar predeterminado.</li>
 
-<li><strong>En dinero</strong>: no puede pagarse en especies. La Ley N.º 21.755 reforzó esta exigencia al limitar el pago en especies al 50% de la remuneración total y solo bajo condiciones estrictas.</li>
+<li><strong>En dinero</strong>: no puede pagarse en especies.</li>
 
 <li><strong>Pagado por períodos iguales</strong>: la periodicidad debe ser regular (mensual, quincenal, semanal).</li>
 
@@ -55,9 +55,9 @@ image: /images/og-sueldo-chile-fijeza.png
 
 <li><strong>Dictamen N.º 3662/53 (2010)</strong>: la DT reproduce la definición de fijeza desarrollada por Fariña y señala que ese concepto aparece recogido en su obra <em>Regulación del Sueldo en el Código del Trabajo</em>.</li>
 
-<li><strong>Dictamen N.º 2734/47</strong>: vuelve a señalar que el análisis de la fijeza considera, entre otros argumentos, lo expuesto por Fariña, y reproduce su definición.</li>
+<li><strong>Dictamen N.º 2734/47 (2011)</strong>: vuelve a señalar que el análisis de la fijeza considera, entre otros argumentos, lo expuesto por Fariña, y reproduce su definición.</li>
 
-<li><strong>Dictamen N.º 457</strong>: nuevamente cita a Fariña, su obra y su formulación sobre la fijeza como criterio para distinguir el sueldo de otras remuneraciones.</li>
+<li><strong>Dictamen N.º 457 (2017)</strong>: nuevamente cita a Fariña, su obra y su formulación sobre la fijeza como criterio para distinguir el sueldo de otras remuneraciones.</li>
 
 </ul>
 
@@ -114,7 +114,7 @@ image: /images/og-sueldo-chile-fijeza.png
 
 <h2>¿Por qué importa en 2026?</h2>
 
-<p>En abril de 2026, la jornada laboral ordinaria se redujo a 42 horas semanales conforme al cronograma de la Ley N.º 21.561. Al mismo tiempo, el Ingreso Mínimo Mensual (IMM) alcanzó los $553.553 según lo dispuesto por la Ley N.º 21.830.</p>
+<p>El 26 de abril de 2026, la jornada laboral ordinaria se redujo a 42 horas semanales conforme al cronograma de la Ley N.º 21.561. Y desde el 1 de mayo de 2026, el Ingreso Mínimo Mensual (IMM) es de $553.553, según la Ley N.º 21.830.</p>
 
 <p>Esta doble modificación normativa hace que la correcta calificación del sueldo sea más relevante que nunca:</p>
 
@@ -124,7 +124,7 @@ image: /images/og-sueldo-chile-fijeza.png
 
 <li><strong>IMM de $553.553</strong>: el sueldo base no puede ser inferior al ingreso mínimo. Pero si un trabajador recibe un monto que el empleador llama "sueldo" y que en realidad está compuesto mayoritariamente por comisiones variables, ese monto no es sueldo para efectos del piso del artículo 44 del CT.</li>
 
-<li><strong>Cálculo de indemnizaciones</strong>: la indemnización por años de servicio (art. 163 del CT) se calcula sobre la "última remuneración mensual", concepto definido en el artículo 172. Si lo que el trabajador percibía como "sueldo" incluía componentes variables, la base de cálculo puede ser inferior a lo que intuitivamente se esperaría.</li>
+<li><strong>Cálculo de indemnizaciones</strong>: la indemnización por años de servicio (art. 163 del CT) se calcula sobre la "última remuneración mensual", concepto definido en el artículo 172. Ese concepto es más amplio que el sueldo: incluye también las remuneraciones variables (con el promedio de los últimos tres meses) y excluye el sobretiempo y los beneficios esporádicos o anuales, con un tope de 90 UF.</li>
 
 <li><strong>Semana corrida</strong>: el artículo 45 del CT establece que el beneficio de semana corrida se calcula sobre las remuneraciones variables. Qué es variable y qué es fijo determina si un trabajador tiene o no derecho a este beneficio, y sobre qué monto.</li>
 
@@ -132,7 +132,7 @@ image: /images/og-sueldo-chile-fijeza.png
 
 <h2>La fijeza como garantía y como límite</h2>
 
-<p>La exigencia de fijeza tiene una doble función. Por un lado, <strong>protege al trabajador</strong>: garantiza que recibirá un monto cierto cada mes, independientemente de las fluctuaciones del negocio. Por otro lado, <strong>delimita la base de cálculo</strong> de todo el sistema de protección laboral: si el sueldo es la unidad de medida para indemnizaciones, cotizaciones y multas, la ley exige que esa unidad sea precisa y no fluctuante.</p>
+<p>La exigencia de fijeza tiene una doble función. Por un lado, <strong>protege al trabajador</strong>: garantiza que recibirá un monto cierto cada mes, independientemente de las fluctuaciones del negocio. Por otro lado, <strong>delimita bases de cálculo concretas</strong>: el sueldo es la base de las horas extraordinarias y el monto que se compara con el ingreso mínimo, por lo que la ley exige que sea preciso y no fluctuante.</p>
 
 <p>Esta no es una exigencia burocrática. Responde a un principio de seguridad jurídica: tanto el trabajador como el empleador —y los organismos fiscalizadores— necesitan saber exactamente sobre qué monto se calculan los derechos y obligaciones.</p>
 
@@ -142,7 +142,7 @@ image: /images/og-sueldo-chile-fijeza.png
 
 <h2>Conclusión práctica</h2>
 
-<p>Para un trabajador, la pregunta correcta no es "¿cuánto gano?" sino "¿cuánto de lo que gano es jurídicamente sueldo?". La diferencia no es semántica: de ella dependen su indemnización por despido, sus cotizaciones previsionales, el pago de su semana corrida y la base sobre la que se calculan sus horas extraordinarias.</p>
+<p>Para un trabajador, la pregunta correcta no es "¿cuánto gano?" sino "¿cuánto de lo que gano es jurídicamente sueldo?". La diferencia no es semántica: de ella dependen el pago de su semana corrida, la base sobre la que se calculan sus horas extraordinarias y el respeto del ingreso mínimo.</p>
 
 <p>Para un empleador, la misma distinción determina si sus liquidaciones resistirán una fiscalización de la Inspección del Trabajo o una demanda laboral. Llamar "sueldo" a lo que no lo es puede generar contingencias cuya magnitud solo se descubre al término de la relación laboral.</p>
 

@@ -68,7 +68,7 @@ image: /images/og-42-horas-remuneraciones.png
 
 <p>Si la jornada se reduce por mandato legal, la equivalencia debe recalcularse. No es aceptable que el trabajador preste menos horas de servicio manteniendo las mismas exigencias de productividad, porque eso altera la ecuación conmutativa en su perjuicio.</p>
 
-<p>Este razonamiento fue recogido por la Dirección del Trabajo en dos pronunciamientos clave:</p>
+<p>La Dirección del Trabajo se ha pronunciado sobre la implementación de la segunda etapa:</p>
 
 <h3>ORD. N.º 820/2025</h3>
 
@@ -78,7 +78,7 @@ image: /images/og-42-horas-remuneraciones.png
 
 <h3>ORD. N.º 253/21 (2026)</h3>
 
-<p>Este dictamen, emitido en 2026 para la segunda etapa de implementación, reconsideró la doctrina administrativa previa y precisó la forma de implementar la rebaja de 44 a 42 horas semanales. Establece que la ley privilegia el acuerdo entre las partes y, a falta de acuerdo, fija reglas supletorias para la distribución de la reducción en la jornada semanal, sin que la implementación pueda afectar las remuneraciones.</p>
+<p>Este dictamen, de 16 de abril de 2026, reconsideró la doctrina administrativa previa y precisó la forma de implementar la rebaja de 44 a 42 horas semanales. Establece que la ley privilegia el acuerdo entre las partes y, a falta de acuerdo, la rebaja se aplica al término de la jornada diaria. Regula cómo se distribuyen las horas; no se pronuncia sobre las remuneraciones variables.</p>
 
 <h2>¿Qué parámetros deben ajustarse?</h2>
 
@@ -88,7 +88,7 @@ image: /images/og-42-horas-remuneraciones.png
 
 <p>Si la meta mensual se fijó cuando la jornada era de 44 horas, la reducción a 42 horas representa una disminución del 4,5% en el tiempo disponible. La meta debería ajustarse en esa misma proporción —o, alternativamente, recalcularse considerando la productividad por hora trabajada.</p>
 
-<p>Ejemplo práctico: una meta de $20.000.000 con jornada de 44 horas equivale a $454.545 por hora trabajada. Con la jornada de 42 horas (168 horas mensuales en vez de 176), la meta ajustada debería ser de aproximadamente $19.090.000.</p>
+<p>Ejemplo práctico: una meta de $20.000.000 con jornada de 44 horas (176 horas al mes) equivale a unos $113.636 en ventas por hora trabajada. Con 42 horas (168 horas al mes), la meta ajustada debería ser de aproximadamente $19.090.909.</p>
 
 <h3>2. Bonos de producción</h3>
 
@@ -100,7 +100,7 @@ image: /images/og-42-horas-remuneraciones.png
 
 <h3>4. Horas extraordinarias</h3>
 
-<p>La reducción de jornada no modifica el concepto de hora extraordinaria: sigue siendo toda aquella que excede la jornada ordinaria pactada. Pero con una jornada más corta, las horas extra se gatillan antes. Si el trabajador con remuneración variable realiza horas extra, el valor de la hora extraordinaria se calcula sobre el sueldo base más el promedio de las remuneraciones variables devengadas en los últimos tres meses, conforme al artículo 32 del CT.</p>
+<p>La reducción de jornada no modifica el concepto de hora extraordinaria: sigue siendo toda aquella que excede la jornada ordinaria pactada. Pero con una jornada más corta, las horas extra se gatillan antes. Conforme al artículo 32 del CT, la hora extraordinaria se paga con un recargo del 50% sobre el sueldo convenido para la jornada ordinaria (o sobre el ingreso mínimo, si no hay sueldo o es inferior). Las remuneraciones variables no integran esa base, pero la menor jornada sí eleva el valor de cada hora ordinaria.</p>
 
 <h2>El menoscabo: cuándo hay infracción</h2>
 
@@ -138,7 +138,7 @@ image: /images/og-42-horas-remuneraciones.png
 
 <h2>Otras normas relevantes en 2026</h2>
 
-<p>La Ley N.º 21.755, publicada en el mismo período, introdujo modificaciones al sistema de remuneraciones —incluyendo la limitación del pago en especies al 50% de la remuneración total— y reforzó obligaciones de transparencia en la estructura salarial. Si bien no aborda directamente el cruce entre jornada y remuneraciones variables, su orientación protectora refuerza la interpretación de que los ajustes posteriores a la reducción de jornada no pueden ser perjudiciales.</p>
+<p>La Ley N.º 21.755, publicada el 11 de julio de 2025, también introdujo ajustes en materia de jornada, que la Dirección del Trabajo considera junto con la Ley 21.561 en su dictamen 253/21.</p>
 
 <h2>¿Qué debería hacer un trabajador en esta situación?</h2>
 

@@ -21,7 +21,7 @@ image: /images/og-remuneraciones-variables.png
 
 <li><strong>Benjamín</strong> trabaja en el área de operaciones de una empresa minera. A fin de año recibe un bono que la empresa denomina "bono de gestión", cuyo monto depende de las utilidades anuales de la compañía. El bono no está pactado en su contrato: la empresa lo entrega discrecionalmente.</li>
 
-<li><strong>Carolina</strong> es supervisora en una planta de producción. Recibe mensualmente un porcentaje de las utilidades netas de la planta, conforme al sistema de gratificación legal regulado en los artículos 47 y 50 del Código del Trabajo.</li>
+<li><strong>Carolina</strong> es supervisora en una planta de producción. Su contrato le asigna un porcentaje de las utilidades netas de la planta en que trabaja.</li>
 
 </ul>
 
@@ -43,7 +43,7 @@ image: /images/og-remuneraciones-variables.png
 
 <li><strong>Remuneración variable (comisiones)</strong>: el trabajador asume un riesgo limitado —el de su propio desempeño—, pero no el riesgo del negocio. Si vende poco, gana poco; pero si la empresa pierde dinero por causas ajenas a las ventas, eso no afecta su comisión sobre lo vendido.</li>
 
-<li><strong>Remuneración participativa (gratificación)</strong>: el trabajador <strong>sí</strong> asume parcialmente el riesgo del negocio, porque su bono depende de las utilidades de la empresa. Si la empresa no genera utilidades, no hay gratificación.</li>
+<li><strong>Remuneración participativa (participación y gratificación)</strong>: el trabajador <strong>sí</strong> asume parcialmente el riesgo del negocio, porque el pago depende de las utilidades. Si no hay utilidades, no hay participación.</li>
 
 <li><strong>Remuneración eventual (bono discrecional)</strong>: no hay riesgo para el trabajador en sentido estricto, porque el pago no depende de ninguna variable objetiva, sino de la mera voluntad del empleador. Pero justamente por eso, el trabajador <strong>no tiene derecho a exigirlo</strong>: no es una obligación.</li>
 
@@ -105,15 +105,15 @@ image: /images/og-remuneraciones-variables.png
 
 <h2>Las definiciones legales del Código del Trabajo</h2>
 
-<p>El artículo 42 del CT no solo define el sueldo. En sus incisos siguientes, establece las categorías de remuneraciones no fijas:</p>
+<p>El artículo 42 del CT no solo define el sueldo. En sus letras siguientes, establece las categorías de remuneraciones no fijas:</p>
 
 <ul>
 
-<li><strong>Comisión</strong> (inciso tercero): "porcentaje sobre el precio de las ventas o compras, o sobre el monto de otras operaciones, que el empleador efectúa con la colaboración del trabajador".</li>
+<li><strong>Comisión</strong> (letra c): "porcentaje sobre el precio de las ventas o compras, o sobre el monto de otras operaciones, que el empleador efectúa con la colaboración del trabajador".</li>
 
-<li><strong>Participación</strong> (inciso cuarto): "proporción en las utilidades de un negocio determinado o de una empresa o solo de la de una o más secciones o sucursales de la misma".</li>
+<li><strong>Participación</strong> (letra d): "proporción en las utilidades de un negocio determinado o de una empresa o solo de la de una o más secciones o sucursales de la misma".</li>
 
-<li><strong>Gratificación</strong> (art. 47): "parte de las utilidades con que el empleador beneficia el sueldo del trabajador". El artículo 50 del CT establece dos sistemas para su cumplimiento: el legal (30% de las utilidades líquidas, con tope de 4,75 IMM) y el convencional.</li>
+<li><strong>Gratificación</strong> (art. 42 letra e): "parte de las utilidades con que el empleador beneficia el sueldo del trabajador". El artículo 47 obliga a repartir al menos el 30% de las utilidades líquidas, sin tope; el artículo 50 permite, en su lugar, pagar el 25% de lo devengado en remuneraciones mensuales, con un tope de 4,75 IMM por trabajador. Las partes también pueden pactar una gratificación convencional.</li>
 
 </ul>
 
@@ -123,13 +123,13 @@ image: /images/og-remuneraciones-variables.png
 
 <h3>Finiquitos y base de cálculo de indemnizaciones</h3>
 
-<p>El artículo 172 del CT define la base de cálculo de la indemnización por años de servicio como "la última remuneración mensual devengada", que incluye toda contraprestación en dinero percibida por el trabajador. Pero la inclusión de componentes variables en esa base depende de su naturaleza:</p>
+<p>El artículo 172 del CT define la base de cálculo de la indemnización por años de servicio como la última remuneración mensual: toda cantidad que estuviere percibiendo el trabajador por la prestación de sus servicios al terminar el contrato, con un tope de 90 UF. Excluye la asignación familiar, el sobretiempo y los beneficios esporádicos o anuales. Dentro de ese marco, la inclusión de componentes variables depende de su naturaleza:</p>
 
 <ul>
 
 <li><strong>Comisiones</strong>: se incluyen en la base de cálculo, prorrateando el promedio de los últimos tres meses.</li>
 
-<li><strong>Gratificaciones</strong>: se incluyen según las reglas del artículo 172, que distingue entre gratificación legal (se prorratea) y convencional (puede estar excluida si así se pactó).</li>
+<li><strong>Gratificaciones</strong>: la anual queda excluida, porque el artículo 172 la menciona expresamente entre los beneficios que se pagan una vez al año. Si se paga mensualmente, la Dirección del Trabajo considera que sí integra la base.</li>
 
 <li><strong>Bonos eventuales</strong>: en principio, no forman parte de la base de cálculo salvo que se hayan pagado con regularidad, periodicidad y sin condiciones, caso en el cual pueden entenderse incorporados al contrato por cláusula tácita.</li>
 
@@ -145,11 +145,11 @@ image: /images/og-remuneraciones-variables.png
 
 <ul>
 
-<li><strong>Comisiones por venta</strong>: sí generan semana corrida, calculada como el promedio de lo devengado en la respectiva semana.</li>
+<li><strong>Comisiones por venta</strong>: sí generan semana corrida. Para quien tiene sueldo mensual más variables, el promedio se calcula solo sobre la parte variable devengada en el respectivo período de pago.</li>
 
 <li><strong>Gratificaciones</strong>: no generan semana corrida, porque no dependen de la jornada diaria del trabajador sino de las utilidades anuales de la empresa.</li>
 
-<li><strong>Bonos por meta</strong>: generan semana corrida si la meta se mide en períodos iguales o inferiores a un mes.</li>
+<li><strong>Bonos por meta</strong>: generan semana corrida cuando dependen del desempeño individual del trabajador y se devengan diariamente; los asociados a metas colectivas no la generan (Dirección del Trabajo, Ord. 185 de 2026).</li>
 
 <li><strong>Bonos eventuales</strong>: no generan semana corrida, salvo que por cláusula tácita se entiendan incorporados como remuneración permanente.</li>
 
@@ -157,11 +157,11 @@ image: /images/og-remuneraciones-variables.png
 
 <h3>Cotizaciones previsionales</h3>
 
-<p>La base imponible para cotizaciones previsionales (AFP, salud, seguro de cesantía) incluye las remuneraciones variables, con las mismas reglas de prorrateo. Pero aquí surge una complejidad adicional: el empleador debe retener y declarar las cotizaciones dentro de los primeros 10 días del mes siguiente. Si las comisiones o bonos variables se liquidan después de esa fecha, las cotizaciones pueden declararse extemporáneamente, generando multas e intereses.</p>
+<p>La base imponible para cotizaciones previsionales (AFP, salud, seguro de cesantía) incluye las remuneraciones variables, con las mismas reglas de prorrateo. Pero aquí surge una complejidad adicional: el empleador debe retener y declarar las cotizaciones dentro de los primeros 10 días del mes siguiente (13 si se declaran y pagan electrónicamente). Si las comisiones o bonos variables se liquidan después de esa fecha, las cotizaciones pueden declararse extemporáneamente, generando multas e intereses.</p>
 
 <h3>Descuentos y embargos</h3>
 
-<p>El artículo 57 del CT regula los descuentos permitidos sobre las remuneraciones. El artículo 58, en tanto, establece los límites de embargabilidad: las remuneraciones son inembargables hasta un monto equivalente a 15 UTM, y solo el excedente puede ser objeto de embargo. Tratándose de remuneraciones variables, estas reglas se aplican sobre el total percibido, sin distinción entre componentes fijos y variables.</p>
+<p>El artículo 57 del CT establece que las remuneraciones son inembargables, salvo en la parte que exceda de 56 unidades de fomento (con excepciones, como las pensiones de alimentos, que permiten embargar hasta el 50%). El artículo 58, en tanto, regula los descuentos que el empleador debe o puede hacer sobre las remuneraciones. Tratándose de remuneraciones variables, estas reglas se aplican sobre el total percibido, sin distinción entre componentes fijos y variables.</p>
 
 <h2>El caso de los bonos: la zona más gris</h2>
 
@@ -226,13 +226,13 @@ image: /images/og-remuneraciones-variables.png
 
 <li><strong>Dictamen 3662/53 (2010)</strong>: el carácter fijo de un estipendio determina su naturaleza de sueldo; la variabilidad excluye esa calificación.</li>
 
-<li><strong>Dictamen 2734/47</strong>: la base de cálculo de indemnizaciones debe distinguir entre componentes fijos y variables.</li>
+<li><strong>Dictamen 2734/47 (2011)</strong>: un estipendio es fijo cuando se devenga por la sola prestación de servicios en la jornada ordinaria y su monto está predeterminado o es determinable según el contrato.</li>
 
-<li><strong>Dictamen 457</strong>: los pagos sujetos a condiciones no pueden considerarse sueldo.</li>
+<li><strong>Dictamen 457 (2017)</strong>: la fijeza implica que el pago no dependa del rendimiento del trabajador ni de condición alguna; con ese criterio, la DT calificó como sueldo un bono de disponibilidad condicionado solo al cumplimiento de la jornada.</li>
 
 </ul>
 
-<p>Además, en materia de semana corrida, la DT ha establecido que las comisiones, los bonos de producción y los incentivos por meta —por depender del trabajo diario del dependiente— generan el beneficio, mientras que las gratificaciones y los bonos anuales —por depender de resultados de largo plazo— no.</p>
+<p>Además, en materia de semana corrida, la DT ha establecido que las comisiones, los bonos de producción y los incentivos por meta individual —por depender del trabajo diario del dependiente— generan el beneficio, mientras que las gratificaciones y los bonos anuales —por depender de resultados de largo plazo— no.</p>
 
 <h2>Conclusión: la importancia de la calificación jurídica</h2>
 
