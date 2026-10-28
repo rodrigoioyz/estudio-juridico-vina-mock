@@ -23,19 +23,19 @@ export const AUTODESPIDO: Servicio = {
     {
       titulo: 'Cuándo aplica',
       parrafos: [
-        'El artículo 171 remite a las causales del artículo 160 que sean imputables al empleador. En la práctica, las más frecuentes son:',
+        'El artículo 171 permite el autodespido cuando el empleador incurre en las causales de los números 1, 5 o 7 del artículo 160:',
       ],
       lista: [
-        'Falta de probidad o conducta deshonesta del empleador (artículo 160, número 1).',
-        'Actos de violencia o maltrato ejercidos contra el trabajador (artículo 160, número 1).',
-        'Incumplimiento grave de las obligaciones que impone el contrato (artículo 160, número 5). Es la causal más usada y la que exige mejor prueba.',
-        'Perjuicio material causado por el empleador con infracción de las obligaciones contractuales (artículo 160, número 7).',
+        'Falta de probidad o conducta deshonesta del empleador (artículo 160 N° 1).',
+        'Acoso sexual, acoso laboral, vías de hecho o injurias del empleador contra el trabajador (artículo 160 N° 1).',
+        'Incumplimiento grave de las obligaciones que impone el contrato (artículo 160 N° 7). Es la causal más usada y la que exige mejor prueba.',
+        'Actos, omisiones o imprudencias temerarias del empleador que afecten la seguridad o la salud del trabajador (artículo 160 N° 5).',
       ],
     },
     {
       titulo: 'Causales frecuentes en la práctica',
       parrafos: [
-        'El incumplimiento grave no se presume: debe acreditarse. Algunos escenarios que suelen evaluarse son el no pago de remuneraciones durante varios períodos, el no pago de cotizaciones previsionales, el cambio unilateral de condiciones esenciales del contrato y el incumplimiento de medidas de seguridad que expone al trabajador a un riesgo cierto. [VERIFICAR: suficiencia de cada supuesto según jurisprudencia]',
+        'El incumplimiento grave no se presume: debe acreditarse. Algunos escenarios que suelen evaluarse son el no pago de remuneraciones durante varios períodos, el no pago de cotizaciones previsionales, el cambio unilateral de condiciones esenciales del contrato y el incumplimiento de medidas de seguridad que expone al trabajador a un riesgo cierto.',
         'Un mismo hecho puede dar lugar a dos caminos distintos. Si el empleador no paga las cotizaciones y luego lo despide, el camino es la nulidad del despido. Si decide terminar usted el contrato por ese mismo incumplimiento, el camino es el autodespido. Conviene comparar ambos antes de actuar.',
       ],
     },
@@ -44,13 +44,13 @@ export const AUTODESPIDO: Servicio = {
       parrafos: [
         'La terminación se comunica por escrito al empleador, indicando la causal y los hechos. Esa carta es la pieza central del caso: fija lo que después se discutirá en juicio y no puede corregirse con facilidad.',
         'El artículo 171 concede un plazo de sesenta días hábiles contados desde la terminación para demandar. Igual que en el despido injustificado, se trata de un plazo de caducidad.',
-        'El empleador, por su parte, puede impugnar la terminación y reclamar que se declare injustificado el autodespido. [VERIFICAR: plazo y trámite de la impugnación del empleador]',
+        'Si el trabajador invoca falsamente acoso sexual o acoso laboral, o lo hace para lesionar la honra del empleador, y el tribunal declara la demanda carente de motivo plausible, deberá indemnizar los perjuicios causados (artículo 171).',
       ],
     },
     {
       titulo: 'Qué se puede obtener y qué se arriesga',
       parrafos: [
-        'Si el tribunal acoge la demanda, se aplican las indemnizaciones propias de un despido injustificado: aviso previo, años de servicio y el recargo legal que corresponda. La sentencia también puede reconocer prestaciones adeudadas durante la relación laboral.',
+        'Si el tribunal acoge la demanda, se pagan las indemnizaciones por aviso previo y por años de servicio, con un recargo de 50% si la causal es el número 7 del artículo 160 y de hasta 80% si son los números 1 o 5 (artículo 171). La sentencia también puede reconocer prestaciones adeudadas durante la relación laboral.',
         'Si la demanda se rechaza, la terminación se entiende como una renuncia y el trabajador queda sin indemnización. Ese riesgo es la razón por la que el análisis previo —hechos, prueba, tiempos y redacción de la carta— importa más que en cualquier otra materia laboral.',
       ],
     },
@@ -66,7 +66,7 @@ export const AUTODESPIDO: Servicio = {
     {
       pregunta: '¿Puedo autodespedirme si no me pagan el sueldo?',
       respuesta:
-        'El no pago reiterado de remuneraciones puede constituir incumplimiento grave de las obligaciones del contrato, que es la causal del artículo 160 número 5. La fuerza del caso depende de los períodos impagos, de los reclamos previos y de la prueba disponible.',
+        'El no pago reiterado de remuneraciones puede constituir incumplimiento grave de las obligaciones del contrato, que es la causal del artículo 160 número 7. La fuerza del caso depende de los períodos impagos, de los reclamos previos y de la prueba disponible.',
     },
     {
       pregunta: '¿Cuánto plazo tengo para autodespedirme y demandar?',

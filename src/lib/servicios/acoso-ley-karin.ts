@@ -15,9 +15,9 @@ export const ACOSO_LEY_KARIN: Servicio = {
     {
       titulo: 'Qué es el acoso laboral',
       parrafos: [
-        'El acoso laboral es una conducta reiterada de agresión u hostigamiento ejercida por el empleador, por sus representantes o por otros trabajadores, que tiene por resultado menoscabar la dignidad de la persona o crear un entorno hostil o humillante.',
-        'La Ley 21.643, conocida como Ley Karin, incorporó esa definición al Código del Trabajo y estableció un estatuto de prevención y sanción. Entró en vigencia el 1 de agosto de 2024. [VERIFICAR: artículo exacto del Código del Trabajo que contiene la definición]',
-        'Conviene distinguir dos figuras que la ley separa: el acoso laboral, entre compañeros o de jefaturas hacia subordinados, y el acoso sexual, que tiene connotación sexual y reglas propias de investigación.',
+        'El acoso laboral es toda conducta de agresión u hostigamiento ejercida por el empleador o por uno o más trabajadores, ya sea que se manifieste una sola vez o de manera reiterada, que tenga como resultado el menoscabo, maltrato o humillación de la persona afectada, o que amenace o perjudique su situación laboral o sus oportunidades en el empleo. Desde la Ley Karin, ya no se exige reiteración.',
+        'La Ley 21.643, conocida como Ley Karin, incorporó esa definición al Código del Trabajo y estableció un estatuto de prevención y sanción. Entró en vigencia el 1 de agosto de 2024, y las definiciones están en el artículo 2 del Código del Trabajo.',
+        'La ley distingue tres figuras: el acoso laboral; el acoso sexual, que tiene connotación sexual; y la violencia en el trabajo ejercida por terceros ajenos a la relación laboral, como clientes o usuarios.',
       ],
     },
     {
@@ -26,7 +26,7 @@ export const ACOSO_LEY_KARIN: Servicio = {
         'Antes, la respuesta dependía en buena medida de la voluntad del empleador. Desde la vigencia de la ley, existen obligaciones exigibles:',
       ],
       lista: [
-        'Protocolo de prevención del acoso laboral y sexual, obligatorio para los empleadores (artículo 154 del Código del Trabajo). [VERIFICAR: umbral de trabajadores y contenido mínimo exigido]',
+        'Protocolo de prevención del acoso laboral, sexual y de la violencia en el trabajo, obligatorio para todos los empleadores, cualquiera sea su tamaño.',
         'Canal de denuncias conocido y accesible para todas las personas que trabajan en la empresa, incluidas las que están a honorarios.',
         'Procedimiento de investigación con plazos, medidas de resguardo para la persona denunciante y resguardo de confidencialidad.',
         'Posibilidad de denunciar directamente ante la Dirección del Trabajo cuando el empleador no investiga o lo hace deficientemente.',
@@ -36,7 +36,7 @@ export const ACOSO_LEY_KARIN: Servicio = {
       titulo: 'Cómo se denuncia',
       parrafos: [
         'La denuncia puede presentarse ante el empleador —a través del canal que debe existir— o directamente ante la Dirección del Trabajo. Los hechos deben relatarse con fechas, personas involucradas y testigos, y conviene acompañar la prueba disponible: correos, mensajes, registros de asistencia, licencias médicas.',
-        'El empleador debe adoptar medidas de resguardo mientras se investiga, como separar a las partes o cambiar el turno de la persona denunciante. [VERIFICAR: plazo para adoptar medidas y para concluir la investigación]',
+        'El empleador debe adoptar medidas de resguardo desde que recibe la denuncia, como separar a las partes o cambiar el turno de la persona denunciante. Dentro de tres días hábiles debe iniciar la investigación o remitirla a la Inspección del Trabajo; la investigación interna tiene un plazo de 30 días y, recibido el informe, el empleador tiene 15 días para aplicar medidas o sanciones.',
         'Si el empleador no investiga, o la investigación no es imparcial, la denuncia administrativa y la acción judicial pueden ejercerse en paralelo.',
       ],
     },
@@ -44,14 +44,14 @@ export const ACOSO_LEY_KARIN: Servicio = {
       titulo: 'La vía judicial: tutela laboral',
       parrafos: [
         'El acoso laboral afecta derechos fundamentales, en particular la dignidad y la integridad psíquica. Por eso se reclama por el procedimiento de tutela laboral, que tiene reglas probatorias favorables al trabajador: si existen indicios de la vulneración, corresponde al empleador explicar y probar lo contrario.',
-        'La acción de tutela tiene un plazo de caducidad de sesenta días contados desde la vulneración o desde el cese de la conducta. [VERIFICAR: artículo y cómputo exacto del plazo]',
+        'La acción de tutela debe presentarse dentro de sesenta días contados desde que se produce la vulneración, y el plazo se suspende si se reclama ante la Inspección del Trabajo (artículo 486). Si la vulneración ocurrió con ocasión del despido, se cuentan desde la separación (artículo 489).',
       ],
     },
     {
       titulo: 'Qué se puede obtener',
       parrafos: [
         'La tutela busca restablecer el derecho y reparar el daño. Según el caso, la sentencia puede ordenar el cese de la conducta, la adopción de medidas, una indemnización por daño moral y, cuando ha habido despido, el recargo legal correspondiente.',
-        'A eso se suman las prestaciones propias del término del contrato, si el acoso derivó en un despido o en un autodespido. [VERIFICAR: montos y recargos aplicables según el artículo 489]',
+        'Si la vulneración ocurrió con ocasión del despido, además de las indemnizaciones por término del contrato con su recargo legal, el juez fija una indemnización adicional de entre seis y once remuneraciones mensuales (artículo 489).',
       ],
     },
     {

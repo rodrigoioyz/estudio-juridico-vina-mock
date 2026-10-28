@@ -29,28 +29,28 @@ export const LEY_BUSTOS: Servicio = {
         'Que existan cotizaciones impagas al momento del despido, total o parcialmente.',
         'Que la deuda sea anterior o contemporánea a la separación, no posterior.',
         'Que el empleador no haya acreditado el pago antes de la demanda o durante el juicio.',
-        'Que la demanda se presente dentro del plazo de caducidad del artículo 168.',
+        'Que la demanda se presente dentro de seis meses desde la separación (artículo 510).',
       ],
     },
     {
       titulo: 'La Ley Bustos y sus límites',
       parrafos: [
-        'La Ley 20.720, conocida como Ley Bustos, modificó el régimen de la nulidad del despido en el contexto de los procedimientos concursales de la empresa. La discusión sobre su alcance exacto —en particular respecto de empleadores en liquidación y del período que se devenga— sigue siendo materia de litigio. [VERIFICAR: alcance y límites introducidos por la Ley 20.720 a la nulidad del despido]',
+        'La nulidad del despido se conoce como Ley Bustos porque la introdujo la Ley 19.631, de 1999, que agregó los incisos quinto a séptimo del artículo 162. Su límite más relevante viene de otra norma: con la Ley 20.720, de insolvencia, la Corte Suprema ha resuelto que si el empleador entra en liquidación concursal, las remuneraciones no se devengan más allá de la resolución de liquidación.',
         'En la práctica, eso significa que la estrategia cambia según la situación de la empresa: no es lo mismo demandar a un empleador activo que a uno sometido a un procedimiento de insolvencia.',
       ],
     },
     {
       titulo: 'Los plazos',
       parrafos: [
-        'La nulidad del despido no tiene una acción separada con plazo propio: se reclama en la misma demanda por despido, dentro de los sesenta días hábiles contados desde la separación (artículo 168).',
-        'Ese plazo corre igual aunque el trabajador esté reclamando administrativamente las cotizaciones ante la Dirección del Trabajo o ante la entidad previsional. [VERIFICAR: interrupción o suspensión del plazo por gestiones administrativas]',
+        'La acción de nulidad del despido prescribe en seis meses contados desde la separación (artículo 510). Si además se reclama que el despido fue injustificado, esa acción caduca en sesenta días hábiles (artículo 168), por lo que en la práctica ambas se presentan juntas dentro del plazo más corto.',
+        'Si dentro de ese plazo de sesenta días presenta un reclamo ante la Inspección del Trabajo, se suspende, con un máximo de noventa días hábiles desde la separación (artículo 168, inciso final).',
       ],
     },
     {
       titulo: 'Qué se puede obtener',
       parrafos: [
         'Cuando se declara la nulidad, la sentencia ordena el pago de las remuneraciones y cotizaciones del período comprendido entre el despido y la convalidación, además de las prestaciones propias del despido que se declare injustificado.',
-        'El monto final depende de tres variables: la fecha del despido, la fecha en que se acredite el pago de las cotizaciones y la remuneración que se determine como base de cálculo. [VERIFICAR: límite temporal de los devengos]',
+        'El monto final depende de tres variables: la fecha del despido, la fecha en que se acredite el pago de las cotizaciones y la remuneración que se determine como base de cálculo. La ley no fija un tope temporal; la excepción es la liquidación concursal del empleador.',
       ],
     },
     {
@@ -70,7 +70,7 @@ export const LEY_BUSTOS: Servicio = {
     {
       pregunta: '¿Sigo devengando sueldo después del despido?',
       respuesta:
-        'Sí, para los efectos de la nulidad: el período entre el despido y la convalidación genera remuneraciones y cotizaciones que el empleador debe pagar. No implica reincorporación al puesto de trabajo. [VERIFICAR: extensión máxima del período]',
+        'Sí, para los efectos de la nulidad: el período entre el despido y la convalidación genera remuneraciones y cotizaciones que el empleador debe pagar. No implica reincorporación al puesto de trabajo. La ley no fija un máximo, salvo que el empleador entre en liquidación concursal.',
     },
     {
       pregunta: '¿Sirve demandar si la empresa está en quiebra?',

@@ -17,7 +17,7 @@ export const PROTOCOLO_LEY_KARIN: Servicio = {
       titulo: 'Qué exige la ley a la empresa',
       parrafos: [
         'La Ley 21.643, vigente desde el 1 de agosto de 2024, modificó el Código del Trabajo para exigir a los empleadores un protocolo de prevención del acoso laboral y sexual, además de un procedimiento de investigación y sanción.',
-        'La obligación no se agota en redactar un documento: exige difundirlo, aplicarlo y dejar registro. En una fiscalización, lo que se revisa es la conducta efectiva de la empresa frente a una denuncia, no solo la existencia del protocolo. [VERIFICAR: artículo 154 y alcance de la obligación según tamaño de empresa]',
+        'La obligación no se agota en redactar un documento: exige difundirlo, aplicarlo y dejar registro. En una fiscalización, lo que se revisa es la conducta efectiva de la empresa frente a una denuncia, no solo la existencia del protocolo. La obligación alcanza a todos los empleadores, cualquiera sea su tamaño.',
       ],
     },
     {
@@ -39,7 +39,7 @@ export const PROTOCOLO_LEY_KARIN: Servicio = {
       titulo: 'Qué pasa si la empresa no lo tiene',
       parrafos: [
         'La Dirección del Trabajo puede fiscalizar y aplicar multas por incumplimiento de las obligaciones de prevención. Pero el costo mayor suele ser otro: una denuncia mal gestionada puede terminar en una demanda de tutela laboral, con indemnización del daño y eventual responsabilidad de la empresa.',
-        'A eso se suma el riesgo reputacional y la rotación. [VERIFICAR: montos de las multas y su graduación]',
+        'A eso se suma el riesgo reputacional y la rotación.',
       ],
     },
     {
@@ -62,7 +62,7 @@ export const PROTOCOLO_LEY_KARIN: Servicio = {
     {
       pregunta: '¿Todas las empresas deben tener protocolo Ley Karin?',
       respuesta:
-        'La obligación de prevención alcanza a los empleadores. El alcance y los documentos exigidos varían según el tamaño de la empresa y si tiene o no reglamento interno. [VERIFICAR: umbral de trabajadores]',
+        'Sí. Todas las empresas deben contar con un protocolo de prevención, cualquiera sea su tamaño. Las que tienen diez o más trabajadores deben además incorporar el procedimiento de investigación y sanción en su reglamento interno; las más pequeñas pueden apoyarse en el modelo de su mutualidad.',
     },
     {
       pregunta: '¿Qué debe contener el canal de denuncias?',
