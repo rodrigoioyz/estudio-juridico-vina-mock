@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     url: '/',
     images: [
       {
-        url: assetPath('/images/fotos/vina-del-mar.jpg'),
+        url: '/images/fotos/vina-del-mar.jpg',
         width: 1200,
         height: 675,
         alt: 'Costa de Viña del Mar al amanecer',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: SITE_CONFIG.name,
     description: SITE_CONFIG.description,
-    images: [assetPath('/images/fotos/vina-del-mar.jpg')],
+    images: ['/images/fotos/vina-del-mar.jpg'],
   },
   robots: {
     index: isPublicSite,
