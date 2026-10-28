@@ -1,15 +1,62 @@
+'use client';
+
 import Image from 'next/image';
 import { assetPath } from '@/lib/asset-path';
 import { HERO_MEDIA } from '@/lib/hero-media';
+import { useEffect, useState } from 'react';
+import type { SyntheticEvent } from 'react';
 
 /**
- * Hero del home: imagen fija.
+ * Hero del home: imagen primero, video despues.
  *
- * Sin video y sin animacion, a proposito. El clip de fondo era video generado
- * y parpadeaba entre frames; se retiro el 2026-10-27. Si algun dia vuelve un
- * video, debe ser material estable y comprobado antes de publicarlo.
+ * - La imagen se pinta desde el primer frame; el video entra cuando puede
+ *   reproducirse (desktop y sin reduced-motion).
+ * - Sin `loop` nativo: Chrome y Firefox vacian el buffer al reiniciar y eso
+ *   produce un salto. Reencuadramos a mano en `ended`.
+ * - Sin animaciones: ni Ken Burns ni parallax ni overlay animado.
  */
 export function HeroMedia() {
+  const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
+  const [videoReady, setVideoReady] = useState(false);
+
+  const handleEnded = (event: SyntheticEvent<HTMLVideoElement>) => {
+    const video = event.currentTarget;
+    video.currentTime = 0;
+    void video.play();
+  };
+
+  useEffect(() => {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const desktop = window.matchMedia('(min-width: 768px)');
+    let timeoutId: ReturnType<typeof setTimeout> | undefined;
+
+    const cancelPendingLoad = () => {
+      if (timeoutId !== undefined) globalThis.clearTimeout(timeoutId);
+      timeoutId = undefined;
+    };
+
+    const syncVideoPolicy = () => {
+      cancelPendingLoad();
+      if (reducedMotion.matches || !desktop.matches) {
+        setShouldLoadVideo(false);
+        setVideoReady(false);
+        return;
+      }
+
+      timeoutId = globalThis.setTimeout(() => setShouldLoadVideo(true), 900);
+    };
+
+    syncVideoPolicy();
+    reducedMotion.addEventListener('change', syncVideoPolicy);
+    desktop.addEventListener('change', syncVideoPolicy);
+
+    return () => {
+      reducedMotion.removeEventListener('change', syncVideoPolicy);
+      desktop.removeEventListener('change', syncVideoPolicy);
+      cancelPendingLoad();
+    };
+  }, []);
+
   return (
     <div className="hero-home-media">
       <Image
@@ -22,6 +69,24 @@ export function HeroMedia() {
         priority
         style={{ animation: 'none' }}
       />
+      {shouldLoadVideo && (
+        <video
+          className={`hero-video${videoReady ? ' is-ready' : ''}`}
+          autoPlay
+          muted
+          playsInline
+          preload="auto"
+          poster={assetPath(HERO_MEDIA.poster)}
+          onCanPlay={() => setVideoReady(true)}
+          onEnded={handleEnded}
+          aria-hidden="true"
+          tabIndex={-1}
+        >
+          {HERO_MEDIA.sources.map((source) => (
+            <source key={source.type} src={assetPath(source.src)} type={source.type} />
+          ))}
+        </video>
+      )}
       <div className="hero-media-tint" aria-hidden="true" />
       <div className="hero-overlay" aria-hidden="true" />
     </div>
