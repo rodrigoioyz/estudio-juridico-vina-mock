@@ -6,7 +6,7 @@ import { EQUIPO } from '@/lib/equipo';
 import { assetPath } from '@/lib/asset-path';
 import { ScrollReveal } from '@/components/motion/scroll-reveal';
 import { HeroMedia } from '@/components/sections/hero-media';
-import articles from './publicaciones/articles-listing.json';
+import { PUBLICACIONES as articles } from '@/lib/publicaciones';
 import {
   HOME_HERO,
   HOME_PRUEBA,

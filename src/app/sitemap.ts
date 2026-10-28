@@ -2,7 +2,7 @@ import { statSync } from 'node:fs';
 import { join } from 'node:path';
 import type { MetadataRoute } from 'next';
 import { PRACTICE_AREAS, SITE_CONFIG } from '@/lib/site-config';
-import articles from '@/app/publicaciones/articles-listing.json';
+import { PUBLICACIONES as articles } from '@/lib/publicaciones';
 
 const FALLBACK = new Date('2026-08-07');
 const AREA_FILE = 'src/app/areas/[slug]/page.tsx';

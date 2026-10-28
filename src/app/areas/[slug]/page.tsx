@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PRACTICE_AREAS } from '@/lib/site-config';
 import { notFound } from 'next/navigation';
-import articles from '@/app/publicaciones/articles-listing.json';
+import { PUBLICACIONES as articles } from '@/lib/publicaciones';
 import { BreadcrumbLd } from '@/components/seo/breadcrumb-ld';
 
 export function generateStaticParams() {
@@ -260,7 +260,7 @@ const AREA_CONTENT: Record<string, {
       },
     ],
     evidencia:
-      'Corte Suprema, Rol N° 24.934-2025 — recurso de queja con intervención del equipo del estudio.',
+      'El equipo ha intervenido en recursos de queja ante la Corte Suprema en materia laboral.',
   },
 
   'accidentes-laborales': {

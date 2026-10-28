@@ -16,10 +16,14 @@ interface ArticleData {
   image: string;
   body_html: string;
   slug: string;
+  status?: 'published' | 'draft';
 }
 
 const ARTICLE_ENTRIES = Object.entries(articlesData) as [string, ArticleData][];
-const ARTICLES = new Map(ARTICLE_ENTRIES);
+// Los borradores no se generan ni se enlazan: filtran el mapa en origen.
+const ARTICLES = new Map(
+  ARTICLE_ENTRIES.filter(([, articulo]) => articulo.status !== 'draft'),
+);
 const ARTICLE_SLUGS = new Set(ARTICLES.keys());
 
 // Las etiquetas de área del artículo no coinciden con los títulos de

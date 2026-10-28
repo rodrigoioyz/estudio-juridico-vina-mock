@@ -3,7 +3,7 @@ import { BreadcrumbLd } from '@/components/seo/breadcrumb-ld';
 import Image from 'next/image';
 import Link from 'next/link';
 import { assetPath } from '@/lib/asset-path';
-import articles from './articles-listing.json';
+import { PUBLICACIONES as articles } from '@/lib/publicaciones';
 
 export const metadata: Metadata = {
   title: { absolute: 'Publicaciones de doctrina laboral chilena' },
@@ -40,7 +40,7 @@ export default function PublicacionesPage() {
             <div>
               <h2 id="publicaciones-recientes" className="section-title">Análisis recientes</h2>
               <p className="section-dek">
-                Cuatro lecturas para comprender cómo operan las remuneraciones, la jornada y el acceso a la justicia laboral.
+                Lecturas para comprender cómo operan las remuneraciones, la jornada y el acceso a la justicia laboral.
               </p>
             </div>
             <p className="publication-count" aria-label={`${articles.length} publicaciones`}>
