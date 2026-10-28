@@ -820,19 +820,11 @@ header button[aria-label="Menú"] {
    Loop suave (alternate = sin salto), 18s por tramo, GPU-only.
    No depende de scroll-timeline: aplica también sin soporte y en móvil
    (donde escala el poster). Nunca bajo reduced-motion. */
-@keyframes hero-kenburns {
-  from { transform: scale(1); }
-  to   { transform: scale(1.045); }
-}
-@media (prefers-reduced-motion: no-preference) {
-  /* Ken Burns solo en el poster: animar transform sobre un <video>
-     provoca repaints y tirones en GPU discretas/móviles. */
-  .hero-home-media .hero-fallback {
-    transform-origin: 62% 50%;
-    animation: hero-kenburns 18s cubic-bezier(0.25, 0.1, 0.25, 0.9) infinite alternate;
-    will-change: transform;
-  }
-}
+/*
+ * Ken Burns RETIRADO (2026-10-27) del hero: escalar el poster (scale 1 -> 1.045)
+ * hace que la imagen "tiemble" cuando el video aún no ha entrado o no carga
+ * (movil, reduced-motion, fallo de red). El hero queda 100% estatico.
+ */
 
 /* Reveal una-sola-vez (IntersectionObserver añade .is-in).
    El estado oculto SOLO existe si body.motion-ok está presente
