@@ -30,7 +30,7 @@ describe('configuración institucional pública', () => {
 
   it('reemplaza localhost en producción, pero lo conserva durante desarrollo', () => {
     expect(getPublicSiteUrl('http://localhost:3000', false)).toBe(
-      'https://estudiojuridicolaboral.cl',
+      'https://www.estudiovina.cl',
     );
     expect(getPublicSiteUrl('http://localhost:3000/', true)).toBe('http://localhost:3000');
   });

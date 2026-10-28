@@ -4,7 +4,7 @@
 // y aprobados en docs/superpowers/specs/2026-10-27-estudiovina-contenido-original-design.md §4.5.
 
 const DEFAULT_PUBLIC_EMAIL = "contacto@estudiovina.cl";
-const DEFAULT_PUBLIC_URL = "https://estudiojuridicolaboral.cl";
+const DEFAULT_PUBLIC_URL = "https://www.estudiovina.cl";
 
 export function getPublicSiteUrl(value?: string, isDevelopment = process.env.NODE_ENV === "development"): string {
   const candidate = value?.trim().replace(/\/$/, "");

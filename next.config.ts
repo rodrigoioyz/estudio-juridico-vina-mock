@@ -1,12 +1,17 @@
 import type { NextConfig } from 'next';
 
 const isGitHubPagesMock = process.env.NEXT_PUBLIC_GITHUB_PAGES_DEMO === 'true';
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+// Export estático limpio (Hostinger u otro hosting sin Node): sin basePath
+// y sin el noindex del demo.
+const isStaticExport =
+  process.env.NEXT_PUBLIC_STATIC_EXPORT === 'true' || isGitHubPagesMock;
+const basePath = isGitHubPagesMock ? process.env.NEXT_PUBLIC_BASE_PATH || '' : '';
 
 const sharedConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
-  images: isGitHubPagesMock
+  // Un export estático no tiene servidor que optimice imágenes.
+  images: isStaticExport
     ? { unoptimized: true }
     : {
         formats: ['image/webp', 'image/avif'],
@@ -14,13 +19,12 @@ const sharedConfig: NextConfig = {
       },
 };
 
-const nextConfig: NextConfig = isGitHubPagesMock
+const nextConfig: NextConfig = isStaticExport
   ? {
       ...sharedConfig,
       output: 'export',
       trailingSlash: true,
-      basePath,
-      assetPrefix: basePath,
+      ...(isGitHubPagesMock ? { basePath, assetPrefix: basePath } : {}),
     }
   : {
       ...sharedConfig,
