@@ -1340,10 +1340,24 @@ footer a { display: inline-flex; min-height: 44px; align-items: center; text-und
   height: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  filter: saturate(0.92) contrast(1.02);
+  /* Tono único para las tres fotos (la de Lautaro es gray y las otras color):
+     B/N con el mismo contraste, para que la serie se lea homogénea. */
+  filter: grayscale(1) contrast(1.06) brightness(1.02);
   transition: transform var(--motion-slow) var(--ease-out);
 }
 .team-card:hover .team-photo { transform: scale(1.02); }
+.team-photo--placeholder {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: var(--paper);
+  border: 1px solid var(--mist-300);
+  color: var(--navy-700);
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 2.6rem;
+  letter-spacing: 0.04em;
+}
 .team-area {
   color: var(--wood-600);
   font-size: 0.74rem;

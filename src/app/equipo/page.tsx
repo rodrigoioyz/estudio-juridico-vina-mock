@@ -118,17 +118,8 @@ export default function EquipoPage() {
                     />
                   </div>
                 ) : (
-                  <div
-                    className="team-photo-wrap"
-                    style={{
-                      aspectRatio: '4 / 5',
-                      display: 'grid',
-                      placeItems: 'center',
-                      color: 'var(--text-muted)',
-                      fontSize: '0.875rem',
-                    }}
-                  >
-                    Fotografía pendiente
+                  <div className="team-photo-wrap team-photo--placeholder" aria-hidden="true">
+                    {abogado.nombre.split(' ').map((w) => w[0]).slice(0, 2).join('')}
                   </div>
                 )}
                 <p className="team-area">{abogado.area}</p>

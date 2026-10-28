@@ -61,7 +61,7 @@ const METRICAS = [
   { value: '1', label: 'especialidad exclusiva: Derecho del Trabajo' },
 ] as const;
 
-const EQUIPO_DESTACADO = EQUIPO.filter((a) => a.foto !== null).slice(0, 3);
+const EQUIPO_DESTACADO = EQUIPO.slice(0, 4);
 
 const dateFormatter = new Intl.DateTimeFormat('es-CL', {
   day: 'numeric',
@@ -226,14 +226,20 @@ export default function HomePage() {
                   tabIndex={-1}
                   aria-hidden="true"
                 >
-                  <Image
-                    src={assetPath(abogado.foto as string)}
-                    alt=""
-                    width={1200}
-                    height={1500}
-                    sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
-                    className="team-photo"
-                  />
+                  {abogado.foto ? (
+                    <Image
+                      src={assetPath(abogado.foto)}
+                      alt=""
+                      width={1200}
+                      height={1500}
+                      sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                      className="team-photo"
+                    />
+                  ) : (
+                    <span className="team-photo team-photo--placeholder" aria-hidden="true">
+                      {abogado.nombre.split(' ').map((w) => w[0]).slice(0, 2).join('')}
+                    </span>
+                  )}
                 </Link>
                 <p className="team-area">{abogado.area}</p>
                 <h3 className="team-name">{abogado.nombre}</h3>
