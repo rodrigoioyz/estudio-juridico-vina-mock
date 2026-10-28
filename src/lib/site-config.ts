@@ -117,7 +117,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     metaDescription:
       "Cómo revisar la liquidación de sueldo, reclamar diferencias de remuneraciones y cobrar horas extras impagas. Qué descuentos son legales y cuáles no lo son.",
     h1: "Remuneraciones y liquidación de sueldo",
-    servicios: ["Cotizaciones impagas", "Diferencias de remuneraciones"],
+    servicios: ["Sueldos adeudados", "Diferencias de remuneraciones", "Horas extras no pagadas"],
   },
   {
     slug: "derechos-fundamentales",

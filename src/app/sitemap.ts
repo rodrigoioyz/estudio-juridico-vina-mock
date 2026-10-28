@@ -3,6 +3,7 @@ import { join } from 'node:path';
 import type { MetadataRoute } from 'next';
 import { PRACTICE_AREAS, SITE_CONFIG } from '@/lib/site-config';
 import { PUBLICACIONES as articles } from '@/lib/publicaciones';
+import { SERVICIOS } from '@/lib/servicios';
 
 const FALLBACK = new Date('2026-08-07');
 const AREA_FILE = 'src/app/areas/[slug]/page.tsx';
@@ -47,5 +48,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...areaRoutes, ...publicationRoutes];
+  const serviceRoutes: MetadataRoute.Sitemap = SERVICIOS.map((servicio) => ({
+    url: `${baseUrl}${servicio.path}/`,
+    lastModified: fileDate('src/components/sections/servicio-page.tsx'),
+    changeFrequency: 'monthly',
+    priority: 0.8,
+  }));
+
+  return [...staticRoutes, ...areaRoutes, ...serviceRoutes, ...publicationRoutes];
 }

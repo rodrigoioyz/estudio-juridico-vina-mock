@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { PRACTICE_AREAS } from '@/lib/site-config';
 import { notFound } from 'next/navigation';
 import { PUBLICACIONES as articles } from '@/lib/publicaciones';
+import { SERVICIOS } from '@/lib/servicios';
 import { BreadcrumbLd } from '@/components/seo/breadcrumb-ld';
 
 export function generateStaticParams() {
@@ -326,6 +327,7 @@ export default async function AreaPage({ params }: Props) {
   if (!area) notFound();
 
   const related = articles.filter((a) => a.area === area.title);
+  const serviciosDelArea = SERVICIOS.filter((servicio) => servicio.areaSlug === slug);
 
   return (
     <>
@@ -384,6 +386,21 @@ export default async function AreaPage({ params }: Props) {
                 específico para <strong>{area.title}</strong> está en preparación y será
                 publicado próximamente.
               </p>
+            </div>
+          )}
+
+          {serviciosDelArea.length > 0 && (
+            <div className="mt-12">
+              <h2>Páginas sobre esta materia</h2>
+              <ul className="mt-4 space-y-2">
+                {serviciosDelArea.map((servicio) => (
+                  <li key={servicio.path}>
+                    <Link href={servicio.path} className="ruled-link">
+                      {servicio.h1}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           )}
 
