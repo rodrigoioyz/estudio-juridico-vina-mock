@@ -1542,3 +1542,21 @@ footer a { display: inline-flex; min-height: 44px; align-items: center; text-und
 @media (max-width: 480px) {
   .offers-grid { grid-template-columns: 1fr; }
 }
+
+/* LinkedIn icon (equipo) */
+.li-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--mist-300);
+  border-radius: 4px;
+  color: var(--navy-700);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background-color 120ms ease-out, border-color 120ms ease-out;
+}
+.li-link:hover { background: var(--navy-800); border-color: var(--navy-800); color: var(--white); }
+.li-link svg { flex: 0 0 auto; }
+.li-link--sm { margin-bottom: 0.85rem; padding: 0.3rem 0.65rem; font-size: 0.8rem; }
