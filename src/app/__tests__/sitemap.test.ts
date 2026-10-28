@@ -12,10 +12,15 @@ describe('sitemap editorial', () => {
     // Solo artículos (slug + barra final); excluye el índice /publicaciones/
     const publicationUrls = urls.filter((url) => /\/publicaciones\/[^/]+\/$/.test(url));
 
+    const borradores = TODAS_LAS_PUBLICACIONES.filter((a) => a.status === 'draft');
     expect(publicationUrls).toHaveLength(PUBLICACIONES.length);
-    expect(PUBLICACIONES.length).toBe(TODAS_LAS_PUBLICACIONES.length - 1);
+    expect(PUBLICACIONES.length + borradores.length).toBe(TODAS_LAS_PUBLICACIONES.length);
+    expect(borradores.length).toBeGreaterThan(0);
     expect(publicationUrls.some((url) => url.includes('ejemplo-articulo'))).toBe(false);
-    // El borrador no puede aparecer: falta el Rol en fuentes públicas.
+    // Ningún borrador puede aparecer en el sitemap.
+    for (const borrador of borradores) {
+      expect(publicationUrls.some((url) => url.includes(borrador.slug)), borrador.slug).toBe(false);
+    }
     expect(publicationUrls.some((url) => url.includes(BORRADOR))).toBe(false);
 
     for (const article of PUBLICACIONES) {

@@ -32,6 +32,9 @@ const AREA_SLUG_BY_ARTICLE_AREA: Record<string, string> = {
   'Jornada Laboral': 'remuneraciones',
   Remuneraciones: 'remuneraciones',
   'Derecho Procesal Laboral': 'litigacion-recursos',
+  'Terminación del Contrato': 'terminacion-contrato',
+  'Accidentes Laborales': 'accidentes-laborales',
+  'Relación Laboral': 'relacion-laboral',
 };
 const dateFormatter = new Intl.DateTimeFormat('es-CL', {
   day: 'numeric',
