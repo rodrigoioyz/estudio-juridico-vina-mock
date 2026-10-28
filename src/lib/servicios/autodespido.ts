@@ -26,10 +26,9 @@ export const AUTODESPIDO: Servicio = {
         'El artículo 171 permite el autodespido cuando el empleador incurre en las causales de los números 1, 5 o 7 del artículo 160:',
       ],
       lista: [
-        'Falta de probidad o conducta deshonesta del empleador (artículo 160 N° 1).',
-        'Acoso sexual, acoso laboral, vías de hecho o injurias del empleador contra el trabajador (artículo 160 N° 1).',
-        'Incumplimiento grave de las obligaciones que impone el contrato (artículo 160 N° 7). Es la causal más usada y la que exige mejor prueba.',
+        'Conductas indebidas graves del empleador: falta de probidad, acoso sexual, acoso laboral, vías de hecho o injurias (artículo 160 N° 1).',
         'Actos, omisiones o imprudencias temerarias del empleador que afecten la seguridad o la salud del trabajador (artículo 160 N° 5).',
+        'Incumplimiento grave de las obligaciones que impone el contrato (artículo 160 N° 7). Es la causal más usada y la que exige mejor prueba.',
       ],
     },
     {
