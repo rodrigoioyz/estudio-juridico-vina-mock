@@ -16,8 +16,6 @@ export type Abogado = {
   area: string; // especialidad destacada (titular)
   credenciales: string[]; // formación verificada (línea por línea, como la antigua)
   foto: string | null;
-  /** object-position para alinear las caras sin recortar el archivo. */
-  fotoPosition?: string;
   email?: string;
   linkedin?: string;
   bio: string;
@@ -35,7 +33,6 @@ export const EQUIPO: Abogado[] = [
       "Magíster en Derecho del Trabajo, Universidad de Talca / Universidad de Valencia, España (2012)",
     ],
     foto: "/images/equipo/lautaro-farina-v2.jpg",
-    fotoPosition: "50% 80%",
     email: "lautaro.farina@estudiovina.cl",
     bio: "Abogado especializado en Derecho del Trabajo. Su producción doctrinal sobre remuneraciones ha sido citada por la Dirección del Trabajo en su jurisprudencia administrativa.",
     publicaciones: [
@@ -66,7 +63,6 @@ export const EQUIPO: Abogado[] = [
       "Diplomado en Derecho Laboral Colectivo, Universidad Diego Portales (2016)",
     ],
     foto: "/images/equipo/pablo-vilches-v2.jpg",
-    fotoPosition: "50% 33%",
     email: "pablovilches@estudiovina.cl",
     bio: "Abogado del estudio con experiencia en litigación laboral y comparecencia ante los Juzgados de Letras del Trabajo, con formación especializada en derecho laboral colectivo.",
   },
@@ -79,7 +75,6 @@ export const EQUIPO: Abogado[] = [
       "Abogado, Universidad Andrés Bello (2019)",
     ],
     foto: "/images/equipo/diego-zarate-v2.jpg",
-    fotoPosition: "50% 31%",
     email: "diegozarate@estudiovina.cl",
     bio: "Abogado de la Universidad Andrés Bello (2019). Integra el equipo de Derecho del Trabajo del estudio.",
   },
@@ -91,7 +86,6 @@ export const EQUIPO: Abogado[] = [
       "Abogado, Pontificia Universidad Católica de Valparaíso (2024)",
     ],
     foto: null,
-    fotoPosition: "50% 50%",
     bio: "Abogado de la Pontificia Universidad Católica de Valparaíso (2024). Integra el equipo de Derecho del Trabajo del estudio.",
   },
 ] as const;

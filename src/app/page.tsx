@@ -234,7 +234,6 @@ export default function HomePage() {
                       height={1500}
                       sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
                       className="team-photo"
-                      style={{ objectPosition: abogado.fotoPosition }}
                     />
                   ) : (
                     /* eslint-disable-next-line @next/next/no-img-element */
@@ -242,7 +241,6 @@ export default function HomePage() {
                       src={assetPath('/images/equipo/silueta.svg')}
                       alt=""
                       className="team-photo team-photo--silueta"
-                      style={{ objectPosition: abogado.fotoPosition }}
                       aria-hidden="true"
                     />
                   )}
