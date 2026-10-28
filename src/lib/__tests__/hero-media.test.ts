@@ -7,7 +7,7 @@ const EXPECTED_HERO_MEDIA = {
   poster: '/hero/pacifico-urbano/pacifico-poster-v2.jpg',
   sources: [
     {
-      src: '/hero/pacifico-urbano/pacifico-hero-v3.mp4',
+      src: '/hero/pacifico-urbano/pacifico-hero-v5.mp4',
       type: 'video/mp4',
     },
   ],
