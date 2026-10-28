@@ -23,19 +23,24 @@ export default function AreasPage() {
         </div>
       </section>
 
-      {/* ── Índice editorial denso ─────────────────── */}
+      {/* ── Índice editorial con servicios por área ── */}
       <section className="section-paper" style={{ paddingTop: '3rem' }}>
         <div className="container-wide">
           <div className="index-list">
             {PRACTICE_AREAS.map((area) => (
-              <Link
-                key={area.slug}
-                href={`/areas/${area.slug}`}
-                className="index-row no-underline"
-              >
-                <span className="index-title">{area.title}</span>
-                <span className="index-desc">{area.description}</span>
-              </Link>
+              <div key={area.slug} className="area-block">
+                <Link href={`/areas/${area.slug}`} className="index-row no-underline">
+                  <span className="index-title">{area.title}</span>
+                  <span className="index-desc">{area.description}</span>
+                </Link>
+                {area.servicios && area.servicios.length > 0 && (
+                  <ul className="area-services">
+                    {area.servicios.map((s) => (
+                      <li key={s}>{s}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             ))}
           </div>
         </div>

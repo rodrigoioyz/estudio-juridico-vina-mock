@@ -105,6 +105,21 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── 2b. OFRECEMOS — 6 ítems del sitio antiguo ── */}
+      <section className="offers-section" aria-labelledby="ofrecemos-home">
+        <div className="container-wide">
+          <h2 id="ofrecemos-home" className="offers-title">Lo que ofrecemos</h2>
+          <ul className="offers-grid">
+            <li className="offers-item">Profesionales con experiencia</li>
+            <li className="offers-item">Estudio Jurídico exclusivo laboral</li>
+            <li className="offers-item">Consulta gratuita</li>
+            <li className="offers-item">Atención personalizada</li>
+            <li className="offers-item">No cobros por adelantado</li>
+            <li className="offers-item">Pago sólo por juicio ganado</li>
+          </ul>
+        </div>
+      </section>
+
       {/* ── 3. Públicos — lista editorial con reglas, no tarjetas ── */}
       <section className="section-paper section-audiencias">
         <div className="container-wide">

@@ -1479,3 +1479,66 @@ footer a { display: inline-flex; min-height: 44px; align-items: center; text-und
 @media (max-width: 900px) {
   .founder-grid { grid-template-columns: 1fr; gap: 2rem; }
 }
+/* ═══════════════════════════════════════════════════════
+   ÁREAS con servicios + OFRECEMOS (datos del sitio antiguo, 2026-10-27)
+   ═══════════════════════════════════════════════════════ */
+.area-block { border-bottom: 1px solid var(--mist-300); }
+.area-block .index-row { border-bottom: none; }
+.area-services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  padding: 0 0.5rem 1.25rem;
+  list-style: none;
+}
+.area-services li {
+  font-size: 0.85rem;
+  color: var(--slate-600);
+  background: var(--surface);
+  border: 1px solid var(--mist-200);
+  border-radius: 4px;
+  padding: 0.3rem 0.7rem;
+}
+
+/* OFRECEMOS — 6 ítems con check */
+.offers-section { background: var(--surface); padding: 5rem 0; border-bottom: 1px solid var(--mist-200); }
+.offers-title {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(1.75rem, 3vw, 2.4rem);
+  color: var(--navy-900);
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem 2.5rem;
+  max-width: 980px;
+  margin: 0 auto;
+}
+.offers-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  font-size: 1rem;
+  color: var(--ink-900);
+}
+.offers-item::before {
+  content: '✓';
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: var(--navy-800);
+  color: var(--sand-300);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+@media (max-width: 767px) {
+  .offers-grid { grid-template-columns: 1fr 1fr; gap: 1rem 1.25rem; }
+}
+@media (max-width: 480px) {
+  .offers-grid { grid-template-columns: 1fr; }
+}

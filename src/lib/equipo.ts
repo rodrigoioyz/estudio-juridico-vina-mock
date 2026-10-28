@@ -77,4 +77,14 @@ export const EQUIPO: Abogado[] = [
     email: "diegozarate@estudiovina.cl",
     bio: "Abogado de la Universidad Andrés Bello (2019). Integra el equipo de Derecho del Trabajo del estudio.",
   },
+  {
+    slug: "enzo-bullion",
+    nombre: "Enzo Bullion",
+    area: "Derecho del Trabajo",
+    credenciales: [
+      "Abogado, Pontificia Universidad Católica de Valparaíso (2024)",
+    ],
+    foto: null,
+    bio: "Abogado de la Pontificia Universidad Católica de Valparaíso (2024). Integra el equipo de Derecho del Trabajo del estudio.",
+  },
 ] as const;
