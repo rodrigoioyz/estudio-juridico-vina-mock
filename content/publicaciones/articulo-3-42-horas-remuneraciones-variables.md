@@ -1,7 +1,7 @@
 ---
 title: "42 horas y remuneraciones variables: comisiones, metas y bonos"
-meta_title: "42 horas y remuneraciones variables: comisiones, metas y bonos"
-meta_description: "Desde abril 2026 la jornada es de 42 horas. ¿Qué pasa con comisiones, bonos y metas? El empleador debe ajustar parámetros según ORD. 820/2025 de la DT."
+meta_title: "Jornada de 42 horas: comisiones, metas y bonos"
+meta_description: "La reducción gradual a 42 horas cambia el cálculo de comisiones, metas y horas extraordinarias. Qué revisar en la liquidación de sueldo antes de firmar."
 slug: 42-horas-remuneraciones-variables-comisiones-metas-bonos
 keyword_primaria: "ley 40 horas Chile 2026"
 keyword_secundaria_1: "42 horas semanales Chile"

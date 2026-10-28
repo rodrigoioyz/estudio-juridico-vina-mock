@@ -310,8 +310,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const area = PRACTICE_AREAS.find((a) => a.slug === slug);
   if (!area) return { title: 'Área no encontrada' };
   return {
-    title: area.title,
-    description: area.description,
+    title: { absolute: area.metaTitle ?? area.title },
+    description: area.metaDescription ?? area.description,
     alternates: { canonical: `/areas/${slug}` },
     openGraph: { url: `/areas/${slug}` },
   };
@@ -340,7 +340,7 @@ export default async function AreaPage({ params }: Props) {
       <section className="internal-hero">
         <div className="container-narrow">
           <p className="eyebrow">Área de práctica</p>
-          <h1>{area.title}</h1>
+          <h1>{area.h1 ?? area.title}</h1>
           <p className="internal-hero-dek">{area.description}</p>
           <Link href="/areas" className="article-back" style={{ marginBottom: 0, marginTop: '2rem' }}>
             <span aria-hidden="true">←</span> Todas las áreas

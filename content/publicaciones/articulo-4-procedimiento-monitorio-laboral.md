@@ -1,7 +1,7 @@
 ---
 title: "Procedimiento monitorio laboral: acceso a la justicia y Corte Suprema"
-meta_title: "Procedimiento monitorio laboral: acceso a la justicia"
-meta_description: "La Corte Suprema resolvió que omitir el reclamo previo para la vía monitoria no puede impedir que la demanda sea conocida por el procedimiento general. Análisis del Rol 24.934-2025."
+meta_title: "Procedimiento monitorio laboral: qué es y cómo funciona"
+meta_description: "Cómo funciona el procedimiento monitorio: montos, plazos, audiencia única y cuándo conviene reclamar ante el Juzgado de Letras del Trabajo sin abogado."
 slug: procedimiento-monitorio-laboral-acceso-justicia-corte-suprema
 keyword_primaria: "procedimiento monitorio laboral"
 keyword_secundaria_1: "recurso de queja Corte Suprema laboral"

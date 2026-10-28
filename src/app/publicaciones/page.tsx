@@ -6,9 +6,9 @@ import { assetPath } from '@/lib/asset-path';
 import articles from './articles-listing.json';
 
 export const metadata: Metadata = {
-  title: 'Publicaciones',
+  title: { absolute: 'Publicaciones de doctrina laboral chilena' },
   description:
-    'Análisis jurídico, doctrina y comentarios sobre Derecho del Trabajo, escritos por el equipo del estudio.',
+    'Análisis de doctrina y jurisprudencia laboral chilena escritos por nuestros abogados: jornada, remuneraciones, procedimiento monitorio y Corte Suprema.',
   alternates: { canonical: '/publicaciones' },
   openGraph: { url: '/publicaciones' },
 };

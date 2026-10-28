@@ -2,10 +2,13 @@ import type { Metadata } from 'next';
 import { BreadcrumbLd } from '@/components/seo/breadcrumb-ld';
 import Link from 'next/link';
 import { SITE_CONFIG } from '@/lib/site-config';
+import Image from 'next/image';
+import { assetPath } from '@/lib/asset-path';
 
 export const metadata: Metadata = {
-  title: 'El Estudio',
-  description: `Conozca al ${SITE_CONFIG.name}. Especialistas en Derecho del Trabajo con más de una década de trayectoria en Viña del Mar.`,
+  title: { absolute: 'Estudio jurídico laboral en Viña del Mar: quiénes somos' },
+  description:
+    'El estudio lo dirige Lautaro Fariña Quezada, magíster en Derecho del Trabajo (PUCV, Talca y Valencia), con más de 600 juicios laborales en la V Región.',
   alternates: { canonical: '/estudio' },
   openGraph: { url: '/estudio' },
 };
@@ -41,7 +44,7 @@ export default function EstudioPage() {
       <section className="internal-hero">
         <div className="container-narrow">
           <p className="eyebrow">El estudio</p>
-          <h1>El Estudio</h1>
+          <h1>Diez años litigando en la V Región</h1>
           <p className="internal-hero-dek">
             Una firma especializada exclusivamente en Derecho del Trabajo, con
             asesoría preventiva y representación judicial para trabajadores,
@@ -53,6 +56,16 @@ export default function EstudioPage() {
       {/* ── Descripción maestra ──────────────────────────── */}
       <section className="section-white">
         <div className="container-narrow">
+          <figure className="page-figure">
+            <Image
+              src={assetPath('/images/ciudad/entre-arboles.jpg')}
+              alt="Viña del Mar vista desde el cerro, entre árboles"
+              width={1024}
+              height={768}
+              sizes="(max-width: 768px) 100vw, 680px"
+            />
+            <figcaption>Viña del Mar desde el cerro</figcaption>
+          </figure>
           <div className="prose max-w-none">
             <p className="text-lg leading-relaxed">
               El <strong>{SITE_CONFIG.name}</strong> combina{' '}

@@ -64,7 +64,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const canonical = `/publicaciones/${slug}`;
   return {
-    title: article.meta_title || article.title,
+    title: { absolute: article.meta_title || article.title },
     description: article.meta_description,
     alternates: { canonical },
     openGraph: {

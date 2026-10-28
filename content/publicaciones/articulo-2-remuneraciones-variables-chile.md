@@ -1,7 +1,7 @@
 ---
 title: "Remuneraciones variables en Chile: bonos, comisiones y diferencias"
-meta_title: "Remuneraciones variables: bonos, comisiones y diferencias"
-meta_description: "¿Es lo mismo un bono que una comisión? ¿Las gratificaciones son remuneración variable? Conoce la distinción jurídica según doctrina 2015, CT y dictámenes de la DT."
+meta_title: "Remuneraciones variables: bonos y comisiones en Chile"
+meta_description: "Cómo se calculan bonos, comisiones y metas, cuándo pasan a ser remuneración fija y cómo reclamar diferencias de remuneraciones variables ante el tribunal."
 slug: remuneraciones-variables-chile-bonos-comisiones
 keyword_primaria: "remuneraciones variables Chile"
 keyword_secundaria_1: "gratificación legal Chile"

@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
 import { BreadcrumbLd } from '@/components/seo/breadcrumb-ld';
 import Link from 'next/link';
+import Image from 'next/image';
+import { assetPath } from '@/lib/asset-path';
 
 export const metadata: Metadata = {
-  title: 'Honorarios',
+  title: { absolute: 'Honorarios por resultas y consulta gratuita' },
   description:
-    'Sistema de honorarios del estudio: solo cobramos si ganamos su juicio. Sin cobros por adelantado.',
+    'Cobramos un porcentaje de lo que se gana en el juicio y se paga cuando usted recibe su dinero. Sin adelantos ni cuotas iniciales. Primera consulta gratuita.',
   alternates: { canonical: '/honorarios' },
   openGraph: { url: '/honorarios' },
 };
@@ -19,8 +21,8 @@ export default function HonorariosPage() {
           <p className="eyebrow">Condiciones claras</p>
           <h1>Honorarios</h1>
           <p className="internal-hero-dek">
-            Nuestro sistema se basa en las resultas del juicio: el estudio solo
-            cobra si la gestión obtiene un resultado favorable.
+            Nuestro sistema se basa en las resultas del juicio: el honorario se
+            calcula sobre lo que usted obtiene y se paga cuando recibe su dinero.
           </p>
         </div>
       </section>
@@ -52,6 +54,17 @@ export default function HonorariosPage() {
               corresponde.
             </p>
           </div>
+
+          <figure className="page-figure page-figure--narrow">
+            <Image
+              src={assetPath('/images/ciudad/muelle-vergara.jpg')}
+              alt="Grúa del muelle de Valparaíso"
+              width={898}
+              height={1600}
+              sizes="(max-width: 768px) 100vw, 680px"
+            />
+            <figcaption>Muelle Vergara · Viña del Mar</figcaption>
+          </figure>
         </div>
       </section>
 

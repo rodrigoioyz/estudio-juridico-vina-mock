@@ -9,10 +9,10 @@ import { HeroMedia } from '@/components/sections/hero-media';
 import articles from './publicaciones/articles-listing.json';
 
 export const metadata: Metadata = {
-  title: `${SITE_CONFIG.name} — ${SITE_CONFIG.location.city}`,
+  title: { absolute: 'Abogado laboral en Viña del Mar | Estudio Jurídico' },
   description:
-    'Estudio especializado exclusivamente en Derecho del Trabajo en Viña del Mar. ' +
-    'Litigación, asesoría preventiva y representación de trabajadores, empresas y organizaciones sindicales.',
+    'Estudio dedicado solo al Derecho del Trabajo en Viña del Mar. Más de 600 juicios. ' +
+    'Honorarios por resultas: paga cuando recibe su dinero. Consulta gratuita.',
   alternates: { canonical: '/' },
   openGraph: {
     title: `${SITE_CONFIG.name} — Derecho del Trabajo en ${SITE_CONFIG.location.city}`,
@@ -79,12 +79,12 @@ export default function HomePage() {
         <div className="hero-home-text">
           <p className="eyebrow">Viña del Mar · Región de Valparaíso</p>
           <h1 className="font-display hero-title">
-            Derecho del Trabajo, desde el análisis <em>hasta el tribunal</em>.
+            Abogado laboral en <em>Viña del Mar</em>
           </h1>
           <span className="signature-rule" aria-hidden="true" />
           <p className="hero-sub">
-            Asesoría y litigio para trabajadores, empresas y sindicatos, con
-            experiencia ante la Corte Suprema.
+            Derecho del Trabajo desde el análisis hasta el tribunal: asesoría y
+            litigio para trabajadores, empresas y sindicatos.
           </p>
           <div className="hero-ctas">
             <Link href="/contacto" className="cta-primary">
@@ -141,6 +141,21 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── 2a-bis. Banda panorámica — pausa editorial de la ciudad ── */}
+      <figure className="city-band">
+        <Image
+          src={assetPath('/images/ciudad/valparaiso-nocturno.jpg')}
+          alt="Vista nocturna de Viña del Mar y Valparaíso desde el cerro"
+          width={1600}
+          height={428}
+          sizes="100vw"
+          className="city-band-img"
+        />
+        <figcaption className="city-band-caption">
+          <span className="container-wide">Viña del Mar · Región de Valparaíso</span>
+        </figcaption>
+      </figure>
+
       {/* ── 2b. OFRECEMOS — 6 ítems del sitio antiguo ── */}
       <section className="offers-section" aria-labelledby="ofrecemos-home">
         <div className="container-wide">
@@ -151,7 +166,7 @@ export default function HomePage() {
             <li className="offers-item">Consulta gratuita</li>
             <li className="offers-item">Atención personalizada</li>
             <li className="offers-item">No cobros por adelantado</li>
-            <li className="offers-item">Pago sólo por juicio ganado</li>
+            <li className="offers-item">Pago sólo cuando recibe su dinero</li>
           </ul>
         </div>
       </section>

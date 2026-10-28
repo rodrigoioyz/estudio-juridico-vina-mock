@@ -7,7 +7,13 @@ import './globals.css';
 
 const siteUrl = SITE_CONFIG.url;
 const isGitHubPagesDemo = process.env.NEXT_PUBLIC_GITHUB_PAGES_DEMO === 'true';
-const isPublicSite = !isGitHubPagesDemo && /^https:\/\//.test(siteUrl) && !/localhost|127\.0\.0\.1/.test(siteUrl);
+const siteEnv = process.env.NEXT_PUBLIC_SITE_ENV ?? (isGitHubPagesDemo ? 'demo' : 'production');
+// noindex solo fuera de producción: demo, staging o URL no pública.
+const isPublicSite =
+  siteEnv === 'production' &&
+  !isGitHubPagesDemo &&
+  /^https:\/\//.test(siteUrl) &&
+  !/localhost|127\.0\.0\.1/.test(siteUrl);
 
 export const metadata: Metadata = {
   title: {
@@ -54,18 +60,32 @@ const jsonLd = {
   name: SITE_CONFIG.name,
   description: SITE_CONFIG.description,
   url: siteUrl,
-  priceRange: '$$',
+  priceRange: 'Honorarios por resultas',
   ...(SITE_CONFIG.social.facebook ? { sameAs: [SITE_CONFIG.social.facebook] } : {}),
   image: `${siteUrl}/images/logo.png`,
   email: SITE_CONFIG.contact.email,
   ...(SITE_CONFIG.contact.phone ? { telephone: SITE_CONFIG.contact.phone } : {}),
   address: {
     '@type': 'PostalAddress',
+    streetAddress: '1 Oriente 252, oficinas 203 y 307',
     addressLocality: SITE_CONFIG.location.city,
     addressRegion: SITE_CONFIG.location.region,
     addressCountry: 'CL',
   },
-  areaServed: { '@type': 'Country', name: 'Chile' },
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '18:00',
+    },
+  ],
+  areaServed: [
+    { '@type': 'City', name: 'Viña del Mar' },
+    { '@type': 'City', name: 'Valparaíso' },
+    { '@type': 'City', name: 'Quilpué' },
+    { '@type': 'City', name: 'Villa Alemana' },
+  ],
   knowsAbout: [
     'Derecho del Trabajo',
     'Terminación del Contrato de Trabajo',

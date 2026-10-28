@@ -6,9 +6,9 @@ import { assetPath } from '@/lib/asset-path';
 import { EQUIPO } from '@/lib/equipo';
 
 export const metadata: Metadata = {
-  title: 'Equipo',
+  title: { absolute: 'Lautaro Fariña Quezada y el equipo de abogados' },
   description:
-    'Los abogados del Estudio Jurídico Laboral de Viña del Mar: especialistas en Derecho del Trabajo con formación en la PUCV, UAI y UNAB.',
+    'Lautaro Fariña Quezada, Pablo Vilches Letelier, Diego Zárate Núñez y Enzo Bullion: cuatro abogados dedicados solo al Derecho del Trabajo en Viña del Mar.',
   alternates: { canonical: '/equipo' },
   openGraph: { url: '/equipo' },
 };

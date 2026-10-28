@@ -2,10 +2,13 @@ import type { Metadata } from 'next';
 import { BreadcrumbLd } from '@/components/seo/breadcrumb-ld';
 import { ContactForm } from '@/components/sections/contact-form';
 import { SITE_CONFIG } from '@/lib/site-config';
+import Image from 'next/image';
+import { assetPath } from '@/lib/asset-path';
 
 export const metadata: Metadata = {
-  title: 'Contacto',
-  description: 'Solicite una evaluación de su caso laboral. Atención en Viña del Mar y en todo Chile.',
+  title: { absolute: 'Contacto: abogado laboral en Viña del Mar' },
+  description:
+    'Visítenos en 1 Oriente 252, oficinas 203 y 307, Viña del Mar. Atención de lunes a viernes, de 9:00 a 18:00. Teléfonos: +56 9 7378 1151 y +56 9 4563 1394.',
   alternates: { canonical: '/contacto' },
   openGraph: { url: '/contacto' },
 };
@@ -38,6 +41,17 @@ export default function ContactoPage() {
             <p className="contact-information-dek">
               Reuniones presenciales en Viña del Mar y por videollamada para personas y organizaciones de otras regiones de Chile.
             </p>
+
+            <figure className="page-figure page-figure--narrow">
+            <Image
+              src={assetPath('/images/ciudad/copacabana.jpg')}
+              alt="Edificio Copacabana, Viña del Mar"
+              width={1600}
+              height={1600}
+              sizes="(max-width: 768px) 100vw, 680px"
+            />
+            <figcaption>Edificio Copacabana · Viña del Mar</figcaption>
+          </figure>
 
             <dl className="contact-details">
               <div>

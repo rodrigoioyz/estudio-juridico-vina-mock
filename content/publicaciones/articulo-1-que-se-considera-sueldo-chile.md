@@ -1,7 +1,7 @@
 ---
 title: "¿Qué se considera sueldo en Chile? Fijeza y concepto legal"
 meta_title: "¿Qué se considera sueldo en Chile? Fijeza y concepto legal"
-meta_description: "El artículo 42 del Código del Trabajo define el sueldo por su fijeza: un pago fijo, en dinero, por la jornada ordinaria. ¿Qué dice la DT y por qué importa en 2026?"
+meta_description: "El artículo 42 del Código del Trabajo define el sueldo por su fijeza: pago fijo, en dinero, por la jornada ordinaria. Qué dice la DT y por qué importa."
 slug: que-se-considera-sueldo-chile-fijeza
 keyword_primaria: "qué se considera sueldo en Chile"
 keyword_secundaria_1: "sueldo base Chile"

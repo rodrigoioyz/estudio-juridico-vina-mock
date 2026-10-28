@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
 import { BreadcrumbLd } from '@/components/seo/breadcrumb-ld';
 import Link from 'next/link';
+import Image from 'next/image';
+import { assetPath } from '@/lib/asset-path';
 
 export const metadata: Metadata = {
-  title: 'Empresas',
+  title: { absolute: 'Asesoría laboral para empresas en Viña del Mar' },
   description:
-    'Asesoría preventiva, cumplimiento normativo y representación judicial para empleadores. Derecho del Trabajo para empresas en Viña del Mar y todo Chile.',
+    'Asesoría preventiva, cumplimiento normativo y defensa judicial para empleadores. Cartas de despido, protocolos y fiscalizaciones de la Dirección del Trabajo.',
   alternates: { canonical: '/empresas' },
   openGraph: { url: '/empresas' },
 };
@@ -46,6 +48,16 @@ export default function EmpresasPage() {
       {/* ── Servicios — lista editorial con reglas ── */}
       <section className="section-white">
         <div className="container-wide">
+          <figure className="page-figure">
+            <Image
+              src={assetPath('/images/ciudad/valparaiso-406.jpg')}
+              alt="Edificios patrimoniales de Valparaíso"
+              width={1600}
+              height={1064}
+              sizes="(max-width: 768px) 100vw, 680px"
+            />
+            <figcaption>Valparaíso · patrimonio y actividad portuaria</figcaption>
+          </figure>
           <h2 className="section-title">Lo que ofrecemos a su empresa</h2>
           <p className="section-dek">
             Tres líneas de trabajo que se complementan: antes del conflicto, en el

@@ -4,9 +4,9 @@ import Link from 'next/link';
 import { PRACTICE_AREAS } from '@/lib/site-config';
 
 export const metadata: Metadata = {
-  title: 'Áreas de Práctica',
+  title: { absolute: 'Áreas de práctica del derecho laboral en Chile' },
   description:
-    'Siete áreas de especialización exclusiva en Derecho del Trabajo: término de contrato, remuneraciones, tutela, relación laboral, colectivo, litigación y accidentes.',
+    'Siete áreas de práctica laboral: término de contrato, remuneraciones, derechos fundamentales, relación laboral, derecho colectivo, litigación y accidentes.',
   alternates: { canonical: '/areas' },
   openGraph: { url: '/areas' },
 };
