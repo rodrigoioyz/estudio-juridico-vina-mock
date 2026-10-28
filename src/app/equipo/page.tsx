@@ -3,6 +3,7 @@ import { BreadcrumbLd } from '@/components/seo/breadcrumb-ld';
 import Image from 'next/image';
 import Link from 'next/link';
 import { assetPath } from '@/lib/asset-path';
+import { TeamPhoto } from '@/components/sections/team-photo';
 import { EQUIPO } from '@/lib/equipo';
 
 export const metadata: Metadata = {
@@ -106,27 +107,13 @@ export default function EquipoPage() {
           <div className="team-grid">
             {RESTO.map((abogado) => (
               <article className="team-card" key={abogado.slug}>
-                {abogado.foto ? (
-                  <div className="team-photo-wrap">
-                    <Image
-                      src={assetPath(abogado.foto)}
-                      alt={abogado.nombre}
-                      width={1200}
-                      height={1500}
-                      sizes="(max-width: 767px) 100vw, 50vw"
-                      className="team-photo"
-                    />
-                  </div>
-                ) : (
-                  <div className="team-photo-wrap" aria-hidden="true">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={assetPath('/images/equipo/silueta.svg')}
-                      alt=""
-                      className="team-photo team-photo--silueta"
-                    />
-                  </div>
-                )}
+                <div className="team-photo-wrap">
+                  <TeamPhoto
+                    abogado={abogado}
+                    sizes="(max-width: 767px) 100vw, 50vw"
+                    alt={abogado.nombre}
+                  />
+                </div>
                 <p className="team-area">{abogado.area}</p>
                 <h2 className="team-name">{abogado.nombre}</h2>
                 <ul className="team-cred">

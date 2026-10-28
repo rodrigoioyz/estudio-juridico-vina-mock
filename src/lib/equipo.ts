@@ -16,6 +16,8 @@ export type Abogado = {
   area: string; // especialidad destacada (titular)
   credenciales: string[]; // formación verificada (línea por línea, como la antigua)
   foto: string | null;
+  /** Iniciales para la tarjeta cuando no hay foto (ej. "EB"). */
+  monograma?: string;
   email?: string;
   linkedin?: string;
   bio: string;
@@ -86,6 +88,7 @@ export const EQUIPO: Abogado[] = [
       "Abogado, Pontificia Universidad Católica de Valparaíso (2024)",
     ],
     foto: null,
+    monograma: "EB",
     bio: "Abogado de la Pontificia Universidad Católica de Valparaíso (2024). Integra el equipo de Derecho del Trabajo del estudio.",
   },
 ] as const;

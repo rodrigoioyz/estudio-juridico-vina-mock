@@ -7,6 +7,16 @@ import { assetPath } from '@/lib/asset-path';
 import { ScrollReveal } from '@/components/motion/scroll-reveal';
 import { HeroMedia } from '@/components/sections/hero-media';
 import articles from './publicaciones/articles-listing.json';
+import {
+  HOME_HERO,
+  HOME_PRUEBA,
+  HOME_TRABAJADORES,
+  HOME_SECUNDARIO,
+  AREA_PROBLEMAS,
+  HOME_AREAS_INTRO,
+  HOME_TRABAJAMOS,
+} from '@/lib/home-content';
+import { TeamPhoto } from '@/components/sections/team-photo';
 
 export const metadata: Metadata = {
   title: { absolute: 'Abogado laboral en Viña del Mar | Estudio Jurídico' },
@@ -33,34 +43,6 @@ export const metadata: Metadata = {
   },
 };
 
-const AUDIENCIAS = [
-  {
-    title: 'Trabajadores',
-    body: 'Despido injustificado, autodespido, nulidad del despido, remuneraciones impagas y tutela de derechos fundamentales. El plazo para demandar un despido es de 60 días hábiles: evaluar el caso a tiempo es parte de la defensa.',
-    cta: 'Consulte como trabajador',
-    href: '/areas/terminacion-contrato',
-  },
-  {
-    title: 'Empresas',
-    body: 'Asesoría preventiva, cumplimiento normativo y defensa judicial. Evaluamos la solidez jurídica de cada decisión antes de que se transforme en contingencia.',
-    cta: 'Consulte como empresa',
-    href: '/empresas',
-  },
-  {
-    title: 'Organizaciones sindicales',
-    body: 'Negociación colectiva, fuero sindical, prácticas antisindicales y defensa de dirigentes, con acompañamiento en todas las etapas del procedimiento.',
-    cta: 'Consulte como sindicato',
-    href: '/areas/derecho-colectivo',
-  },
-] as const;
-
-const METRICAS = [
-  { value: '10+', label: 'años de trayectoria en litigación laboral' },
-  { value: '600+', label: 'juicios laborales en los que ha intervenido el estudio' },
-  { value: '3', label: 'dictámenes de la Dirección del Trabajo que citan su doctrina' },
-  { value: '1', label: 'especialidad exclusiva: Derecho del Trabajo' },
-] as const;
-
 const EQUIPO_DESTACADO = EQUIPO.slice(0, 4);
 
 const dateFormatter = new Intl.DateTimeFormat('es-CL', {
@@ -77,44 +59,34 @@ export default function HomePage() {
       {/* ── 1. Hero — split editorial, imagen cortada en borde y fold ── */}
       <section className="hero-home">
         <div className="hero-home-text">
-          <p className="eyebrow">Viña del Mar · Región de Valparaíso</p>
+          <p className="eyebrow">{HOME_HERO.eyebrow}</p>
           <h1 className="font-display hero-title">
-            Abogado laboral en <em>Viña del Mar</em>
+            {HOME_HERO.titulo} <em>{HOME_HERO.tituloEnfasis}</em>
           </h1>
           <span className="signature-rule" aria-hidden="true" />
-          <p className="hero-sub">
-            Derecho del Trabajo desde el análisis hasta el tribunal: asesoría y
-            litigio para trabajadores, empresas y sindicatos.
-          </p>
+          <p className="hero-sub">{HOME_HERO.bajada}</p>
           <div className="hero-ctas">
-            <Link href="/contacto" className="cta-primary">
-              Solicitar evaluación
+            <Link href={HOME_HERO.ctaPrimario.href} className="cta-primary">
+              {HOME_HERO.ctaPrimario.label}
             </Link>
-            <Link href="/estudio" className="cta-ghost">
-              Conozca el estudio
+            <Link href={HOME_HERO.ctaSecundario.href} className="cta-ghost">
+              {HOME_HERO.ctaSecundario.label}
             </Link>
           </div>
-          <p className="hero-trust">
-            Doctrina del estudio citada por la Dirección del Trabajo.
-          </p>
         </div>
         <HeroMedia />
-      </section>
-
-      {/* ── 2. Cifras de prueba — banda de mínimos históricos ── */}
-      <section className="metrics-band" aria-label="Trayectoria institucional">
-        <div className="container-wide metrics-grid">
-          {METRICAS.map((m) => (
-            <div key={m.value}>
-              <p className="metric-value nums">{m.value}</p>
-              <p className="metric-label">{m.label}</p>
-            </div>
+        <ul className="hero-proof" aria-label="Trayectoria del estudio">
+          {HOME_PRUEBA.map((item) => (
+            <li key={item.detalle}>
+              <span className="hero-proof-title nums">{item.titulo}</span>
+              <span className="hero-proof-detail">{item.detalle}</span>
+            </li>
           ))}
-        </div>
+        </ul>
       </section>
 
       {/* ── 2a. El estudio — texto del sitio antiguo (a cargo de Lautaro) ── */}
-      <section className="section-paper" aria-labelledby="estudio-intro-home">
+      <section className="section-paper section-paper--cierre" aria-labelledby="estudio-intro-home">
         <div className="container-narrow">
           <p className="eyebrow">El estudio</p>
           <h2 id="estudio-intro-home" className="section-title">
@@ -156,40 +128,32 @@ export default function HomePage() {
         </figcaption>
       </figure>
 
-      {/* ── 2b. OFRECEMOS — 6 ítems del sitio antiguo ── */}
-      <section className="offers-section" aria-labelledby="ofrecemos-home">
-        <div className="container-wide">
-          <h2 id="ofrecemos-home" className="offers-title">Lo que ofrecemos</h2>
-          <ul className="offers-grid">
-            <li className="offers-item">Profesionales con experiencia</li>
-            <li className="offers-item">Estudio Jurídico exclusivo laboral</li>
-            <li className="offers-item">Consulta gratuita</li>
-            <li className="offers-item">Atención personalizada</li>
-            <li className="offers-item">No cobros por adelantado</li>
-            <li className="offers-item">Pago sólo cuando recibe su dinero</li>
-          </ul>
-        </div>
-      </section>
-
       {/* ── 3. Públicos — lista editorial con reglas, no tarjetas ── */}
       <section className="section-paper section-audiencias">
         <div className="container-wide">
-          <h2 className="font-display section-title reveal-up" data-reveal-index={0}>¿A quién representamos?</h2>
-          <p className="section-dek reveal-up" data-reveal-index={1}>
-            La práctica abarca las tres posiciones de la relación laboral.
-            Conocer el conflicto desde cada lado es parte de la estrategia.
-          </p>
+          <p className="eyebrow reveal-up" data-reveal-index={0}>{HOME_TRABAJADORES.eyebrow}</p>
+          <h2 className="font-display section-title reveal-up" data-reveal-index={1}>
+            {HOME_TRABAJADORES.titulo}
+          </h2>
           <div className="ruled-list">
-            {AUDIENCIAS.map((a, idx) => (
-              <div key={a.title} className="ruled-row reveal-up" data-reveal-index={idx + 2}>
-                <h3 className="font-display ruled-title">{a.title}</h3>
-                <p className="ruled-body">{a.body}</p>
-                <Link href={a.href} className="ruled-link">
-                  {a.cta} →
+            <div className="ruled-row reveal-up" data-reveal-index={2}>
+              <p className="ruled-body">{HOME_TRABAJADORES.body}</p>
+              <div className="hero-ctas" style={{ marginTop: '1.75rem', marginBottom: 0 }}>
+                <Link href={HOME_TRABAJADORES.cta.href} className="cta-primary">
+                  {HOME_TRABAJADORES.cta.label}
+                </Link>
+                <Link href={HOME_TRABAJADORES.ctaSecundario.href} className="cta-ghost">
+                  {HOME_TRABAJADORES.ctaSecundario.label}
                 </Link>
               </div>
-            ))}
+            </div>
           </div>
+          <p className="audiencias-secundario reveal-up" data-reveal-index={3}>
+            {HOME_SECUNDARIO.texto}{' '}
+            <Link href={HOME_SECUNDARIO.cta.href} className="ruled-link">
+              {HOME_SECUNDARIO.cta.label} →
+            </Link>
+          </p>
         </div>
       </section>
 
@@ -197,24 +161,24 @@ export default function HomePage() {
       <section className="section-white areas-home">
         <div className="container-wide areas-grid">
           <div className="areas-intro">
-            <h2 className="font-display section-title">Áreas de práctica</h2>
-            <p className="section-dek">
-              Siete materias, una sola especialidad. De la asesoría preventiva
-              al recurso ante la Corte Suprema.
-            </p>
-            <Link href="/areas" className="ruled-link">
-              Vea todas las áreas →
+            <h2 className="font-display section-title">{HOME_AREAS_INTRO.titulo}</h2>
+            <p className="section-dek">{HOME_AREAS_INTRO.dek}</p>
+            <Link href={HOME_AREAS_INTRO.cta.href} className="ruled-link">
+              {HOME_AREAS_INTRO.cta.label} →
             </Link>
           </div>
           <ul className="index-list">
-            {PRACTICE_AREAS.map((area) => (
-              <li key={area.slug}>
-                <Link href={`/areas/${area.slug}`} className="index-row">
-                  <span className="index-title">{area.title}</span>
-                  <span className="index-desc">{area.description}</span>
-                </Link>
-              </li>
-            ))}
+            {PRACTICE_AREAS.map((area) => {
+              const problema = AREA_PROBLEMAS[area.slug];
+              return (
+                <li key={area.slug}>
+                  <Link href={`/areas/${area.slug}`} className="index-row index-row--area">
+                    <span className="index-problem">{problema?.problema ?? area.title}</span>
+                    <span className="index-tech">{problema?.tecnico ?? area.title}</span>
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </section>
@@ -241,24 +205,10 @@ export default function HomePage() {
                   tabIndex={-1}
                   aria-hidden="true"
                 >
-                  {abogado.foto ? (
-                    <Image
-                      src={assetPath(abogado.foto)}
-                      alt=""
-                      width={1200}
-                      height={1500}
-                      sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
-                      className="team-photo"
-                    />
-                  ) : (
-                    /* eslint-disable-next-line @next/next/no-img-element */
-                    <img
-                      src={assetPath('/images/equipo/silueta.svg')}
-                      alt=""
-                      className="team-photo team-photo--silueta"
-                      aria-hidden="true"
-                    />
-                  )}
+                  <TeamPhoto
+                    abogado={abogado}
+                    sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                  />
                 </Link>
                 <p className="team-area">{abogado.area}</p>
                 <h3 className="team-name">{abogado.nombre}</h3>
@@ -289,42 +239,27 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 6b. Compromiso + honorarios ── */}
-      <section className="section-white" aria-labelledby="compromiso-home">
+      {/* ── 6b. Cómo trabajamos — bloque único ── */}
+      <section className="section-white" aria-labelledby="trabajamos-home">
         <div className="container-wide">
           <div className="areas-grid">
             <div className="areas-intro">
-              <h2 id="compromiso-home" className="font-display section-title">Un compromiso claro</h2>
-              <p className="section-dek">
-                Nuestros clientes están informados de cada paso con anticipación
-                y participan plenamente en la toma de decisiones.
-              </p>
-              <Link href="/honorarios" className="ruled-link">
-                Conozca nuestro sistema de honorarios →
+              <p className="eyebrow">{HOME_TRABAJAMOS.eyebrow}</p>
+              <h2 id="trabajamos-home" className="font-display section-title">
+                {HOME_TRABAJAMOS.titulo}
+              </h2>
+              <p className="section-dek">{HOME_TRABAJAMOS.dek}</p>
+              <Link href={HOME_TRABAJAMOS.cta.href} className="ruled-link">
+                {HOME_TRABAJAMOS.cta.label} →
               </Link>
             </div>
             <div className="index-list">
-              <div className="index-row">
-                <span className="index-title">Honorarios por resultas</span>
-                <span className="index-desc">
-                  Solo cobramos si ganamos su juicio: un porcentaje de lo obtenido,
-                  sin cobros por adelantado.
-                </span>
-              </div>
-              <div className="index-row">
-                <span className="index-title">Informado en cada paso</span>
-                <span className="index-desc">
-                  Le informamos con anticipación y usted participa en las decisiones
-                  relevantes de su causa.
-                </span>
-              </div>
-              <div className="index-row">
-                <span className="index-title">Consulta sin costo</span>
-                <span className="index-desc">
-                  Solicite una evaluación de su caso. Le diremos con claridad si
-                  existe un caso y qué puede obtener.
-                </span>
-              </div>
+              {HOME_TRABAJAMOS.puntos.map((punto) => (
+                <div className="index-row" key={punto.titulo}>
+                  <span className="index-title">{punto.titulo}</span>
+                  <span className="index-desc">{punto.body}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>

@@ -75,7 +75,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     slug: "terminacion-contrato",
     title: "Terminación del Contrato",
     description:
-      "Despido injustificado, improcedente, indirecto. Nulidad del despido. Finiquitos e indemnizaciones.",
+      "Despido injustificado e indirecto. Nulidad del despido. Finiquitos e indemnizaciones.",
     metaTitle: "Término de contrato de trabajo: causales y salidas",
     metaDescription:
       "Las tres vías legales ante un término de contrato: despido injustificado, autodespido y nulidad por cotizaciones. Qué exige cada una y qué plazos corren.",

@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { assetPath } from '@/lib/asset-path';
-import { NAV_LINKS, SITE_CONFIG } from '@/lib/site-config';
+import { NAV_LINKS } from '@/lib/site-config';
 
 function isCurrentPath(pathname: string, href: string) {
   return href === '/' ? pathname === '/' : pathname === href || pathname.startsWith(`${href}/`);
@@ -18,7 +18,7 @@ export function Header() {
   return (
     <header className="site-header">
       <div className="container-wide header-row">
-        <Link href="/" className="brand-link" aria-label={`${SITE_CONFIG.name}, inicio`}>
+        <Link href="/" className="brand-link">
           <Image
             src={assetPath('/images/logo.png')}
             alt=""
@@ -27,7 +27,7 @@ export function Header() {
             className="brand-mark"
             priority
           />
-          <span className="brand-wordmark" aria-hidden="true">
+          <span className="brand-wordmark">
             <span>Estudio</span>
             Jurídico Laboral
           </span>

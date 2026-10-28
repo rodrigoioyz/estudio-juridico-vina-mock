@@ -27,7 +27,7 @@ const AREA_CONTENT: Record<string, {
       'la terminación de la relación laboral.',
     subtemas: [
       {
-        title: 'Despido injustificado, improcedente e indebido',
+        title: 'Despido injustificado, indebido y sin causa',
         body:
           'La causal de despido debe ser probada por el empleador. Si la causal invocada no se configura ' +
           'o no se acredita en juicio, el despido es declarado injustificado y proceden las indemnizaciones ' +
