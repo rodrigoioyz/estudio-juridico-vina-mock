@@ -1806,7 +1806,7 @@ footer a { display: inline-flex; min-height: 44px; align-items: center; text-und
 }
 
 /* ── Contacto directo (modo sin backend) ─────────────────
-   Dos acciones que funcionan: WhatsApp y correo. Sin formulario. */
+   Dos vías que funcionan: correo y teléfono. Sin formulario. */
 .contact-direct { border-top: 3px solid var(--navy-900); padding-top: 2rem; }
 .contact-direct-title {
   margin-bottom: 0.75rem;
@@ -1835,6 +1835,10 @@ footer a { display: inline-flex; min-height: 44px; align-items: center; text-und
 .contact-action--primary .contact-action-detail { color: rgba(255, 255, 255, 0.8); }
 .contact-action--primary .contact-action-value { color: #ffffff; }
 .contact-action--primary:hover { background: var(--navy-700); border-color: var(--navy-700); }
+.contact-action--group { background: var(--surface); }
+.contact-action--group .contact-action-value { text-decoration: underline; text-decoration-color: var(--mist-300); text-underline-offset: 3px; }
+.contact-action--group .contact-action-value + .contact-action-value { margin-top: 0.15rem; }
+.contact-action--group .contact-action-value:hover { text-decoration-color: var(--navy-800); }
 .contact-direct-note { margin-top: 1.5rem; color: var(--slate-500); font-size: 0.8rem; line-height: 1.55; }
 .contact-action:focus-visible { outline: 2px solid var(--navy-800); outline-offset: 3px; }
 

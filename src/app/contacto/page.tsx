@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { BreadcrumbLd } from '@/components/seo/breadcrumb-ld';
 import { ContactForm } from '@/components/sections/contact-form';
 import { ContactoDirecto } from '@/components/sections/contact-direct';
-import { CONTACTO_COPY } from '@/lib/contacto';
+import { CONTACTO_COPY, telUrl } from '@/lib/contacto';
 import { SITE_CONFIG } from '@/lib/site-config';
 import Image from 'next/image';
 import { assetPath } from '@/lib/asset-path';
@@ -59,18 +59,22 @@ export default function ContactoPage() {
                 <dt>Dirección</dt>
                 <dd>{contact.address}</dd>
               </div>
-              <div>
-                <dt>Correo</dt>
-                <dd><a href={`mailto:${contact.email}`}>{contact.email}</a></dd>
-              </div>
-              <div>
-                <dt>Teléfonos</dt>
-                <dd>
-                  <a href={`tel:${contact.phone}`}>{contact.phone}</a>
-                  <br />
-                  <a href={`tel:${contact.phoneSecondary}`}>{contact.phoneSecondary}</a>
-                </dd>
-              </div>
+              {contact.mode === 'form' && (
+                <>
+                  <div>
+                    <dt>Correo</dt>
+                    <dd><a href={`mailto:${contact.email}`}>{contact.email}</a></dd>
+                  </div>
+                  <div>
+                    <dt>Teléfonos</dt>
+                    <dd>
+                      <a href={telUrl(contact.phone)}>{contact.phone}</a>
+                      <br />
+                      <a href={telUrl(contact.phoneSecondary)}>{contact.phoneSecondary}</a>
+                    </dd>
+                  </div>
+                </>
+              )}
               <div>
                 <dt>Horario</dt>
                 <dd>{contact.schedule}</dd>

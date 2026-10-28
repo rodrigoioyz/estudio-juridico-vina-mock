@@ -19,7 +19,7 @@ export function getPublicContactEmail(value?: string): string {
   return candidate;
 }
 
-/** "direct": WhatsApp y correo, sin formulario. "form": formulario (requiere backend). */
+/** "direct": correo y teléfono, sin formulario. "form": formulario (requiere backend). */
 export type ContactMode = "direct" | "form";
 
 export const SITE_CONFIG = {
@@ -44,7 +44,7 @@ export const SITE_CONFIG = {
     email: getPublicContactEmail(process.env.NEXT_PUBLIC_CONTACT_EMAIL),
     phone: "+56 9 7378 1151",
     phoneSecondary: "+56 9 4563 1394",
-    whatsapp: "+56 9 7378 1151",
+    whatsapp: null, // No se ofrece en el MVP: si se define un numero, la UI puede usarlo.
     address: "1 Oriente 252, oficinas 203 y 307, Viña del Mar",
     schedule: "Lunes a viernes, 09:00–18:00",
   },

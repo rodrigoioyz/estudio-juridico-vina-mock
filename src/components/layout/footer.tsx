@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { assetPath } from '@/lib/asset-path';
 import { SITE_CONFIG, SOCIAL_LINKS } from '@/lib/site-config';
+import { telUrl } from '@/lib/contacto';
 
 const FACEBOOK_SVG = (
   <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
@@ -92,7 +93,7 @@ export function Footer() {
               </a>
             </p>
             <p>
-              <a href={`tel:${contact.phone}`} className="hover:text-white transition-colors">
+              <a href={telUrl(contact.phone)} className="hover:text-white transition-colors">
                 {contact.phone}
               </a>
             </p>
