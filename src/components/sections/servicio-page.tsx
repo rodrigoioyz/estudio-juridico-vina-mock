@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { BreadcrumbLd } from '@/components/seo/breadcrumb-ld';
 import { PRACTICE_AREAS, SITE_CONFIG } from '@/lib/site-config';
+import { FaqBlock, faqJsonLd } from '@/components/sections/faq-block';
 import type { Servicio } from '@/lib/servicios/tipos';
 
 /** Metadata de una página de servicio, con title absoluto para esquivar el sufijo. */
@@ -18,18 +19,6 @@ export function metadataServicio(servicio: Servicio): Metadata {
   };
 }
 
-/** JSON-LD de preguntas frecuentes. Solo se emite cuando la FAQ es visible. */
-function faqJsonLd(servicio: Servicio) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: servicio.faq.map((item) => ({
-      '@type': 'Question',
-      name: item.pregunta,
-      acceptedAnswer: { '@type': 'Answer', text: item.respuesta },
-    })),
-  };
-}
 
 export function ServicioContenido({ servicio }: { servicio: Servicio }) {
   const area = PRACTICE_AREAS.find((a) => a.slug === servicio.areaSlug);
@@ -48,7 +37,7 @@ export function ServicioContenido({ servicio }: { servicio: Servicio }) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqJsonLd(servicio)).replace(/</g, '\\u003c'),
+          __html: JSON.stringify(faqJsonLd(servicio.faq)).replace(/</g, '\\u003c'),
         }}
       />
 
@@ -88,17 +77,7 @@ export function ServicioContenido({ servicio }: { servicio: Servicio }) {
             ))}
           </div>
 
-          <div className="servicio-faq" aria-labelledby="faq-servicio">
-            <h2 id="faq-servicio">Preguntas frecuentes</h2>
-            <dl>
-              {servicio.faq.map((item) => (
-                <div key={item.pregunta} className="servicio-faq-item">
-                  <dt>{item.pregunta}</dt>
-                  <dd>{item.respuesta}</dd>
-                </div>
-              ))}
-            </dl>
-          </div>
+          <FaqBlock faq={servicio.faq} id="faq-servicio" />
 
           <div className="servicio-cierre">
             <h2>¿Necesita evaluar su caso?</h2>

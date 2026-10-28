@@ -4,6 +4,8 @@ import { PRACTICE_AREAS } from '@/lib/site-config';
 import { notFound } from 'next/navigation';
 import { PUBLICACIONES as articles } from '@/lib/publicaciones';
 import { SERVICIOS } from '@/lib/servicios';
+import { FAQ_POR_AREA } from '@/lib/faq';
+import { FaqBlock, faqJsonLd } from '@/components/sections/faq-block';
 import { BreadcrumbLd } from '@/components/seo/breadcrumb-ld';
 
 export function generateStaticParams() {
@@ -328,6 +330,8 @@ export default async function AreaPage({ params }: Props) {
 
   const related = articles.filter((a) => a.area === area.title);
   const serviciosDelArea = SERVICIOS.filter((servicio) => servicio.areaSlug === slug);
+  // eslint-disable-next-line security/detect-object-injection
+  const faqDelArea = FAQ_POR_AREA[slug] ?? [];
 
   return (
     <>
@@ -417,6 +421,18 @@ export default async function AreaPage({ params }: Props) {
                 ))}
               </ul>
             </div>
+          )}
+
+          {faqDelArea.length > 0 && (
+            <>
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                  __html: JSON.stringify(faqJsonLd(faqDelArea)).replace(/</g, '\\u003c'),
+                }}
+              />
+              <FaqBlock faq={faqDelArea} id="faq-area" />
+            </>
           )}
 
           {/* ── CTA ──────────────────────────────────────── */}

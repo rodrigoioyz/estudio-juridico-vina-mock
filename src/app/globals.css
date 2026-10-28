@@ -1857,13 +1857,13 @@ footer a { display: inline-flex; min-height: 44px; align-items: center; text-und
 .servicio-seccion li { margin-bottom: 0.6rem; line-height: 1.7; }
 .servicio-seccion li::marker { color: var(--sand-300); }
 
-.servicio-faq { margin-top: 4rem; padding-top: 2.5rem; border-top: 1px solid var(--mist-300); }
-.servicio-faq h2 { margin-bottom: 1.75rem; font-family: var(--font-display), Georgia, serif; }
-.servicio-faq dl { margin: 0; }
-.servicio-faq-item { padding: 1.35rem 0; border-bottom: 1px solid var(--mist-300); }
-.servicio-faq-item:first-child { border-top: 1px solid var(--mist-300); }
-.servicio-faq-item dt { font-weight: 600; color: var(--navy-900); }
-.servicio-faq-item dd { margin: 0.5rem 0 0; color: var(--slate-600); line-height: 1.7; }
+.faq-block { margin-top: 4rem; padding-top: 2.5rem; border-top: 1px solid var(--mist-300); }
+.faq-block h2 { margin-bottom: 1.75rem; font-family: var(--font-display), Georgia, serif; }
+.faq-block dl { margin: 0; }
+.faq-item { padding: 1.35rem 0; border-bottom: 1px solid var(--mist-300); }
+.faq-item:first-child { border-top: 1px solid var(--mist-300); }
+.faq-item dt { font-weight: 600; color: var(--navy-900); }
+.faq-item dd { margin: 0.5rem 0 0; color: var(--slate-600); line-height: 1.7; }
 
 .servicio-cierre {
   margin-top: 3.5rem;
@@ -1880,3 +1880,6 @@ footer a { display: inline-flex; min-height: 44px; align-items: center; text-und
 .servicio-relacionados ul { display: grid; gap: 0.75rem; margin: 0; padding: 0; list-style: none; }
 
 .servicio-nota { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--mist-300); color: var(--slate-500); font-size: 0.8rem; line-height: 1.6; }
+
+/* El bloque puede abrir su propia sección (home): sin filete ni margen superior. */
+.faq-block--standalone { margin-top: 0; padding-top: 0; border-top: 0; }

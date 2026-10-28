@@ -7,6 +7,8 @@ import { assetPath } from '@/lib/asset-path';
 import { ScrollReveal } from '@/components/motion/scroll-reveal';
 import { HeroMedia } from '@/components/sections/hero-media';
 import { PUBLICACIONES as articles } from '@/lib/publicaciones';
+import { FaqBlock, faqJsonLd } from '@/components/sections/faq-block';
+import { FAQ_HOME } from '@/lib/faq';
 import {
   HOME_HERO,
   HOME_PRUEBA,
@@ -322,6 +324,19 @@ export default function HomePage() {
               Ver todas las publicaciones →
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* ── 7b. Preguntas frecuentes ── */}
+      <section className="section-paper" aria-labelledby="faq-home">
+        <div className="container-narrow">
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(faqJsonLd(FAQ_HOME)).replace(/</g, '\\u003c'),
+            }}
+          />
+          <FaqBlock faq={FAQ_HOME} id="faq-home" standalone />
         </div>
       </section>
 
